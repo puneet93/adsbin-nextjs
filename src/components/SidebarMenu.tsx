@@ -14,7 +14,7 @@ export default function Sidebar(){
         { href: '/locations', label: 'Locations', subtitle: 'Signage Display Locations', icon: <EyeIcon color="#0F172A" size={24} /> },
         { href: '/billing', label: 'Billing', subtitle: 'Payment information', icon: <DollarSign color="#0F172A" size={24} /> },
         { href: '/statistics', label: 'Statistics', subtitle: 'Performance', icon: <TrendingUpIcon color="#0F172A" size={24} /> },
-        { href: '/users', label: 'Users', subtitle: 'Manage team', icon: <UsersIcon color="#0F172A" size={24} /> },
+        { href: '/team-management', label: 'Users', subtitle: 'Manage team', icon: <UsersIcon color="#0F172A" size={24} /> },
         { href: '/settings', label: 'Settings', subtitle: 'Adjust your preferences', icon: <Cog color="#0F172A" size={24} /> },
         { href: '/documentation', label: 'Documentation', subtitle: 'Find your answer', icon: <CircleHelp color="#0F172A" size={24} /> },
     ];

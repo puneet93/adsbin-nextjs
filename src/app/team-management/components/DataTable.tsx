@@ -31,25 +31,25 @@ const data: Payment[] = [
   {
     id: "m5gr84i9",
     amount: 316,
-    status: "Uploaded",
+    status: "Active",
     email: "ken99@yahoo.com",
     img: '/image-1.png',
     title: 'Poster of Big Bunny',
     name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
+    type: 'Network Manager',
+    lastseen: 'A week ago',
     actions: ''
   },
   {
     id: "3u1reuv4",
     amount: 242,
-    status: "success",
+    status: "Active",
     email: "Abe45@gmail.com",
     img: '/image-1.png',
     title: 'Poster of Big Bunny',
     name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
+    type: 'Admin',
+    lastseen: 'Today',
     actions: ''
   },
   {
@@ -60,32 +60,32 @@ const data: Payment[] = [
     img: '/image-1.png',
     title: 'Poster of Big Bunny',
     name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
+    type: 'Content Editor',
+    lastseen: 'Today',
     actions: ''
   },
   {
     id: "5kma53ae",
     amount: 874,
-    status: "success",
+    status: "Active",
     email: "Silas22@gmail.com",
     img: '/image-1.png',
     title: 'Poster of Big Bunny',
     name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
+    type: 'Content Editor',
+    lastseen: 'Yesterday',
     actions: ''
   },
   {
     id: "bhqecj4p",
     amount: 721,
-    status: "failed",
+    status: "Active",
     email: "carmella@hotmail.com",
     img: '/image-1.png',
     title: 'Poster of Big Bunny',
     name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
+    type: 'Network Manager',
+    lastseen: 'More then a week ago',
     actions: ''
   },
 ]
@@ -93,10 +93,10 @@ const data: Payment[] = [
 export type Payment = {
   id: string
   amount: number
-  status: "pending" | "processing" | "success" | "failed" | "Uploaded"
+  status: "Active" | "processing"
   email: string,
   type: string,
-  size: string,
+  lastseen: string,
   actions: string,
   img: string,
     title: string,
@@ -131,10 +131,10 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Username",
     cell: ({ row }) => (
       <div className="flex items-center gap-2.5 min-w-60">
-        <div><img src={"/image-1.png"} alt={"Title"} width="47" height="44" /></div>
+        <div><img src={"/image-1.png"} alt={"Title"} width="47" height="44" className="rounded-full" /></div>
         <div>
             <h4 className="text-black text-base font-bold">Poster of Big Bunny</h4>
-            <p className="text-[13px] font-normal">Lorem.png</p>
+            <p className="text-[13px] font-normal">george.che@gmail.com</p>
         </div>
         </div>
     ),
@@ -150,7 +150,7 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "lastseen",
     header: "Last Seen",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("size")}</div>
+      <div className="capitalize">{row.getValue("lastseen")}</div>
     ),
   },
   {
