@@ -6,8 +6,8 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
-import { DataTable } from "./components/Datatable"
 import { Ellipsis, Search } from "lucide-react"
+import { DataTable } from "./components/Datatable"
 
 export default function MediaData(){
     return(

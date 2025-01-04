@@ -13,14 +13,19 @@ export default {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
 			black: '#415B41',
+			'green-text': '#17412D',
 			green: '#4DBB18',
-			body: '#606060'
+			body: '#606060',
+			'gray-light': '#ECECEC',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		boxShadow:{
+			container: "0px 0px 44px 0px rgba(0,0,0,0.1)"
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
