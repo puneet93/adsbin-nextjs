@@ -1,7 +1,7 @@
 import Sidebar from "./ui/components/sidebarMenu";
 
 export default function LayoutSidebar({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
