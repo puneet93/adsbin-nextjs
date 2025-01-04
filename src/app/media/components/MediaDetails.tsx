@@ -1,7 +1,7 @@
+import FileDetailHeader from "@/components/FileDetailHeader";
+import FileDetailItems from "@/components/fileDetailItems";
+import Preview from "@/components/Preview";
 import { X } from "lucide-react";
-import Preview from "../../../components/Preview";
-import FileDetailHeader from "../../../components/FileDetailHeader";
-import FileDetailItems from "../../../components/FileDetailItems";
 
 export default function MediaDetails(){
     return(

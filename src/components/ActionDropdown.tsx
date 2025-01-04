@@ -9,7 +9,7 @@ import {
   import { Button } from "@/components/ui/button"
   import { Ellipsis } from "lucide-react"
 
-export default function ActionDropdown({payment}:any){    
+export default function ActionDropdown({payment}:{payment:any}){    
     return(
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

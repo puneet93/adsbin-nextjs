@@ -24,8 +24,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { PaginationUI } from "./Pagination"
-import ActionDropdown from "./ActionDropdown"
+import { PaginationUI } from "../../../components/Pagination"
+import ActionDropdown from "../../../components/ActionDropdown"
 
 const data: Payment[] = [
   {
