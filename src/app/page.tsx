@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import LayoutSidebar from "./layoutSidebar";
-import Information from "./ui/components/Information";
-import { UploadIcon } from "@/lib/icons";
-import MediaData from "./ui/mediaPage";
+import Information from "../components/Information";
+import MediaData from "./media/components/MediaPage";
 
 export default function page() {
   return (

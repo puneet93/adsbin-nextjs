@@ -1,3 +1,4 @@
+import { DataTable } from "@/components/DataTable"
 import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
@@ -7,7 +8,6 @@ import {
   } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import { Ellipsis, Search } from "lucide-react"
-import { DataTable } from "./components/Datatable"
 
 export default function MediaData(){
     return(

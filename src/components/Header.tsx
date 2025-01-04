@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import UserDropdown from "./userDropdown";
+import UserDropdown from "./UserDropdown";
 
 export default function Header(){
     return(

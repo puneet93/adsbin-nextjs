@@ -1,5 +1,5 @@
 import { Pencil } from "lucide-react";
-import FileDetailsControl from "./fileDetailsControls";
+import FileDetailsControl from "./FileDetailsControls";
 
 export default function FileDetailHeader(){
     return(

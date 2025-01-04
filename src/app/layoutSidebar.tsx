@@ -1,4 +1,4 @@
-import Sidebar from "./ui/components/sidebarMenu";
+import Sidebar from "../components/SidebarMenu";
 
 export default function LayoutSidebar({
   children

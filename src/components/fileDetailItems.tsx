@@ -1,4 +1,5 @@
-import FileDetailItem from "./fileDetailItem";
+import FileDetailItem from "./FileDetailItem";
+
 
 export default function FileDetailItems(){
     return(

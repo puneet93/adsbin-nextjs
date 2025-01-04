@@ -1,5 +1,5 @@
 import LayoutSidebar from "@/app/layoutSidebar";
-import MediaDetailsUI from "@/app/ui/mediaDetails";
+import MediaDetailsUI from "@/app/media/components/MediaDetails";
 
 export default function page(){
     return(

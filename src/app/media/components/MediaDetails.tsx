@@ -1,9 +1,9 @@
 import { X } from "lucide-react";
-import Preview from "./components/preview";
-import FileDetailHeader from "./components/fileDetailHeader";
-import FileDetailItems from "./components/fileDetailItems";
+import Preview from "../../../components/Preview";
+import FileDetailHeader from "../../../components/FileDetailHeader";
+import FileDetailItems from "../../../components/FileDetailItems";
 
-export default function MediaDetailsUI(){
+export default function MediaDetails(){
     return(
         <div className="container px-md-0 px-4 mx-auto w-full">
             <div className="shadow-container border border-gray-light">

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import LayoutSidebar from "../layoutSidebar";
-import Information from "../ui/components/Information";
-import MediaData from "../ui/mediaPage";
+import Information from "../../components/Information";
+import MediaData from "./components/MediaPage";
 import { Upload } from "lucide-react";
 
 export default function page(){
