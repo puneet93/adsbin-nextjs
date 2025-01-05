@@ -25,6 +25,7 @@ export default {
 			runningBg: '#F0F0F0',
 			body: '#606060',
 			'A0A': '#A0A0A0',
+			'959': '#959393',
 			'border-btn': '#AEADAD',
 			'gray-light': '#ECECEC',
   		},
