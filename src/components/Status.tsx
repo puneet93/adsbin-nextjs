@@ -17,5 +17,13 @@ export default function Status({status}:{status:string}){
         return(
             <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-approved text-black bg-approvedBg font-semibold">{status}</div>
         )
+    }else if(status === 'Paid'){
+        return(
+            <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-approved text-black bg-approvedBg font-semibold">{status}</div>
+        )
+    }else if(status === 'Overdue'){
+        return(
+            <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-unpaid text-920 bg-unpaidBg font-semibold">{status}</div>
+        )
     }
 }

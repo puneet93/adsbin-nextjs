@@ -25,51 +25,49 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import Status from "@/components/Status"
-import ActionDropdown from "@/components/ActionDropdown"
 import { PaginationUI } from "@/components/Pagination"
+import ActionDropdown from "@/components/ActionDropdown"
+import { ArrowRight, Download } from "lucide-react"
+import Link from "next/link"
 
 const data: Payment[] = [
   {
+    id: "derv1ws0",
+    status: "Paid",
+    description: 'Campaign Jan.',
+    date: '27-08-2023',
+    customerName: 'DHG & Partners',
+    amount: '€ 142.50',
+    actions: 'Download'
+  },
+  {
     id: "m5gr84i9",
-    assets: 24,
-    locations: 97,
-    status: "Approved",
-    name: 'Big Bunny 04',
-    startDate: '24/04/2025',
-    endDate: '31/04/2025',
-    actions: ''
+    status: "Overdue",
+    description: 'Campaign Jan.',
+    date: '27-08-2023',
+    customerName: 'DHG & Partners',
+    amount: '€ 142.50',
+    actions: 'Download'
   },
   {
     id: "3u1reuv4",
-    assets: 5,
-    locations: 12,
-    status: "Unpaid",
-    name: 'Fizzy Pop Adreel',
-    startDate: '12/04/2025',
-    endDate: '21/04/2025',
-    actions: ''
-  },
-  {
-    id: "derv1ws0",
-    assets: 5,
-    locations: 12,
-    status: "Running",
-    name: 'Lorem.png',
-    startDate: '12/04/2025',
-    endDate: '21/04/2025',
-    actions: ''
+    status: "Paid",
+    description: 'Campaign Jan.',
+    date: '27-08-2023',
+    customerName: 'DHG & Partners',
+    amount: '€ 142.50',
+    actions: 'Pay now'
   }
 ]
 
 export type Payment = {
   id: string
-  assets: number
-  locations: number
-  status: "Approved" | "Unpaid" | "Running"
-  startDate: string,
-  endDate: string,
-  actions: string,
-    name: string
+  status: "Paid" | "Overdue"
+  description: string,
+  date: string,
+  customerName: string,
+  amount: string,
+  actions: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
@@ -96,10 +94,31 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "name",
-    header: "Name",
+    accessorKey: "description",
+    header: "Description",
     cell: ({ row }) => (
-        <h4 className="text-black text-base font-bold">{row.getValue("name")}</h4>
+        <h4 className="text-black text-base font-bold">{row.getValue("description")}</h4>
+    ),
+  },
+  {
+    accessorKey: "date",
+    header: "Date",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("date")}</div>
+    ),
+  },
+  {
+    accessorKey: "customerName",
+    header: "Customer Name",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("customerName")}</div>
+    ),
+  },
+  {
+    accessorKey: "amount",
+    header: "Amount",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("amount")}</div>
     ),
   },
   {
@@ -110,43 +129,20 @@ export const columns: ColumnDef<Payment>[] = [
     ),
   },
   {
-    accessorKey: "assets",
-    header: "Assets",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("assets")}</div>
-    ),
-  },
-  {
-    accessorKey: "locations",
-    header: "Locations",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("locations")}</div>
-    ),
-  },
-  {
-    accessorKey: "startDate",
-    header: "Start date",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("startDate")}</div>
-    ),
-  },
-  {
-    accessorKey: "endDate",
-    header: "End date",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("endDate")}</div>
-    ),
-  },
-  {
-    id: "actions",
-    accessorKey: "sctions",
+    // id: "actions",
+    accessorKey: "actions",
     header: "Actions",
-    enableHiding: false,
+    // enableHiding: false,
     cell: ({ row }) => {
-      const payment = row.original
+      // const payment = row.original
       
       return (
-        <ActionDropdown payment={payment} />
+        <Link href={'/'} className="flex gap-2.5">
+          {row.getValue("actions")}
+
+          {row.getValue("actions") === "Download" && <Download color="#000" />}
+          {row.getValue("actions") === "Pay now" && <ArrowRight color="#000" />}
+        </Link>
       )
     },
   },

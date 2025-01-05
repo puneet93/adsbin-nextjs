@@ -22,5 +22,9 @@ label{
 }
 
 select, input{
-  @apply !h-11 shadow-formField;
+  @apply !h-11 shadow-formField !border-border-btn !text-base !px-5;
+}
+
+textarea, button[role="combobox"]{
+  @apply shadow-formField !border-border-btn !text-base !px-5;
 }

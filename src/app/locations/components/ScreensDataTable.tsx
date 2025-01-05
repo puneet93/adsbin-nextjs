@@ -26,75 +26,40 @@ import {
 } from "@/components/ui/table"
 import Status from "@/components/Status"
 import ActionDropdown from "@/components/ActionDropdown"
-import { PaginationUI } from "@/components/Pagination"
 
 const data: Payment[] = [
   {
+    id: "derv1ws0",
+    status: "Online",
+    name: 'LG G4 55 Inch',
+    orientation: '0 Deg.',
+    actions: ''
+  },
+  {
     id: "m5gr84i9",
-    assets: 24,
-    locations: 97,
-    status: "Approved",
-    name: 'Big Bunny 04',
-    startDate: '24/04/2025',
-    endDate: '31/04/2025',
+    status: "Online",
+    name: 'LG H Series 32 Inch',
+    orientation: '90 Deg.',
     actions: ''
   },
   {
     id: "3u1reuv4",
-    assets: 5,
-    locations: 12,
-    status: "Unpaid",
-    name: 'Fizzy Pop Adreel',
-    startDate: '12/04/2025',
-    endDate: '21/04/2025',
-    actions: ''
-  },
-  {
-    id: "derv1ws0",
-    assets: 5,
-    locations: 12,
-    status: "Running",
-    name: 'Lorem.png',
-    startDate: '12/04/2025',
-    endDate: '21/04/2025',
+    status: "Online",
+    name: 'LG G4 55 Inch',
+    orientation: '0 Deg.',
     actions: ''
   }
 ]
 
 export type Payment = {
   id: string
-  assets: number
-  locations: number
-  status: "Approved" | "Unpaid" | "Running"
-  startDate: string,
-  endDate: string,
+  status: "Approved" | "Unpaid" | "Running" | "Online"
+  orientation: string,
   actions: string,
     name: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
-  {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
-        onCheckedChange={(value: any) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value: any) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
   {
     accessorKey: "name",
     header: "Name",
@@ -110,31 +75,10 @@ export const columns: ColumnDef<Payment>[] = [
     ),
   },
   {
-    accessorKey: "assets",
-    header: "Assets",
+    accessorKey: "orientation",
+    header: "Orientation",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("assets")}</div>
-    ),
-  },
-  {
-    accessorKey: "locations",
-    header: "Locations",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("locations")}</div>
-    ),
-  },
-  {
-    accessorKey: "startDate",
-    header: "Start date",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("startDate")}</div>
-    ),
-  },
-  {
-    accessorKey: "endDate",
-    header: "End date",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("endDate")}</div>
+      <div className="capitalize">{row.getValue("orientation")}</div>
     ),
   },
   {
@@ -152,7 +96,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTable() {
+export function ScreensDataTable() {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -181,15 +125,15 @@ export function DataTable() {
   })
 
   return (
-    <div className="w-full">
+    <div className="w-full border-b border-gray-light">
         <div className="overflow-auto">            
-        <Table className="mb-4">
+        <Table>
             <TableHeader>
                 {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>
                     {headerGroup.headers.map((header) => {
                     return (
-                        <TableHead key={header.id} className="tracking-wider text-base font-bold text-[#000]">
+                        <TableHead key={header.id} className="tracking-wider py-3 text-base font-bold text-[#000]">
                         {header.isPlaceholder
                             ? null
                             : flexRender(
@@ -210,7 +154,7 @@ export function DataTable() {
                     data-state={row.getIsSelected() && "selected"}
                     >
                     {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id} className="text-black text-base tracking-wider">
+                        <TableCell key={cell.id} className="text-black py-3 text-base tracking-wider">
                         {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()
@@ -232,7 +176,6 @@ export function DataTable() {
             </TableBody>
             </Table>
         </div>
-            <PaginationUI />
     </div>
   )
 }
