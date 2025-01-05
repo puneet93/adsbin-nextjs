@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react"
 import { DataTable } from "./DataTable"
 
-export default function TeamDataTable(){
+export default function LocationDataTable(){
     return(
         <div className="border-t border-gray-light">
             <div className="md:py-5 md:pr-3.5 md:pl-12 p-4 flex md:flex-row flex-col md:items-center gap-2.5">
