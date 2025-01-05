@@ -15,6 +15,7 @@ export default {
 			black: '#415B41',
 			dark: '#000000',
 			'green-text': '#17412D',
+			'green-text-btn': '#345947',
 			green: '#4DBB18',
 			approved: '#64A446',
 			approvedBg: '#E4FCDC',
@@ -23,6 +24,8 @@ export default {
 			running: '#C9C9C9',
 			runningBg: '#F0F0F0',
 			body: '#606060',
+			'A0A': '#A0A0A0',
+			'border-btn': '#AEADAD',
 			'gray-light': '#ECECEC',
   		},
   		borderRadius: {
@@ -32,7 +35,7 @@ export default {
   		},
 		boxShadow:{
 			container: "0px 0px 44px 0px rgba(0,0,0,0.1)",
-			formField: '0px 4px 4px 0px rgba(0,0,0,0.4)'
+			formField: '0px 4px 4px 0px rgba(0,0,0,0.04)'
 		}
   	}
   },

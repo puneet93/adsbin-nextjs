@@ -20,7 +20,7 @@ export default function StepSecond(){
                     <Input type="url" placeholder="https://yourwebsite.address" />
                 </div>
                 <div className="flex w-full max-w-xl items-center md:gap-5 gap-2.5">
-                    <Label htmlFor="picture" className="text-nowrap min-w-24">Show QR:</Label>
+                    <Label className="text-nowrap min-w-24">Show QR:</Label>
                     <Select>
                         <SelectTrigger className="w-32 h-11">
                             <SelectValue placeholder="None" />
@@ -43,7 +43,7 @@ export default function StepSecond(){
                     </Select>
                 </div>
                 <div className="flex w-full max-w-xl items-center md:gap-5 gap-2.5">
-                    <Label htmlFor="picture" className="text-nowrap min-w-24">Type:</Label>
+                    <Label className="text-nowrap min-w-24">Type:</Label>
                     <Select>
                         <SelectTrigger className="w-44 h-11" disabled>
                             <SelectValue placeholder="Light" />

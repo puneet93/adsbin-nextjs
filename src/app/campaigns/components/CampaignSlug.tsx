@@ -1,4 +1,5 @@
 import StepFirst from "./StepFirst";
+import StepFour from "./StepFour";
 import StepSecond from "./StepSecond";
 import StepThird from "./StepThird";
 
@@ -8,6 +9,7 @@ export default function CampaignSlug(){
             <StepFirst />
             <StepSecond />
             <StepThird />
+            <StepFour />
         </div>
     )
 }
