@@ -24,84 +24,31 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { PaginationUI } from "@/components/Pagination"
+import Status from "@/components/Status"
 import ActionDropdown from "@/components/ActionDropdown"
+import { PaginationUI } from "@/components/Pagination"
+import User from "./User"
 import NameMedia from "@/components/NameMedia"
+import { Button } from "@/components/ui/button"
+import { CirclePlay } from "lucide-react"
+import Actions from "./Actions"
 
 const data: Payment[] = [
   {
-    id: "m5gr84i9",
-    amount: 316,
-    status: "Uploaded",
-    email: "ken99@yahoo.com",
-    img: '/image-1.png',
-    title: 'Poster of Big Bunny',
-    name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
-    actions: ''
-  },
-  {
-    id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
-    img: '/image-1.png',
-    title: 'Poster of Big Bunny',
-    name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
-    actions: ''
-  },
-  {
     id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
-    img: '/image-1.png',
-    title: 'Poster of Big Bunny',
-    name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
+    campaignName: 'Lorem.png',
+    play: '12/04/2025',
+    user: '21/04/2025',
     actions: ''
-  },
-  {
-    id: "5kma53ae",
-    amount: 874,
-    status: "success",
-    email: "Silas22@gmail.com",
-    img: '/image-1.png',
-    title: 'Poster of Big Bunny',
-    name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
-    actions: ''
-  },
-  {
-    id: "bhqecj4p",
-    amount: 721,
-    status: "failed",
-    email: "carmella@hotmail.com",
-    img: '/image-1.png',
-    title: 'Poster of Big Bunny',
-    name: 'Lorem.png',
-    type: 'Image',
-    size: '240kb',
-    actions: ''
-  },
+  }
 ]
 
 export type Payment = {
   id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed" | "Uploaded"
-  email: string,
-  type: string,
-  size: string,
+  user: string,
+  play: string,
   actions: string,
-  img: string,
-    title: string,
-    name: string
+  campaignName: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
@@ -128,46 +75,33 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "filename",
-    header: "Filename",
+    accessorKey: "campaignName",
+    header: "Campaign Name",
     cell: ({ row }) => (
       <NameMedia />
     ),
   },
   {
-    accessorKey: "type",
-    header: "Type",
+    accessorKey: "play",
+    header: "Play",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("type")}</div>
+      <Button variant={'outline'} className="text-base shadow-formField font-outfit border-border-btn !h-12 font-bold text-green-text-btn">Preview <CirclePlay color="#000" /></Button>
     ),
   },
   {
-    accessorKey: "size",
-    header: "Size",
+    accessorKey: "user",
+    header: "User",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("size")}</div>
+      <User />
     ),
   },
   {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
-    ),
-  },
-  {
-    id: "actions",
-    accessorKey: "sctions",
+    accessorKey: "actions",
     header: "Actions",
-    enableHiding: false,
-    cell: ({ row }) => {
-      const payment = row.original
-      
-      return (
-        <ActionDropdown payment={payment} />
-      )
-    },
-  },
+    cell: ({ row }) => (
+      <Actions />
+    ),
+  }
 ]
 
 export function DataTable() {
@@ -199,15 +133,15 @@ export function DataTable() {
   })
 
   return (
-    <div className="w-full">
+    <div className="w-full border-b border-gray-light">
         <div className="overflow-auto">            
-        <Table className="mb-4">
+        <Table>
             <TableHeader>
                 {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>
                     {headerGroup.headers.map((header) => {
                     return (
-                        <TableHead key={header.id} className="tracking-wider text-base font-bold text-[#000]">
+                        <TableHead key={header.id} className="tracking-wider py-3 text-base font-bold text-[#000]">
                         {header.isPlaceholder
                             ? null
                             : flexRender(
@@ -228,7 +162,7 @@ export function DataTable() {
                     data-state={row.getIsSelected() && "selected"}
                     >
                     {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id} className="text-black text-base tracking-wider">
+                        <TableCell key={cell.id} className="text-black py-3 text-base tracking-wider">
                         {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()
@@ -250,7 +184,6 @@ export function DataTable() {
             </TableBody>
             </Table>
         </div>
-            <PaginationUI />
     </div>
   )
 }

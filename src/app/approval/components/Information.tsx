@@ -1,0 +1,20 @@
+import { Button } from "@/components/ui/button";
+import { ThumbsDown, ThumbsUp, TriangleAlert } from "lucide-react";
+
+export default function Information(){
+    return(
+        <div className="px-5 grid md:grid-cols-2 grid-cols-1 items-start md:gap-2.5 gap-5 px-5 mb-5">
+            <div className="flex items-start gap-6 max-w-xl pr-8 w-full">
+                <TriangleAlert className="mt-2" />
+                <div className="flex flex-col items-start gap-2.5">
+                    <h1 className={`text-black tracking-tight text-4xl font-normal font-outfit`}>Approval required</h1>
+                    <p className="text-base tracking-wider text-body">Please approve these campaigns</p>
+                </div>
+            </div>
+            <div className="text-right flex items-center justify-end gap-2.5">
+                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-border-btn !h-12 font-bold text-green-text-btn">Deny All <ThumbsDown /></Button>
+                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-border-btn !h-12 font-bold text-green-text-btn">Approve All <ThumbsUp /></Button>
+            </div>
+        </div>
+    )
+}
