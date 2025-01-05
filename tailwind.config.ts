@@ -13,6 +13,7 @@ export default {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
 			black: '#415B41',
+			dark: '#000000',
 			'green-text': '#17412D',
 			green: '#4DBB18',
 			approved: '#64A446',
@@ -30,7 +31,8 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		boxShadow:{
-			container: "0px 0px 44px 0px rgba(0,0,0,0.1)"
+			container: "0px 0px 44px 0px rgba(0,0,0,0.1)",
+			formField: '0px 4px 4px 0px rgba(0,0,0,0.4)'
 		}
   	}
   },
