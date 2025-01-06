@@ -33,6 +33,10 @@ textarea, button[role="combobox"]{
   @apply shadow-formField !border-border-btn !text-base !px-5;
 }
 
+.select-box button[role="combobox"]{
+  @apply !border-gray-light;
+}
+
 .text-xsm{
   font-size: 13px;
 }
