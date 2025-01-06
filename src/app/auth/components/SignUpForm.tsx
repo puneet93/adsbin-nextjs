@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ArrowLeft, ArrowRight, CircleHelp } from "lucide-react";
-import Link from "next/link";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function SignUpForm(){
     return(
@@ -55,7 +54,7 @@ export default function SignUpForm(){
                 </div>
             </div>
 
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 md:px-0 px-5">
                 <Button variant={'outline'} className="p-0 border-0 mr-auto !bg-transparent shadow-none text-base font-bold text-body"><ArrowLeft color="#000" className="w-5 h-5" /> Go back</Button>
                 
                 <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-green rounded-none">Create Account <ArrowRight className="w-5 h-5" /></Button>
