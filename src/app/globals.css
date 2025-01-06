@@ -16,6 +16,10 @@ body {
   font-family: var(--font-outfit);
 }
 
+.font-nunito{
+  font-family: var(--font-nunito);
+}
+
 label{
   font-family: var(--font-outfit);
   @apply text-dark font-normal !text-base;
@@ -27,4 +31,8 @@ select, input{
 
 textarea, button[role="combobox"]{
   @apply shadow-formField !border-border-btn !text-base !px-5;
+}
+
+.text-xsm{
+  font-size: 13px;
 }

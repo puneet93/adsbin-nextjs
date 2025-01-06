@@ -134,7 +134,7 @@ export const columns: ColumnDef<Payment>[] = [
         <div><img src={"/image-1.png"} alt={"Title"} width="47" height="44" className="rounded-full" /></div>
         <div>
             <h4 className="text-black text-base font-bold">Poster of Big Bunny</h4>
-            <p className="text-[13px] font-normal">george.che@gmail.com</p>
+            <p className="text-xsm font-normal">george.che@gmail.com</p>
         </div>
         </div>
     ),

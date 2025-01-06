@@ -29,6 +29,7 @@ export default {
 			'818': '#818181',
 			'AAA': '#AAAAAA',
 			'920': '#920909',
+			'8C8': '#8C8C8C',
 			'border-btn': '#AEADAD',
 			'gray-light': '#ECECEC',
   		},

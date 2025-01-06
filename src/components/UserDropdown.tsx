@@ -19,7 +19,7 @@ export default function UserDropdown(){
                     <div className="flex items-center gap-5">
                         <div className="md:flex hidden flex-col items-start gap-1">
                             <span className="font-semibold text-base text-white">Jimmy van der Velde</span>
-                            <span className="font-bold text-[13px] text-black">DHG & Partners</span>
+                            <span className="font-bold text-xsm text-black">DHG & Partners</span>
                         </div>
 
                         <Avatar className="border-2 border-[#848484] w-12 h-12 rounded-full overflow-hidden">
