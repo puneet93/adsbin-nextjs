@@ -1,5 +1,5 @@
 import { Clock3, DollarSign, Eye, Plus } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../../../components/ui/button";
 
 export default function LocationCard({icon, title, content}:{icon:React.ReactNode, title:string, content:string}){
     return(

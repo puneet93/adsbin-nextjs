@@ -11,7 +11,7 @@ import {
     SelectValue,
   } from "@/components/ui/select"
 import GoogleMap from "@/components/GoogleMap";
-import LocationCard from "@/components/LocationCard";
+import LocationCard from "@/app/campaigns/components/LocationCard";
 
 export default function StepFour(){
     return(

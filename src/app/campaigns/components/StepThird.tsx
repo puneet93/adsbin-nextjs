@@ -1,5 +1,5 @@
-import MediaCard from "@/components/MediaCard";
-import MediaUpload from "@/components/MediaUpload";
+import MediaCard from "@/app/media/components/MediaCard";
+import MediaUpload from "@/app/media/components/MediaUpload";
 import StepHeader from "@/components/StepHeader";
 
 export default function StepThird(){

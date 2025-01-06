@@ -1,4 +1,4 @@
-import CampaignCard from "@/components/CampaignCard";
+import CampaignCard from "@/app/campaigns/components/CampaignCard";
 import StepHeader from "@/components/StepHeader";
 import { BookDown, Eye, ShoppingCart, User, UserPlus } from "lucide-react";
 

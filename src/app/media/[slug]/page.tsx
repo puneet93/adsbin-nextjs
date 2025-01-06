@@ -1,10 +1,10 @@
 import LayoutSidebar from "@/app/layoutSidebar";
-import MediaDetailsUI from "@/app/media/components/MediaDetails";
+import MediaDetails from "../components/MediaDetails";
 
 export default function page(){
     return(
         <LayoutSidebar>
-            <MediaDetailsUI />
+            <MediaDetails />
         </LayoutSidebar>
     )
 }

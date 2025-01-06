@@ -1,4 +1,4 @@
-import BrochureForm from "../components/BrochureForm";
+import BrochureForm from "./components/BrochureForm";
 import InfoHeader from "../components/InfoHeader";
 
 export default function page(){

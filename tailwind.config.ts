@@ -30,6 +30,7 @@ export default {
 			'AAA': '#AAAAAA',
 			'920': '#920909',
 			'8C8': '#8C8C8C',
+			'A6A': '#A6A6A6',
 			'border-btn': '#AEADAD',
 			'gray-light': '#ECECEC',
   		},

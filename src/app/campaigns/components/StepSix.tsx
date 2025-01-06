@@ -1,4 +1,4 @@
-import PaymentDetail from "@/components/PaymentDetail";
+import PaymentDetail from "@/app/campaigns/components/PaymentDetail";
 import StepHeader from "@/components/StepHeader";
 
 export default function StepSix(){

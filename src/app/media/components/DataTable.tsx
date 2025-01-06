@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/table"
 import { PaginationUI } from "@/components/Pagination"
 import ActionDropdown from "@/components/ActionDropdown"
-import NameMedia from "@/components/NameMedia"
+import NameMedia from "@/app/media/components/NameMedia"
 
 const data: Payment[] = [
   {

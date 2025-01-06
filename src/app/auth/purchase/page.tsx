@@ -1,5 +1,5 @@
 import InfoHeader from "../components/InfoHeader";
-import PurchaseForm from "../components/PurchaseForm";
+import PurchaseForm from "./components/PurchaseForm";
 
 export default function page(){
     return(

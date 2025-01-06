@@ -1,5 +1,5 @@
 import InfoHeader from "../components/InfoHeader";
-import SignUpForm from "../components/SignUpForm";
+import SignUpForm from "./components/SignUpForm";
 
 export default function page(){
     return(

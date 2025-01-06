@@ -1,6 +1,6 @@
+import FileDetailItem from "@/app/media/components/FileDetailItem";
 import { FileVideo } from "lucide-react";
 import Image from "next/image";
-import FileDetailItem from "./FileDetailItem";
 
 export default function MediaCard(){
     return(

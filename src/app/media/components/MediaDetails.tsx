@@ -1,5 +1,5 @@
-import FileDetailHeader from "@/components/FileDetailHeader";
-import FileDetailItems from "@/components/fileDetailItems";
+import FileDetailHeader from "@/app/media/components/FileDetailHeader";
+import FileDetailItems from "@/app/media/components/FileDetailItems";
 import Preview from "@/components/Preview";
 import { X } from "lucide-react";
 
