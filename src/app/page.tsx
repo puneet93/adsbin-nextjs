@@ -4,6 +4,7 @@ import Information from "../components/Information";
 import MediaData from "./media/components/MediaPage";
 import { CalendarDays } from "lucide-react";
 import Statistics from "@/components/Statistics";
+import Overview from "@/components/Overview";
 
 export default function page() {
   return (
@@ -16,6 +17,7 @@ export default function page() {
       
       <div className="border-t border-gray-light mt-10 py-5 grid md:grid-cols-2 grid-cols-1 gap-5">
         <Statistics />
+        <Overview />
       </div>
     </LayoutSidebar>
   );

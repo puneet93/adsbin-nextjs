@@ -42,6 +42,9 @@ export default {
 		boxShadow:{
 			container: "0px 0px 44px 0px rgba(0,0,0,0.1)",
 			formField: '0px 4px 4px 0px rgba(0,0,0,0.04)'
+		},
+		spacing:{
+			'26': '108px'
 		}
   	}
   },

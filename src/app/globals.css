@@ -40,3 +40,7 @@ textarea, button[role="combobox"]{
 .text-xsm{
   font-size: 13px;
 }
+
+.sub sub{
+  @apply text-sm bottom-0 font-bold;
+}

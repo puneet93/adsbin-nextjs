@@ -5,7 +5,7 @@ import { BarChartStatistics } from "./BarChartStatistics";
 
 export default function Statistics(){
     return(
-        <div className="p-5">
+        <div className="p-5 border-b border-gray-light">
             <div className="flex items-center mb-5 justify-between">
                 <h3 className="text-black text-2xl font-outfit tracking-tight">Statistics</h3>
                 <Button asChild variant={'outline'} className="px-5 py-2.5 tracking-wider border-0 uppercase !bg-transparent shadow-none text-base font-extrabold text-body">
@@ -13,7 +13,9 @@ export default function Statistics(){
                 </Button>
             </div>
 
-            <BarChartStatistics />
+            <div className="px-7">
+                <BarChartStatistics />
+            </div>
         </div>
     )
 }
