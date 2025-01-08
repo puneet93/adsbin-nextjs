@@ -12,7 +12,7 @@ import {
 export default function StepThird(){
     return(
         <div>
-            <StepHeader count={3} title="Notifications" children={undefined} />
+            <StepHeader count={3} title="Notifications"><></></StepHeader>
 
             <div className="flex flex-col pt-2 pb-5 gap-2.5">
                 <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">

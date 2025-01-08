@@ -7,7 +7,7 @@ import Overview from "./components/Overview";
 export default function page(){
     return(
         <LayoutSidebar>
-            <Information goBack={false} content="Here you can view and analyze all your key data insights in one place." label="STATISTICS" align="top" title="Statistics Dashboard" children={false} />
+            <Information goBack={false} content="Here you can view and analyze all your key data insights in one place." label="STATISTICS" align="top" title="Statistics Dashboard" />
 
            <Campaign />
 

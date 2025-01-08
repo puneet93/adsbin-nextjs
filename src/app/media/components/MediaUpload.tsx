@@ -1,5 +1,5 @@
-import { CirclePlus, CirclePlusIcon, FilmIcon, PlusCircle } from "lucide-react";
-import { Button } from "../../../components/ui/button";
+import { Button } from "@/components/ui/button";
+import { CirclePlusIcon, FilmIcon } from "lucide-react";
 
 export default function MediaUpload(){
     return(

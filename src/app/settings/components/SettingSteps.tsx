@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, Save } from "lucide-react";
+import { ArrowLeft, Save } from "lucide-react";
 import StepFirst from "./StepFirst";
 import StepSecond from "./StepSecond";
 import StepThird from "./StepThird";

@@ -12,7 +12,7 @@ import {
 export default function StepSecond(){
     return(
         <div>
-            <StepHeader count={2} title="Target Links and Engagement" children={undefined} />
+            <StepHeader count={2} title="Target Links and Engagement"><></></StepHeader>
 
             <div className="flex flex-col py-5 mb-5 gap-5 md:px-0 px-5">
                 <div className="flex w-full max-w-xl items-center md:gap-5 gap-2.5">

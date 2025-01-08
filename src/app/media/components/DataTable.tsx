@@ -113,14 +113,14 @@ export const columns: ColumnDef<Payment>[] = [
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && "indeterminate")
         }
-        onCheckedChange={(value: any) => table.toggleAllPageRowsSelected(!!value)}
+        onCheckedChange={(value: boolean) => table.toggleAllPageRowsSelected(!!value)}
         aria-label="Select all"
       />
     ),
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
-        onCheckedChange={(value: any) => row.toggleSelected(!!value)}
+        onCheckedChange={(value: boolean) => row.toggleSelected(!!value)}
         aria-label="Select row"
       />
     ),
@@ -130,7 +130,7 @@ export const columns: ColumnDef<Payment>[] = [
   {
     accessorKey: "filename",
     header: "Filename",
-    cell: ({ row }) => (
+    cell: () => (
       <NameMedia />
     ),
   },
@@ -170,7 +170,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
 ]
 
-export function DataTable() {
+export function DataTable({getValue}:{getValue:() => void}) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -226,6 +226,7 @@ export function DataTable() {
                     <TableRow
                     key={row.id}
                     data-state={row.getIsSelected() && "selected"}
+                    onClick={getValue}
                     >
                     {row.getVisibleCells().map((cell) => (
                         <TableCell key={cell.id} className="text-black text-base tracking-wider">

@@ -1,39 +1,25 @@
-import { Button } from "@/components/ui/button"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
-import { Ellipsis, Search } from "lucide-react"
-import { DataTable } from "./DataTable"
+"use client";
 
-export default function MediaData(){
+import Information from "@/components/Information";
+import { Button } from "@/components/ui/button";
+import { Upload } from "lucide-react";
+import MediaDetails from "./MediaDetails";
+import MediaData from "./MediaData";
+import { useState } from "react";
+
+export default function MediaPage(){
+    const [show, setShow] = useState(false)
+
     return(
-        <div className="border-t border-gray-light">
-            <div className="md:py-5 md:pr-3.5 md:pl-12 p-4 flex md:flex-row flex-col md:items-center gap-2.5">
-                <div className="flex items-center pr-5 justify-between flex-grow">
-                    <h5 className="text-body text-base tracking-wide">5 files selected</h5>
-
-                    <DropdownMenu>
-                        <DropdownMenuTrigger className="flex items-center gap-2.5 text-[#000] text-sm font-semibold outline-none">Apply to selection <Ellipsis color="#415B41" size={24} /></DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuItem>Profile</DropdownMenuItem>
-                            <DropdownMenuItem>Billing</DropdownMenuItem>
-                            <DropdownMenuItem>Team</DropdownMenuItem>
-                            <DropdownMenuItem>Subscription</DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-                </div>
-
-                <form action="/" className="relative">
-                    <Input placeholder="Search Term" className="rounded-full pr-10 font-semibold min-h-10 min-w-56" />
-                    <Button variant={'link'} className="p-0 absolute top-0.5 right-0 min-w-12"><Search color="#415B41" size={32} /></Button>
-                </form>
-            </div>
-            
-            <DataTable />
-        </div>
+        !show ? (
+            <>
+                <Information goBack={false} label="Media" title="Images and videos" content="Upload your campaign imagery. Max 1GB per file. Video or audio files.">
+                    <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-green rounded-none">Upload new File <Upload className="w-4 h-4" /></Button>
+                </Information>
+                <MediaData getValue={() => setShow(!show)} />
+            </>
+        ):(
+            <MediaDetails getValue={() => setShow(!show)} />
+        )
     )
 }

@@ -5,7 +5,7 @@ import { BookDown, Eye, ShoppingCart, User, UserPlus } from "lucide-react";
 export default function StepFirst(){
     return(
         <div>
-            <StepHeader count={1} title="What is the target of the Campaign?" children={undefined} />
+            <StepHeader count={1} title="What is the target of the Campaign?"><></></StepHeader>
 
             <div className="p-5 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                 <CampaignCard icon={<ShoppingCart color="#000" size={24} />} title="Sales" content="Drive direct purchases of your products or services through targeted advertising." />

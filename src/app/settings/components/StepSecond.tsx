@@ -11,7 +11,7 @@ import {
 export default function StepSecond(){
     return(
         <div>
-            <StepHeader count={2} title="Region" children={undefined} />
+            <StepHeader count={2} title="Region"><></></StepHeader>
 
             <div className="flex flex-col pt-2 pb-5 gap-2.5">
                 <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">

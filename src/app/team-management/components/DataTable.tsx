@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/table"
 import { PaginationUI } from "@/components/Pagination"
 import ActionDropdown from "@/components/ActionDropdown"
+import Image from "next/image"
 
 const data: Payment[] = [
   {
@@ -103,6 +104,7 @@ export type Payment = {
     name: string
 }
 
+
 export const columns: ColumnDef<Payment>[] = [
   {
     id: "select",
@@ -112,14 +114,14 @@ export const columns: ColumnDef<Payment>[] = [
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && "indeterminate")
         }
-        onCheckedChange={(value: any) => table.toggleAllPageRowsSelected(!!value)}
+        onCheckedChange={(value: boolean) => table.toggleAllPageRowsSelected(!!value)}
         aria-label="Select all"
       />
     ),
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
-        onCheckedChange={(value: any) => row.toggleSelected(!!value)}
+        onCheckedChange={(value: boolean) => row.toggleSelected(!!value)}
         aria-label="Select row"
       />
     ),
@@ -129,9 +131,9 @@ export const columns: ColumnDef<Payment>[] = [
   {
     accessorKey: "username",
     header: "Username",
-    cell: ({ row }) => (
+    cell: () => (
       <div className="flex items-center gap-2.5 min-w-60">
-        <div><img src={"/image-1.png"} alt={"Title"} width="47" height="44" className="rounded-full" /></div>
+        <div><Image src={"/image-1.png"} alt={"Title"} width="47" height="44" className="rounded-full" /></div>
         <div>
             <h4 className="text-black text-base font-bold">Poster of Big Bunny</h4>
             <p className="text-xsm font-normal">george.che@gmail.com</p>

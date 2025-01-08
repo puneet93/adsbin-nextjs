@@ -1,7 +1,7 @@
 export default function StepHeader({
     children, count, title
   }: {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     count:number; title:string
   }){
     return(

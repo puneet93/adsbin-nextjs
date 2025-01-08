@@ -16,7 +16,7 @@ import LocationCard from "@/app/campaigns/components/LocationCard";
 export default function StepFour(){
     return(
         <div>
-            <StepHeader children={undefined} count={4} title="Where do you want to Advertise?" />
+            <StepHeader count={4} title="Where do you want to Advertise?"><></></StepHeader>
 
             <div className="flex items-center gap-2.5 justify-between mb-5">
                 <div className="flex items-center gap-2.5">

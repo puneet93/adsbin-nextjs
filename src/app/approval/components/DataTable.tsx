@@ -24,9 +24,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import Status from "@/components/Status"
-import ActionDropdown from "@/components/ActionDropdown"
-import { PaginationUI } from "@/components/Pagination"
 import User from "./User"
 import NameMedia from "@/app/media/components/NameMedia"
 import { Button } from "@/components/ui/button"
@@ -60,14 +57,14 @@ export const columns: ColumnDef<Payment>[] = [
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && "indeterminate")
         }
-        onCheckedChange={(value: any) => table.toggleAllPageRowsSelected(!!value)}
+        onCheckedChange={(value: boolean) => table.toggleAllPageRowsSelected(!!value)}
         aria-label="Select all"
       />
     ),
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
-        onCheckedChange={(value: any) => row.toggleSelected(!!value)}
+        onCheckedChange={(value: boolean) => row.toggleSelected(!!value)}
         aria-label="Select row"
       />
     ),
@@ -77,28 +74,28 @@ export const columns: ColumnDef<Payment>[] = [
   {
     accessorKey: "campaignName",
     header: "Campaign Name",
-    cell: ({ row }) => (
+    cell: () => (
       <NameMedia />
     ),
   },
   {
     accessorKey: "play",
     header: "Play",
-    cell: ({ row }) => (
+    cell: () => (
       <Button variant={'outline'} className="text-base shadow-formField font-outfit border-border-btn !h-12 font-bold text-green-text-btn">Preview <CirclePlay color="#000" /></Button>
     ),
   },
   {
     accessorKey: "user",
     header: "User",
-    cell: ({ row }) => (
+    cell: () => (
       <User />
     ),
   },
   {
     accessorKey: "actions",
     header: "Actions",
-    cell: ({ row }) => (
+    cell: () => (
       <Actions />
     ),
   }

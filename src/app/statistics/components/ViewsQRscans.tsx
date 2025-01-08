@@ -1,6 +1,3 @@
-import { CircleArrowRight } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { BarChartStatistics } from "./BarChartStatistics";
 
 export default function ViewsQRscans(){

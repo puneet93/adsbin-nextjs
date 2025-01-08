@@ -11,7 +11,7 @@ import {
 export default function StepFirst(){
     return(
         <div>
-            <StepHeader count={1} title="Clock and Timezone" children={undefined} />
+            <StepHeader count={1} title="Clock and Timezone"><></></StepHeader>
 
             <div className="flex flex-col pt-2 pb-5 gap-2.5">
                 <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">

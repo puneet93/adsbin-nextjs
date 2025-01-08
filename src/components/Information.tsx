@@ -5,7 +5,7 @@ export default function Information({
     children,
     label, title, content, goBack, align = ""
   }: {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     label:string; title:string; content:string, goBack:boolean, align?:string
   }){
     return(

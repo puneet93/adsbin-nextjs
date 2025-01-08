@@ -26,7 +26,6 @@ import {
 } from "@/components/ui/table"
 import Status from "@/components/Status"
 import { PaginationUI } from "@/components/Pagination"
-import ActionDropdown from "@/components/ActionDropdown"
 import { ArrowRight, Download } from "lucide-react"
 import Link from "next/link"
 
@@ -79,14 +78,14 @@ export const columns: ColumnDef<Payment>[] = [
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && "indeterminate")
         }
-        onCheckedChange={(value: any) => table.toggleAllPageRowsSelected(!!value)}
+        onCheckedChange={(value: boolean) => table.toggleAllPageRowsSelected(!!value)}
         aria-label="Select all"
       />
     ),
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
-        onCheckedChange={(value: any) => row.toggleSelected(!!value)}
+        onCheckedChange={(value: boolean) => row.toggleSelected(!!value)}
         aria-label="Select row"
       />
     ),

@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
 import LayoutSidebar from "./layoutSidebar";
 import Information from "../components/Information";
-import MediaData from "./media/components/MediaPage";
 import { CalendarDays } from "lucide-react";
 import Statistics from "@/components/Statistics";
 import Overview from "@/components/Overview";
