@@ -2,11 +2,10 @@ import ViewsQRscans from "./components/ViewsQRscans";
 import Campaign from "./components/Campaign";
 import Overview from "./components/Overview";
 import Information from "@/components/Information";
-import Layout from "../layout";
 
 export default function page(){
     return(
-        <Layout>
+        <>
             <Information goBack={false} content="Here you can view and analyze all your key data insights in one place." label="STATISTICS" align="top" title="Statistics Dashboard" />
 
            <Campaign />
@@ -15,6 +14,6 @@ export default function page(){
                 <ViewsQRscans />
                 <Overview />
             </div>
-        </Layout>
+        </>
     )
 }

@@ -3,7 +3,7 @@ import { Clock, Coins, Lock } from "lucide-react"
 export default function Status({status}:{status:string}){
     if(status === 'Approved'){
         return(
-            <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-adsbin-adsbin-green-500-200 text-adsbin-evergreens bg-adsbin-adsbin-green-500-100 font-semibold">{status} <Lock color="#415B41"/></div>
+            <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-adsbin-green-500 text-adsbin-evergreens bg-adsbin-green-100 font-semibold">{status} <Lock color="#415B41"/></div>
         )
     }else if(status === 'Unpaid'){
         return(
@@ -15,11 +15,11 @@ export default function Status({status}:{status:string}){
         )
     }else if(status === 'Online'){
         return(
-            <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-adsbin-adsbin-green-500-200 text-adsbin-evergreens bg-adsbin-adsbin-green-500-100 font-semibold">{status}</div>
+            <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-adsbin-green-500 text-adsbin-evergreens bg-adsbin-green-100 font-semibold">{status}</div>
         )
     }else if(status === 'Paid'){
         return(
-            <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-adsbin-adsbin-green-500-200 text-adsbin-evergreens bg-adsbin-adsbin-green-500-100 font-semibold">{status}</div>
+            <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-adsbin-green-500 text-adsbin-evergreens bg-adsbin-green-100 font-semibold">{status}</div>
         )
     }else if(status === 'Overdue'){
         return(

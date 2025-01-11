@@ -13,7 +13,7 @@ export default function LocationCard({icon, title, content}:{icon:React.ReactNod
             </div>
 
             <div className="mb-7 flex flex-col gap-2">
-                <div className="flex items-center gap-2.5"><Eye size={20} className="text-adsbin-adsbin-green-500-400" /> <span>High visibility</span></div>
+                <div className="flex items-center gap-2.5"><Eye size={20} className="text-adsbin-green-400" /> <span>High visibility</span></div>
                 <div className="flex items-center gap-2.5"><Clock3 size={20} className="text-black" /> <span>Medium Exposure Time</span></div>
                 <div className="flex items-center gap-2.5"><DollarSign size={20} className="text-black" /> <span>High Value</span></div>
             </div>
