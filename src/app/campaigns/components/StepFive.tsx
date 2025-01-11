@@ -14,15 +14,19 @@ export default function StepFive(){
         <div>
             <StepHeader count={5} title="Set the start and end dates"><></></StepHeader>
 
-            <div className="flex text-body flex-col py-5 mb-5 gap-5 md:px-0 px-5 max-w-xl w-full">
+            <div className="flex text-adsbin-grey-1000 flex-col py-5 mb-5 gap-5 md:px-0 px-5 max-w-xl w-full">
                 <p className="tracking-wide text-base">Reserve a certain number of hours of ad display over two weeks, and your ad will be shown multiple times, evenly distributed to maximise visibility.</p>
 
-                <div className="flex items-center md:gap-5 gap-2.5">
-                    <Label className="text-nowrap !font-normal min-w-24">Start Date:</Label>
-                    <DatePicker />
+                <div className="flex items-center flex-wrap gap-5">
+                    <div className="flex items-center md:gap-5 gap-2.5">
+                        <Label className="text-nowrap !font-normal min-w-24">Start Date:</Label>
+                        <DatePicker />
+                    </div>
 
-                    <Label className="text-nowrap !font-normal min-w-24">End Date:</Label>
-                    <DatePicker />
+                    <div className="flex items-center md:gap-5 gap-2.5">
+                        <Label className="text-nowrap !font-normal min-w-24">End Date:</Label>
+                        <DatePicker />
+                    </div>
                 </div>
                 <div className="flex items-center md:gap-5 gap-2.5 font-outfit">
                     <Label className="text-nowrap min-w-24">Duration</Label>

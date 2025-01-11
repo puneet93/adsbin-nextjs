@@ -23,7 +23,7 @@ export default function SignUpForm(){
                     <Label className="min-w-36 font-nunito mt-3">Repeat password</Label>
                     <div>
                         <Input type="text" className="!border-adsbin-grey-100 mb-5" />
-                        <p className="text-body text-xsm">Passwords must be 12+ characters with a mix of letters, numbers, and symbols. Change every 90 days; accounts lock after five failed attempts.</p>
+                        <p className="text-adsbin-grey-1000 text-xsm">Passwords must be 12+ characters with a mix of letters, numbers, and symbols. Change every 90 days; accounts lock after five failed attempts.</p>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@ export default function SignUpForm(){
             </div>
 
             <div className="flex items-center gap-1.5 md:px-0 px-5">
-                <Button variant={'outline'} className="p-0 border-0 mr-auto !bg-transparent shadow-none text-base font-bold text-body"><ArrowLeft color="#000" className="w-5 h-5" /> Go back</Button>
+                <Button variant={'outline'} className="p-0 border-0 mr-auto !bg-transparent shadow-none text-base font-bold text-adsbin-grey-1000"><ArrowLeft color="#000" className="w-5 h-5" /> Go back</Button>
                 
                 <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">Create Account <ArrowRight className="w-5 h-5" /></Button>
             </div>

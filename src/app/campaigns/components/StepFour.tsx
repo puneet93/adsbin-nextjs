@@ -12,14 +12,15 @@ import {
   } from "@/components/ui/select"
 import GoogleMap from "@/components/GoogleMap";
 import LocationCard from "@/app/campaigns/components/LocationCard";
+import SelectedLocations from "./SelectedLocations";
 
 export default function StepFour(){
     return(
         <div>
             <StepHeader count={4} title="Where do you want to Advertise?"><></></StepHeader>
 
-            <div className="flex items-center gap-2.5 justify-between mb-5">
-                <div className="flex items-center gap-2.5">
+            <div className="flex items-center flex-wrap gap-2.5 justify-between mb-5 md:px-0 px-5">
+                <div className="flex flex-wrap items-center gap-2.5">
                     <form action="/" className="relative">
                         <Input placeholder="Place search" className="rounded-sm shadow-formField text-adsbin-adsbin-green-500-300 placeholder:text-adsbin-adsbin-green-500-300 font-outfit text-base border-adsbin-grey-200 pr-10 font-normal min-h-10 min-w-72" />
                         <Button variant={'link'} className="p-0 absolute top-0.5 right-0 min-w-12"><Search color="#000" size={32} /></Button>
@@ -57,12 +58,14 @@ export default function StepFour(){
 
             <GoogleMap />
 
-            <div className="py-5 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
+            <div className="py-5 md:px-0 px-5 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
                 <LocationCard icon={<ShoppingBag color="#000" className="mb-3" />} title="DUBAI MALL" content="Dubai Mall is the world’s largest mall, featuring over 1,300 stores, an aquarium, ice rink, and numerous dining options." />
                 <LocationCard icon={<ShoppingBag color="#000" className="mb-3" />} title="MALL OF THE EMIRATES" content="Mall of the Emirates features 560 stores, Ski Dubai, VOX Cinemas, luxury hotels, and diverse dining options, making it a must-visit." />
                 <LocationCard icon={<ShoppingBag color="#000" className="mb-3" />} title="Ibn Battuta Mall" content="Ibn Battuta Mall, the world’s largest themed mall, features 300+ stores, dining, and decor inspired by the explorer’s travels" />
                 <LocationCard icon={<ShoppingBag color="#000" className="mb-3" />} title="Dubai Marina Mall" content="Dubai Marina Mall offers 140 stores, 21 dining options, and a children’s play area, all within 390,000 square feet" />
             </div>
+
+            <SelectedLocations />
         </div>
     )
 }

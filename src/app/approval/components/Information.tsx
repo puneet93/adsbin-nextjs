@@ -8,7 +8,7 @@ export default function Information(){
                 <TriangleAlert className="mt-2" />
                 <div className="flex flex-col items-start gap-2.5">
                     <h1 className={`text-adsbin-evergreens tracking-tight text-4xl font-normal font-outfit`}>Approval required</h1>
-                    <p className="text-base tracking-wider text-body">Please approve these campaigns</p>
+                    <p className="text-base tracking-wider text-adsbin-grey-1000">Please approve these campaigns</p>
                 </div>
             </div>
             <div className="text-right flex items-center justify-end gap-2.5">

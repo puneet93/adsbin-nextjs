@@ -14,7 +14,7 @@ export default function PurchaseForm(){
             <PurchaseAdditionalInformation />
 
             <div className="flex items-center gap-1.5 md:px-0 px-5">
-                <Button variant={'outline'} className="p-0 border-0 mr-auto !bg-transparent shadow-none text-base font-bold text-body"><ArrowLeft color="#000" className="w-5 h-5" /> Go back</Button>
+                <Button variant={'outline'} className="p-0 border-0 mr-auto !bg-transparent shadow-none text-base font-bold text-adsbin-grey-1000"><ArrowLeft color="#000" className="w-5 h-5" /> Go back</Button>
                 
                 <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">Pay now <ArrowRight className="w-5 h-5" /></Button>
             </div>

@@ -6,9 +6,9 @@ export default function InfoHeader({
     return(
         <>
             <div className="flex flex-col gap-2.5 p-5">
-                {label && <h6 className="uppercase text-body tracking-widest text-xsm font-bold"># {label}</h6>}
+                {label && <h6 className="uppercase text-adsbin-grey-1000 tracking-widest text-xsm font-bold"># {label}</h6>}
                 <h1 className={`text-adsbin-evergreens tracking-tight text-4xl font-normal font-outfit`}>{title}</h1>
-                <p className="text-base tracking-wider text-body">{content}</p>
+                <p className="text-base tracking-wider text-adsbin-grey-1000">{content}</p>
             </div>
             <hr className="border-adsbin-grey-100 my-5" />
         </>

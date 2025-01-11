@@ -6,7 +6,7 @@ export default function StepSix(){
         <div>
             <StepHeader count={6} title="Payment Details"><></></StepHeader>
 
-            <div className="flex tracking-wide text-body flex-col py-5 mb-5 gap-5 md:px-0 px-5">
+            <div className="flex tracking-wide text-adsbin-grey-1000 flex-col py-5 mb-5 gap-5 md:px-0 px-5">
                 <p className="text-base max-w-xl w-full">Here you see an overview of your items.</p>
 
                 <PaymentDetail />

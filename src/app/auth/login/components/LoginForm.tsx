@@ -19,7 +19,7 @@ export default function LoginForm(){
             </div>
 
             <div className="flex items-center gap-1.5 md:px-0 px-5 flex-wrap">
-                <Button variant={'outline'} className="p-0 border-0 mr-auto !bg-transparent shadow-none text-base font-bold text-body"><ArrowLeft color="#000" className="w-5 h-5" /> Go back</Button>
+                <Button variant={'outline'} className="p-0 border-0 mr-auto !bg-transparent shadow-none text-base font-bold text-adsbin-grey-1000"><ArrowLeft color="#000" className="w-5 h-5" /> Go back</Button>
 
                 <div className="gap-1.5 flex items-center ml-auto">
                     <Button asChild variant={'outline'} className="px-5 py-2.5 border-0 !bg-transparent shadow-none text-base font-bold text-adsbin-grey-600">

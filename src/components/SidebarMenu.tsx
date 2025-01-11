@@ -25,7 +25,7 @@ export default function Sidebar(){
                 <Link
                     key={index}
                     href={item.href}
-                    className={`flex items-center gap-5 leading-none text-[#606060] text-sm tracking-wide py-4 px-5 border-t border-adsbin-grey-100 transition-all border-r-4 ${
+                    className={`flex items-center gap-5 leading-none text--adsbin-grey-1000 text-sm tracking-wide py-4 px-5 border-t border-adsbin-grey-100 transition-all border-r-4 ${
                         pathname === item.href ? 'border-r-adsbin-green-500' : 'border-r-transparent hover:border-r-adsbin-green-500'
                     } 
                         ${
@@ -40,7 +40,7 @@ export default function Sidebar(){
                     </span>
                 </Link>
             ))}
-            <p className="text-[10px] text-[#606060] font-semibold text-right py-2 px-6 border-t border-adsbin-grey-100">Version 0.2.1.223</p>
+            <p className="text-[10px] text--adsbin-grey-1000 font-semibold text-right py-2 px-6 border-t border-adsbin-grey-100">Version 0.2.1.223</p>
         </div>
     )
 }
