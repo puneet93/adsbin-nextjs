@@ -1,4 +1,4 @@
-import LayoutSidebar from "./layoutSidebar";
+import LayoutSidebar from "./(dashboard)/layout";
 import Information from "../components/Information";
 import { CalendarDays } from "lucide-react";
 import Statistics from "@/components/Statistics";
