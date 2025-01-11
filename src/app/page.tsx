@@ -13,7 +13,7 @@ export default function page() {
         </div>
       </Information>
       
-      <div className="border-t border-gray-light mt-10 py-5 grid md:grid-cols-2 grid-cols-1 gap-5">
+      <div className="border-t border-adsbin-grey-100 mt-10 py-5 grid md:grid-cols-2 grid-cols-1 gap-5">
         <Statistics />
         <Overview />
       </div>

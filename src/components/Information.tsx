@@ -13,7 +13,7 @@ export default function Information({
             <div className="flex flex-col items-start gap-2.5 max-w-xl pr-8 w-full">
                 {goBack && <Button variant={'ghost'} className="p-0 h-auto !bg-transparent tracking-tight text-base text-body font-bold"><ArrowLeft color="#000" /> Go back</Button>}
                 {label && <h6 className="uppercase text-body tracking-widest text-xsm font-bold"># {label}</h6>}
-                <h1 className={`text-black tracking-tight text-4xl font-normal font-outfit`} dangerouslySetInnerHTML={{__html: title}} />
+                <h1 className={`text-adsbin-evergreens tracking-tight text-4xl font-normal font-outfit`} dangerouslySetInnerHTML={{__html: title}} />
                 <p className="text-base tracking-wider text-body">{content}</p>
             </div>
             <div className="text-right">

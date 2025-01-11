@@ -135,7 +135,7 @@ export const columns: ColumnDef<Payment>[] = [
       <div className="flex items-center gap-2.5 min-w-60">
         <div><Image src={"/image-1.png"} alt={"Title"} width="47" height="44" className="rounded-full" /></div>
         <div>
-            <h4 className="text-black text-base font-bold">Poster of Big Bunny</h4>
+            <h4 className="text-adsbin-evergreens text-base font-bold">Poster of Big Bunny</h4>
             <p className="text-xsm font-normal">george.che@gmail.com</p>
         </div>
         </div>
@@ -235,7 +235,7 @@ export function DataTable() {
                     data-state={row.getIsSelected() && "selected"}
                     >
                     {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id} className="text-black text-base tracking-wider">
+                        <TableCell key={cell.id} className="text-adsbin-evergreens text-base tracking-wider">
                         {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()

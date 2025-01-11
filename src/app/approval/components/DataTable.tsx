@@ -82,7 +82,7 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "play",
     header: "Play",
     cell: () => (
-      <Button variant={'outline'} className="text-base shadow-formField font-outfit border-border-btn !h-12 font-bold text-green-text-btn">Preview <CirclePlay color="#000" /></Button>
+      <Button variant={'outline'} className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-adsbin-green-500-300">Preview <CirclePlay color="#000" /></Button>
     ),
   },
   {
@@ -130,7 +130,7 @@ export function DataTable() {
   })
 
   return (
-    <div className="w-full border-b border-gray-light">
+    <div className="w-full border-b border-adsbin-grey-100">
         <div className="overflow-auto">            
         <Table>
             <TableHeader>
@@ -159,7 +159,7 @@ export function DataTable() {
                     data-state={row.getIsSelected() && "selected"}
                     >
                     {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id} className="text-black py-3 text-base tracking-wider">
+                        <TableCell key={cell.id} className="text-adsbin-evergreens py-3 text-base tracking-wider">
                         {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()

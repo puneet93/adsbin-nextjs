@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function MediaCard(){
     return(
-        <div className="border border-gray-light p-5">
+        <div className="border border-adsbin-grey-100 p-5">
             <div className="relative h-40 mb-2.5">
                 <Image src={'/media-poster.png'} alt="media poster" fill={true} className="object-cover object-center" />
             </div>

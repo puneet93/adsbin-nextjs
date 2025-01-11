@@ -20,13 +20,13 @@ export default function Sidebar(){
     ];
 
     return(
-        <div className="fixed z-10 top-0 left-0 w-80 mt-[112px] bottom-0 border-r border-gray-light overflow-auto md:flex hidden flex-col">
+        <div className="fixed z-10 top-0 left-0 w-80 mt-[112px] bottom-0 border-r border-adsbin-grey-100 overflow-auto md:flex hidden flex-col">
             {menuItems.map((item, index) => (
                 <Link
                     key={index}
                     href={item.href}
-                    className={`flex items-center gap-5 leading-none text-[#606060] text-sm tracking-wide py-4 px-5 border-t border-gray-light transition-all border-r-4 ${
-                        pathname === item.href ? 'border-r-green' : 'border-r-transparent hover:border-r-green'
+                    className={`flex items-center gap-5 leading-none text-[#606060] text-sm tracking-wide py-4 px-5 border-t border-adsbin-grey-100 transition-all border-r-4 ${
+                        pathname === item.href ? 'border-r-adsbin-green-500' : 'border-r-transparent hover:border-r-adsbin-green-500'
                     } 
                         ${
                             item.label === 'Documentation' ? 'mt-auto' : ''
@@ -40,7 +40,7 @@ export default function Sidebar(){
                     </span>
                 </Link>
             ))}
-            <p className="text-[10px] text-[#606060] font-semibold text-right py-2 px-6 border-t border-gray-light">Version 0.2.1.223</p>
+            <p className="text-[10px] text-[#606060] font-semibold text-right py-2 px-6 border-t border-adsbin-grey-100">Version 0.2.1.223</p>
         </div>
     )
 }

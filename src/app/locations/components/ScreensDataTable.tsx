@@ -62,7 +62,7 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "name",
     header: "Name",
     cell: ({ row }) => (
-        <h4 className="text-black text-base font-bold">{row.getValue("name")}</h4>
+        <h4 className="text-adsbin-evergreens text-base font-bold">{row.getValue("name")}</h4>
     ),
   },
   {
@@ -123,7 +123,7 @@ export function ScreensDataTable() {
   })
 
   return (
-    <div className="w-full border-b border-gray-light">
+    <div className="w-full border-b border-adsbin-grey-100">
         <div className="overflow-auto">            
         <Table>
             <TableHeader>
@@ -152,7 +152,7 @@ export function ScreensDataTable() {
                     data-state={row.getIsSelected() && "selected"}
                     >
                     {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id} className="text-black py-3 text-base tracking-wider">
+                        <TableCell key={cell.id} className="text-adsbin-evergreens py-3 text-base tracking-wider">
                         {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()

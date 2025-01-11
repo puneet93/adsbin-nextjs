@@ -7,13 +7,13 @@ export default function Information(){
             <div className="flex items-start gap-6 max-w-xl pr-8 w-full">
                 <TriangleAlert className="mt-2" />
                 <div className="flex flex-col items-start gap-2.5">
-                    <h1 className={`text-black tracking-tight text-4xl font-normal font-outfit`}>Approval required</h1>
+                    <h1 className={`text-adsbin-evergreens tracking-tight text-4xl font-normal font-outfit`}>Approval required</h1>
                     <p className="text-base tracking-wider text-body">Please approve these campaigns</p>
                 </div>
             </div>
             <div className="text-right flex items-center justify-end gap-2.5">
-                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-border-btn !h-12 font-bold text-green-text-btn">Deny All <ThumbsDown /></Button>
-                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-border-btn !h-12 font-bold text-green-text-btn">Approve All <ThumbsUp /></Button>
+                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-adsbin-green-500-300">Deny All <ThumbsDown /></Button>
+                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-adsbin-green-500-300">Approve All <ThumbsUp /></Button>
             </div>
         </div>
     )

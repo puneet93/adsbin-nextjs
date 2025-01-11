@@ -21,12 +21,12 @@ export default function StepFour(){
             <div className="flex items-center gap-2.5 justify-between mb-5">
                 <div className="flex items-center gap-2.5">
                     <form action="/" className="relative">
-                        <Input placeholder="Place search" className="rounded-sm shadow-formField text-green-text-btn placeholder:text-green-text-btn font-outfit text-base border-border-btn pr-10 font-normal min-h-10 min-w-72" />
+                        <Input placeholder="Place search" className="rounded-sm shadow-formField text-adsbin-adsbin-green-500-300 placeholder:text-adsbin-adsbin-green-500-300 font-outfit text-base border-adsbin-grey-200 pr-10 font-normal min-h-10 min-w-72" />
                         <Button variant={'link'} className="p-0 absolute top-0.5 right-0 min-w-12"><Search color="#000" size={32} /></Button>
                     </form>
 
                     <Select>
-                        <SelectTrigger className="w-40 h-11 text-green-text-btn border-border-btn font-outfit text-base">
+                        <SelectTrigger className="w-40 h-11 text-adsbin-adsbin-green-500-300 border-adsbin-grey-200 font-outfit text-base">
                             <SelectValue placeholder="Venue type" />
                         </SelectTrigger>
                         <SelectContent>
@@ -36,7 +36,7 @@ export default function StepFour(){
                         </SelectContent>
                     </Select>
                     <Select>
-                        <SelectTrigger className="w-28 h-11 text-green-text-btn border-border-btn font-outfit text-base">
+                        <SelectTrigger className="w-28 h-11 text-adsbin-adsbin-green-500-300 border-adsbin-grey-200 font-outfit text-base">
                             <SelectValue placeholder="Map" />
                         </SelectTrigger>
                         <SelectContent>
@@ -46,12 +46,12 @@ export default function StepFour(){
                         </SelectContent>
                     </Select>
 
-                    <p className="px-2.5 text-A0A">6 Units found</p>
+                    <p className="px-2.5 text-adsbin-grey-500">6 Units found</p>
                 </div>
 
                 <div className="flex items-center gap-2.5">
                     <Label className="text-nowrap px-5 py-2 font-outfit font-bold">15 selected</Label>
-                    <Button variant={'outline'} className="text-base shadow-formField font-outfit border-border-btn !h-12 font-bold text-green-text-btn">Add All <ArrowRight color="#000" /></Button>
+                    <Button variant={'outline'} className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-adsbin-green-500-300">Add All <ArrowRight color="#000" /></Button>
                 </div>
             </div>
 

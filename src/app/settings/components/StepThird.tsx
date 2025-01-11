@@ -18,7 +18,7 @@ export default function StepThird(){
                 <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
                     <Label htmlFor="picture" className="text-nowrap min-w-40">Email </Label>
                     <Select>
-                        <SelectTrigger className="h-11 w-80 text-black !border-border-btn font-outfit font-normal">
+                        <SelectTrigger className="h-11 w-80 text-adsbin-evergreens !border-adsbin-grey-200 font-outfit font-normal">
                             <SelectValue placeholder="Enable all" />
                         </SelectTrigger>
                         <SelectContent>
@@ -31,7 +31,7 @@ export default function StepThird(){
                 <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
                     <Label htmlFor="picture" className="text-nowrap min-w-40">Web Push </Label>
                     <Select>
-                        <SelectTrigger className="h-11 w-80 text-black !border-border-btn font-outfit font-normal">
+                        <SelectTrigger className="h-11 w-80 text-adsbin-evergreens !border-adsbin-grey-200 font-outfit font-normal">
                             <SelectValue placeholder="Enable all" />
                         </SelectTrigger>
                         <SelectContent>
@@ -40,7 +40,7 @@ export default function StepThird(){
                             <SelectItem value="system">System</SelectItem>
                         </SelectContent>
                     </Select>
-                    <Button variant={'outline'} className="text-base shadow-formField font-outfit border-border-btn !h-12 font-bold text-green-text-btn">Approve Web Push</Button>
+                    <Button variant={'outline'} className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-adsbin-green-500-300">Approve Web Push</Button>
                 </div>
             </div>
         </div>

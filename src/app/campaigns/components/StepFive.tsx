@@ -27,7 +27,7 @@ export default function StepFive(){
                 <div className="flex items-center md:gap-5 gap-2.5 font-outfit">
                     <Label className="text-nowrap min-w-24">Duration</Label>
                     <Select>
-                        <SelectTrigger className="w-32 h-11 text-black">
+                        <SelectTrigger className="w-32 h-11 text-adsbin-evergreens">
                             <SelectValue placeholder="8 hours" />
                         </SelectTrigger>
                         <SelectContent>
@@ -36,13 +36,13 @@ export default function StepFive(){
                             <SelectItem value="system">System</SelectItem>
                         </SelectContent>
                     </Select>
-                    <p className="text-959">per location</p>
+                    <p className="text-adsbin-grey-700">per location</p>
                 </div>
                 <div className="flex items-center md:gap-5 gap-2.5 font-outfit">
                     <Label className="text-nowrap min-w-24">Exposure:</Label>
                     
-                    <p className="text-959">+/- 930 views per location</p>
-                    <p className="text-959">+/- 13.950 over 15 locations</p>
+                    <p className="text-adsbin-grey-700">+/- 930 views per location</p>
+                    <p className="text-adsbin-grey-700">+/- 13.950 over 15 locations</p>
                 </div>
             </div>
         </div>

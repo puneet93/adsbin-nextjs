@@ -7,7 +7,7 @@ export default function StepThird(){
         <div>
             <StepHeader count={3} title="What do you want to show?">
                 <div className="text-center ml-auto">
-                    <h5 className="text-lg text-dark font-bold">29 s. remaining</h5>
+                    <h5 className="text-lg text-black font-bold">29 s. remaining</h5>
                     <p className="text-sm text-body">max 1. min</p>
                 </div>
             </StepHeader>

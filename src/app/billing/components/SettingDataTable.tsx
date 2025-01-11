@@ -5,7 +5,7 @@ import { DataTable } from "./DataTable"
 
 export default function SettingDataTable(){
     return(
-        <div className="border-t border-gray-light">
+        <div className="border-t border-adsbin-grey-100">
             <div className="md:py-5 md:pr-3.5 md:pl-12 p-4 flex md:flex-row flex-col md:items-center gap-2.5">
                 <div className="flex items-center pr-5 justify-between flex-grow">
                     <h5 className="text-body text-base tracking-wide">No  selection</h5>

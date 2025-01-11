@@ -7,7 +7,7 @@ type FileDetailItemProps = {
 export default function FileDetailItem({title, info, customClass = ''}:FileDetailItemProps){
     return(
         <div className={`tracking-tight flex flex-col gap-1.5 px-5 text-base ${customClass}`}>
-            <h2 className="font-bold text-black">{title}</h2>
+            <h2 className="font-bold text-adsbin-evergreens">{title}</h2>
             <p className="text-body">{info}</p>
         </div>
     )

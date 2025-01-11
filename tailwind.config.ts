@@ -12,27 +12,34 @@ export default {
   		colors: {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
-			black: '#415B41',
+			'adsbin-evergreens': '#415B41',
 			dark: '#000000',
-			'green-text': '#17412D',
-			'green-text-btn': '#345947',
-			green: '#4DBB18',
-			approved: '#64A446',
-			approvedBg: '#E4FCDC',
-			unpaid: '#FF6E6E',
-			unpaidBg: '#FCDCDC',
-			running: '#C9C9C9',
-			runningBg: '#F0F0F0',
-			body: '#606060',
-			'A0A': '#A0A0A0',
-			'959': '#959393',
-			'818': '#818181',
-			'AAA': '#AAAAAA',
-			'920': '#920909',
-			'8C8': '#8C8C8C',
-			'A6A': '#A6A6A6',
-			'border-btn': '#AEADAD',
-			'gray-light': '#ECECEC',
+			'adsbin-grey': {
+				100: '#ECECEC', // gray-light
+				200: '#AEADAD', // border-btn
+				300: '#AAAAAA', // AAA
+				400: '#A6A6A6', // A6A
+				500: '#A0A0A0', // A0A
+				600: '#8C8C8C', // 8C8
+				700: '#959393', // 959
+				800: '#818181', // 818
+				900: '#920909', // 920
+			},
+			'adsbin-green': {
+				100: '#E4FCDC', // approvedBg
+				200: '#64A446', // approved
+				300: '#345947', // green-text-btn
+				400: '#17412D', // green-text
+				500: '#4DBB18', // green
+			},
+			'adsbin-red': {
+				100: '#FCDCDC', // unpaidBg
+				200: '#FF6E6E', // unpaid
+			},
+			'adsbin-neutral': {
+				100: '#F0F0F0', // runningBg
+				200: '#C9C9C9', // running
+			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

@@ -16,7 +16,7 @@ import {
 
 export default function PurchaseOrderDetails(){
     return(
-        <div className="px-5 pb-10 mb-5 gap-5 flex flex-col border-b border-gray-light">
+        <div className="px-5 pb-10 mb-5 gap-5 flex flex-col border-b border-adsbin-grey-100">
             <p className="text-xsm tracking-wider text-body font-semibold uppercase mb-5">ORDER DETAILS</p>
             <div className="flex select-box w-full max-w-xl items-center md:gap-5 gap-2.5">
                 <Label className="min-w-36 font-nunito">Quantity</Label>
@@ -32,21 +32,21 @@ export default function PurchaseOrderDetails(){
                 </Select>
             </div>
 
-            <Table className="text-base text-818">
+            <Table className="text-base text-adsbin-grey-800">
                 <TableBody>
                     <TableRow className="border-0">
-                        <TableCell className="py-5 font-semibold text-dark">Adsbin Unit</TableCell>
+                        <TableCell className="py-5 font-semibold text-black">Adsbin Unit</TableCell>
                         <TableCell className="py-5">1 unit</TableCell>
                         <TableCell className="py-5 text-right">$1999</TableCell>
                     </TableRow>
                     <TableRow className="border-0">
-                        <TableCell colSpan={2} className="py-5 font-semibold text-dark">Maintenance Subscription </TableCell>
+                        <TableCell colSpan={2} className="py-5 font-semibold text-black">Maintenance Subscription </TableCell>
                         <TableCell className="py-5 text-right">$100 <sub>p/m</sub></TableCell>
                     </TableRow>
                 </TableBody>
                 <TableFooter>
                     <TableRow className="bg-white">
-                        <TableCell colSpan={2} className="py-5 font-semibold text-dark">Total Amount (One year incl.)</TableCell>
+                        <TableCell colSpan={2} className="py-5 font-semibold text-black">Total Amount (One year incl.)</TableCell>
                         <TableCell className="py-3 text-right">$1999</TableCell>
                     </TableRow>
                 </TableFooter>

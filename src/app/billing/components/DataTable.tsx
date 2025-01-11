@@ -96,7 +96,7 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "description",
     header: "Description",
     cell: ({ row }) => (
-        <h4 className="text-black text-base font-bold">{row.getValue("description")}</h4>
+        <h4 className="text-adsbin-evergreens text-base font-bold">{row.getValue("description")}</h4>
     ),
   },
   {
@@ -205,7 +205,7 @@ export function DataTable() {
                     data-state={row.getIsSelected() && "selected"}
                     >
                     {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id} className="text-black text-base tracking-wider">
+                        <TableCell key={cell.id} className="text-adsbin-evergreens text-base tracking-wider">
                         {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()

@@ -11,7 +11,7 @@ export default function StepSix(){
 
                 <PaymentDetail />
 
-                <hr className="border-gray-light" />
+                <hr className="border-adsbin-grey-100" />
             </div>
         </div>
     )

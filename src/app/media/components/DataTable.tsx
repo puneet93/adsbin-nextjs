@@ -229,7 +229,7 @@ export function DataTable({getValue}:{getValue:() => void}) {
                     onClick={getValue}
                     >
                     {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id} className="text-black text-base tracking-wider">
+                        <TableCell key={cell.id} className="text-adsbin-evergreens text-base tracking-wider">
                         {flexRender(
                             cell.column.columnDef.cell,
                             cell.getContext()

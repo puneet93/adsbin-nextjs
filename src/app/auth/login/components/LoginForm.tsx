@@ -10,11 +10,11 @@ export default function LoginForm(){
             <div className="p-5 mb-5 gap-5 flex flex-col">
                 <div className="flex w-full max-w-xl items-center md:gap-5 gap-2.5">
                     <Label className="min-w-24 font-nunito">Username</Label>
-                    <Input type="text" className="!border-gray-light" />
+                    <Input type="text" className="!border-adsbin-grey-100" />
                 </div>
                 <div className="flex w-full max-w-xl items-center md:gap-5 gap-2.5">
                     <Label className="min-w-24 font-nunito">Password</Label>
-                    <Input type="text" className="!border-gray-light" />
+                    <Input type="text" className="!border-adsbin-grey-100" />
                 </div>
             </div>
 
@@ -22,13 +22,13 @@ export default function LoginForm(){
                 <Button variant={'outline'} className="p-0 border-0 mr-auto !bg-transparent shadow-none text-base font-bold text-body"><ArrowLeft color="#000" className="w-5 h-5" /> Go back</Button>
 
                 <div className="gap-1.5 flex items-center ml-auto">
-                    <Button asChild variant={'outline'} className="px-5 py-2.5 border-0 !bg-transparent shadow-none text-base font-bold text-8C8">
-                        <Link href={'/'}>Forgotten <CircleHelp className="text-8C8" /></Link>
+                    <Button asChild variant={'outline'} className="px-5 py-2.5 border-0 !bg-transparent shadow-none text-base font-bold text-adsbin-grey-600">
+                        <Link href={'/'}>Forgotten <CircleHelp className="text-adsbin-grey-600" /></Link>
                     </Button>
-                    <Button variant={'outline'} asChild className="px-5 py-2.5 border-0 !bg-transparent shadow-none text-base font-bold text-8C8">
+                    <Button variant={'outline'} asChild className="px-5 py-2.5 border-0 !bg-transparent shadow-none text-base font-bold text-adsbin-grey-600">
                         <Link href={'/'}>Sign Up</Link>
                     </Button>
-                    <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-green rounded-none">Login <ArrowRight className="w-5 h-5" /></Button>
+                    <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">Login <ArrowRight className="w-5 h-5" /></Button>
                 </div>
             </div>
         </>
