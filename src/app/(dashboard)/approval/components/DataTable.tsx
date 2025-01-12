@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -11,10 +11,10 @@ import {
   getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
-  useReactTable,
-} from "@tanstack/react-table"
+  useReactTable
+} from "@tanstack/react-table";
 
-import { Checkbox } from "@/components/ui/checkbox"
+import { Checkbox } from "@/components/ui/checkbox";
 
 import {
   Table,
@@ -22,31 +22,31 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-import User from "./User"
-import { Button } from "@/components/ui/button"
-import { CirclePlay } from "lucide-react"
-import Actions from "./Actions"
-import NameMedia from "./NameMedia"
+  TableRow
+} from "@/components/ui/table";
+import User from "./User";
+import { Button } from "@/components/ui/button";
+import { CirclePlay } from "lucide-react";
+import Actions from "./Actions";
+import NameMedia from "./NameMedia";
 
 const data: Payment[] = [
   {
     id: "derv1ws0",
-    campaignName: 'Lorem.png',
-    play: '12/04/2025',
-    user: '21/04/2025',
-    actions: ''
+    campaignName: "Lorem.png",
+    play: "12/04/2025",
+    user: "21/04/2025",
+    actions: ""
   }
-]
+];
 
 export type Payment = {
-  id: string
-  user: string,
-  play: string,
-  actions: string,
-  campaignName: string
-}
+  id: string;
+  user: string;
+  play: string;
+  actions: string;
+  campaignName: string;
+};
 
 export const columns: ColumnDef<Payment>[] = [
   {
@@ -57,7 +57,9 @@ export const columns: ColumnDef<Payment>[] = [
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && "indeterminate")
         }
-        onCheckedChange={(value: boolean) => table.toggleAllPageRowsSelected(!!value)}
+        onCheckedChange={(value: boolean) =>
+          table.toggleAllPageRowsSelected(!!value)
+        }
         aria-label="Select all"
       />
     ),
@@ -69,46 +71,45 @@ export const columns: ColumnDef<Payment>[] = [
       />
     ),
     enableSorting: false,
-    enableHiding: false,
+    enableHiding: false
   },
   {
     accessorKey: "campaignName",
     header: "Campaign Name",
-    cell: () => (
-      <NameMedia />
-    ),
+    cell: () => <NameMedia />
   },
   {
     accessorKey: "play",
     header: "Play",
     cell: () => (
-      <Button variant={'outline'} className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300">Preview <CirclePlay color="#000" /></Button>
-    ),
+      <Button
+        variant={"outline"}
+        className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300"
+      >
+        Preview <CirclePlay color="#000" />
+      </Button>
+    )
   },
   {
     accessorKey: "user",
     header: "User",
-    cell: () => (
-      <User />
-    ),
+    cell: () => <User />
   },
   {
     accessorKey: "actions",
     header: "Actions",
-    cell: () => (
-      <Actions />
-    ),
+    cell: () => <Actions />
   }
-]
+];
 
 export function DataTable() {
-  const [sorting, setSorting] = React.useState<SortingState>([])
+  const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
-  )
+  );
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({})
-  const [rowSelection, setRowSelection] = React.useState({})
+    React.useState<VisibilityState>({});
+  const [rowSelection, setRowSelection] = React.useState({});
 
   const table = useReactTable({
     data,
@@ -125,62 +126,68 @@ export function DataTable() {
       sorting,
       columnFilters,
       columnVisibility,
-      rowSelection,
-    },
-  })
+      rowSelection
+    }
+  });
 
   return (
     <div className="w-full border-b border-adsbin-grey-100">
-        <div className="overflow-auto">            
+      <div className="overflow-auto">
         <Table>
-            <TableHeader>
-                {table.getHeaderGroups().map((headerGroup) => (
-                <TableRow key={headerGroup.id}>
-                    {headerGroup.headers.map((header) => {
-                    return (
-                        <TableHead key={header.id} className="tracking-wider py-3 text-base text-nowrap font-bold text-[#000]">
-                        {header.isPlaceholder
-                            ? null
-                            : flexRender(
-                                header.column.columnDef.header,
-                                header.getContext()
-                            )}
-                        </TableHead>
-                    )
-                    })}
-                </TableRow>
-                ))}
-            </TableHeader>
-            <TableBody>
-                {table.getRowModel().rows?.length ? (
-                table.getRowModel().rows.map((row) => (
-                    <TableRow
-                    key={row.id}
-                    data-state={row.getIsSelected() && "selected"}
+          <TableHeader>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                {headerGroup.headers.map((header) => {
+                  return (
+                    <TableHead
+                      key={header.id}
+                      className="tracking-wider py-3 text-base text-nowrap font-bold text-[#000]"
                     >
-                    {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id} className="text-adsbin-evergreens py-3 text-base tracking-wider">
-                        {flexRender(
-                            cell.column.columnDef.cell,
-                            cell.getContext()
-                        )}
-                        </TableCell>
-                    ))}
-                    </TableRow>
-                ))
-                ) : (
-                <TableRow>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                    </TableHead>
+                  );
+                })}
+              </TableRow>
+            ))}
+          </TableHeader>
+          <TableBody>
+            {table.getRowModel().rows?.length ? (
+              table.getRowModel().rows.map((row) => (
+                <TableRow
+                  key={row.id}
+                  data-state={row.getIsSelected() && "selected"}
+                >
+                  {row.getVisibleCells().map((cell) => (
                     <TableCell
-                    colSpan={columns.length}
-                    className="h-24 text-center"
+                      key={cell.id}
+                      className="text-adsbin-evergreens py-3 text-base tracking-wider"
                     >
-                    No results.
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
                     </TableCell>
+                  ))}
                 </TableRow>
-                )}
-            </TableBody>
-            </Table>
-        </div>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell
+                  colSpan={columns.length}
+                  className="h-24 text-center"
+                >
+                  No results.
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
     </div>
-  )
+  );
 }

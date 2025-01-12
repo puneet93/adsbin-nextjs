@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Bar, BarChart, XAxis } from "recharts"
+import { Bar, BarChart, XAxis } from "recharts";
 
 import {
   ChartConfig,
@@ -8,8 +8,8 @@ import {
   ChartLegend,
   ChartLegendContent,
   ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart"
+  ChartTooltipContent
+} from "@/components/ui/chart";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -23,19 +23,19 @@ const chartData = [
   { month: "Sptember", desktop: 237, mobile: 120 },
   { month: "October", desktop: 73, mobile: 190 },
   { month: "November", desktop: 209, mobile: 130 },
-  { month: "December", desktop: 214, mobile: 140 },
-]
+  { month: "December", desktop: 214, mobile: 140 }
+];
 
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "#4DBB18",
+    color: "#4DBB18"
   },
   mobile: {
     label: "Mobile",
-    color: "#415B41",
-  },
-} satisfies ChartConfig
+    color: "#415B41"
+  }
+} satisfies ChartConfig;
 
 export function BarChartStatistics() {
   return (
@@ -55,5 +55,5 @@ export function BarChartStatistics() {
         <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
       </BarChart>
     </ChartContainer>
-  )
+  );
 }

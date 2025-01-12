@@ -3,32 +3,30 @@ import { Nunito, Outfit } from "next/font/google";
 import "./globals.css";
 
 const nunito = Nunito({
-  weight: ['200', '300', '400', '500', '600', '700','800', '900', '1000'],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
   variable: "--font-nunito",
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 const outfit = Outfit({
-  weight: ['200', '300', '400', '500', '600', '700','800', '900'],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-outfit",
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
   title: "Adsbin | Media UI",
-  description: "Lorem Ipsum",
+  description: "Lorem Ipsum"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${nunito.variable} ${outfit.variable} antialiased`}
-      >
+      <body className={`${nunito.variable} ${outfit.variable} antialiased`}>
         {children}
       </body>
     </html>

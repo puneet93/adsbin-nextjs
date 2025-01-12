@@ -12,35 +12,37 @@ body {
   }
 }
 
-.font-outfit{
+.font-outfit {
   font-family: var(--font-outfit);
 }
 
-.font-nunito{
+.font-nunito {
   font-family: var(--font-nunito);
 }
 
-label{
+label {
   font-family: var(--font-outfit);
   @apply text-black font-normal !text-base;
 }
 
-select, input{
+select,
+input {
   @apply !h-11 shadow-formField !border-adsbin-grey-200 !text-base !px-5;
 }
 
-textarea, button[role="combobox"]{
+textarea,
+button[role="combobox"] {
   @apply shadow-formField !border-adsbin-grey-200 !text-base !px-5;
 }
 
-.select-box button[role="combobox"]{
+.select-box button[role="combobox"] {
   @apply !border-adsbin-grey-100;
 }
 
-.text-xsm{
+.text-xsm {
   font-size: 13px;
 }
 
-.sub sub{
+.sub sub {
   @apply text-sm bottom-0 font-bold;
 }
