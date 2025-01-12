@@ -82,7 +82,7 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "play",
     header: "Play",
     cell: () => (
-      <Button variant={'outline'} className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-adsbin-green-500-300">Preview <CirclePlay color="#000" /></Button>
+      <Button variant={'outline'} className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300">Preview <CirclePlay color="#000" /></Button>
     ),
   },
   {

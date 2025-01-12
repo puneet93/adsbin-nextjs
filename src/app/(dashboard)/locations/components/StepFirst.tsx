@@ -63,7 +63,7 @@ export default function StepFirst(){
                     <div className="flex md:flex-row flex-col md:items-center md:gap-5 gap-2.5 flex-grow">
                         <Input type="text" className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300" placeholder="Latitude" />
                         <Input type="text" className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300" placeholder="Longitude" />
-                        <Button variant={'outline'} className="text-base flex-grow shadow-formField font-outfit border-adsbin-grey-200 !h-11 font-bold text-adsbin-adsbin-green-500-300">Current Location <Locate color="#000" /></Button>
+                        <Button variant={'outline'} className="text-base flex-grow shadow-formField font-outfit border-adsbin-grey-200 !h-11 font-bold text-adsbin-green-300">Current Location <Locate color="#000" /></Button>
                     </div>
                 </div>
                 <div className="flex items-start md:gap-5 gap-2.5">

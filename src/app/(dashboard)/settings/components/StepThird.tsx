@@ -40,7 +40,7 @@ export default function StepThird(){
                             <SelectItem value="system">System</SelectItem>
                         </SelectContent>
                     </Select>
-                    <Button variant={'outline'} className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-adsbin-green-500-300">Approve Web Push</Button>
+                    <Button variant={'outline'} className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300">Approve Web Push</Button>
                 </div>
             </div>
         </div>

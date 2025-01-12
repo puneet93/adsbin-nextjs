@@ -12,8 +12,8 @@ export default function Information(){
                 </div>
             </div>
             <div className="text-right flex items-center justify-end gap-2.5">
-                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-adsbin-green-500-300">Deny All <ThumbsDown /></Button>
-                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-adsbin-green-500-300">Approve All <ThumbsUp /></Button>
+                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300">Deny All <ThumbsDown /></Button>
+                <Button variant={'outline'} disabled className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300">Approve All <ThumbsUp /></Button>
             </div>
         </div>
     )
