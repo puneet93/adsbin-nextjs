@@ -13,7 +13,7 @@ export default function Statistics() {
         <Button
           asChild
           variant={"outline"}
-          className="px-5 py-2.5 tracking-wider border-0 uppercase !bg-transparent shadow-none text-base font-extrabold text-adsbin-grey-1000"
+          className="px-5 anim-pulse py-2.5 tracking-wider border-0 uppercase !bg-transparent shadow-none text-base font-extrabold text-adsbin-grey-1000"
         >
           <Link href={"/"}>
             see more <CircleArrowRight />

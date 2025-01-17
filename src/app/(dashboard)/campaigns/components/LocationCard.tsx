@@ -34,7 +34,7 @@ export default function LocationCard({
       </div>
 
       <Button
-        className="!h-11 border-adsbin-grey-100 font-bold text-base w-full text-black"
+        className="!h-11 anim-pulse border-adsbin-grey-100 font-bold text-base w-full text-black"
         variant={"outline"}
       >
         Add location <Plus />

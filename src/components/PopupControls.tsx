@@ -28,7 +28,7 @@ export default function PopupControls({title, content}:{title:string, content:st
             <p>{content}</p>
           </div>
 
-          <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
+          <Button className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
             Understood <CheckIcon />
           </Button>
 

@@ -13,7 +13,7 @@ export default function StepSecond() {
       <div className="flex flex-col py-5 mb-5 gap-2.5">
         <Button
           variant={"outline"}
-          className="text-base ml-auto mb-2.5 px-5 flex-grow shadow-formField font-outfit border-adsbin-grey-200 !h-11 font-bold text-adsbin-green-300"
+          className="text-base anim-pulse ml-auto mb-2.5 px-5 flex-grow shadow-formField font-outfit border-adsbin-grey-200 !h-11 font-bold text-adsbin-green-300"
         >
           <Plus color="#000" /> Add Screen
         </Button>

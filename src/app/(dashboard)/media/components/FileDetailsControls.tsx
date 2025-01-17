@@ -6,19 +6,19 @@ export default function FileDetailsControl() {
     <div className="flex items-center flex-wrap gap-1">
       <Button
         variant="ghost"
-        className="text-base font-semibold tracking-tight text-adsbin-grey-1000"
+        className="text-base anim-pulse font-semibold tracking-tight text-adsbin-grey-1000"
       >
         Play <PlayCircle />
       </Button>
       <Button
         variant="ghost"
-        className="text-base font-semibold tracking-tight text-adsbin-grey-1000"
+        className="text-base anim-pulse font-semibold tracking-tight text-adsbin-grey-1000"
       >
         Delete <Trash2 />
       </Button>
       <Button
         variant="ghost"
-        className="text-base font-semibold tracking-tight text-adsbin-grey-1000"
+        className="text-base anim-pulse font-semibold tracking-tight text-adsbin-grey-1000"
       >
         Download <Download />
       </Button>

@@ -17,10 +17,10 @@ export default function MediaUpload() {
           </h6>
         </div>
 
-        <Button variant={"outline"} className="text-base" size={"lg"}>
+        <Button variant={"outline"} className="text-base anim-pulse" size={"lg"}>
           Pick from Media Library <FilmIcon className="!w-6 !h-6" />
         </Button>
-        <Button variant={"outline"} className="text-base mb-2.5" size={"lg"}>
+        <Button variant={"outline"} className="text-base mb-2.5 anim-pulse" size={"lg"}>
           Upload File <FilmIcon className="!w-6 !h-6" />
         </Button>
       </label>

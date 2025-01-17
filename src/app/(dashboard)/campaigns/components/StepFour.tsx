@@ -66,7 +66,7 @@ export default function StepFour() {
           </Label>
           <Button
             variant={"outline"}
-            className="text-base shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300"
+            className="text-base anim-pulse shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300"
           >
             Add All <ArrowRight color="#000" />
           </Button>

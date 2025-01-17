@@ -16,7 +16,7 @@ export default function page() {
       >
         <Button
           asChild
-          className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none"
+          className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none"
         >
           <Link href={"/campaigns/new"}>
             Start new campaign <Megaphone className="w-5 h-5" />

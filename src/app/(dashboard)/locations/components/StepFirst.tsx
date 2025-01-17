@@ -108,7 +108,7 @@ export default function StepFirst() {
             />
             <Button
               variant={"outline"}
-              className="text-base flex-grow shadow-formField font-outfit border-adsbin-grey-200 !h-11 font-bold text-adsbin-green-300"
+              className="text-base anim-pulse flex-grow shadow-formField font-outfit border-adsbin-grey-200 !h-11 font-bold text-adsbin-green-300"
             >
               Current Location <Locate color="#000" />
             </Button>
