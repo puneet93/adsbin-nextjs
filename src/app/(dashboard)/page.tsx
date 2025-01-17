@@ -25,7 +25,7 @@ export default function page() {
         <Overview />
       </div>
 
-      <PopupControls />
+      <PopupControls title="Stay in Control with your Dashboard" content="Here you can see all your campaigns, statistics, and more." />
     </>
   );
 }

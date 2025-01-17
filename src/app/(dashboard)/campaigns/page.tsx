@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Megaphone } from "lucide-react";
 import CampaignDataTable from "./components/CampaignDataTable";
 import Link from "next/link";
+import PopupControls from "@/components/PopupControls";
 
 export default function page() {
   return (
@@ -24,6 +25,7 @@ export default function page() {
       </Information>
 
       <CampaignDataTable />
+      <PopupControls title="Create or Mange your Campaigns" content="Here you can create a new campaign or manage your existing ones." />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import Information from "@/components/Information";
 import SettingDataTable from "./components/SettingDataTable";
+import PopupControls from "@/components/PopupControls";
 
 export default function page() {
   return (
@@ -14,6 +15,8 @@ export default function page() {
       </Information>
 
       <SettingDataTable />
+
+      <PopupControls title="Billing Information" content="This is a list of all your invoices." />
     </>
   );
 }

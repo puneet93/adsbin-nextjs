@@ -1,5 +1,6 @@
 import Information from "@/components/Information";
 import SettingSteps from "./components/SettingSteps";
+import PopupControls from "@/components/PopupControls";
 
 export default function page() {
   return (
@@ -12,6 +13,8 @@ export default function page() {
       />
 
       <SettingSteps />
+
+      <PopupControls title="Your Account Settings" content="Here you can change your account settings." />
     </>
   );
 }

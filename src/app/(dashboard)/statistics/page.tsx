@@ -2,6 +2,7 @@ import ViewsQRscans from "./components/ViewsQRscans";
 import Campaign from "./components/Campaign";
 import Overview from "./components/Overview";
 import Information from "@/components/Information";
+import PopupControls from "@/components/PopupControls";
 
 export default function page() {
   return (
@@ -20,6 +21,8 @@ export default function page() {
         <ViewsQRscans />
         <Overview />
       </div>
+
+      <PopupControls title="Your Campaign Statistics" content="Here you can see all your campaign statistics." />
     </>
   );
 }
