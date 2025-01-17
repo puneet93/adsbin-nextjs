@@ -11,7 +11,7 @@ import {
 
 export default function StepSecond() {
   return (
-    <div>
+    <div className="bg-adsbin-neutral-100 p-5 rounded-lg">
       <StepHeader count={2} title="Target Links and Engagement">
         <></>
       </StepHeader>

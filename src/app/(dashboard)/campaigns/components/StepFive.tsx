@@ -11,7 +11,7 @@ import {
 
 export default function StepFive() {
   return (
-    <div>
+    <div className="bg-adsbin-neutral-100 p-5 rounded-lg">
       <StepHeader count={5} title="Set the start and end dates">
         <></>
       </StepHeader>

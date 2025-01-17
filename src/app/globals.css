@@ -27,16 +27,16 @@ label {
 
 select,
 input {
-  @apply !h-11 shadow-formField !border-adsbin-grey-200 !text-base !px-5;
+  @apply !h-11 shadow-formField !bg-white !border-adsbin-grey-200 !text-base !px-5;
 }
 
 textarea,
 button[role="combobox"] {
-  @apply shadow-formField !border-adsbin-grey-200 !text-base !px-5;
+  @apply shadow-formField !bg-white !border-adsbin-grey-200 !text-base !px-5;
 }
 
 .select-box button[role="combobox"] {
-  @apply !border-adsbin-grey-100;
+  @apply !border-adsbin-grey-100 !bg-white;
 }
 
 .text-xsm {
