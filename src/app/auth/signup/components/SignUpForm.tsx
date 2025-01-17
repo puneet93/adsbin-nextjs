@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -56,6 +57,25 @@ export default function SignUpForm() {
           <Label className="min-w-36 font-nunito">Team invitation code</Label>
           <Input type="text" className="!border-adsbin-grey-100" />
         </div>
+      </div>
+
+      <div className="px-5 pt-2.5 flex items-center space-x-2">
+        <Checkbox id="terms" />
+        <label
+          htmlFor="terms"
+          className="font-nunito leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          Accept terms and conditions
+        </label>
+      </div>
+      <div className="px-5 py-2.5 mb-5 flex items-center space-x-2">
+        <Checkbox id="privacy" />
+        <label
+          htmlFor="privacy"
+          className="font-nunito leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        >
+          Accept Privacy and cookies agreement
+        </label>
       </div>
 
       <div className="flex items-center gap-1.5 md:px-0 px-5">
