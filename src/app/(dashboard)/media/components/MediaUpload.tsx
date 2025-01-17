@@ -12,8 +12,7 @@ export default function MediaUpload() {
         <div className="flex items-center justify-center flex-col gap-2.5 py-4 mb-7">
           <CirclePlusIcon size={40} />
           <h6 className="leading-5">
-            ADD YOUR <br />
-            MEDIA
+            Upload Your <br />Advertisement
           </h6>
         </div>
 
