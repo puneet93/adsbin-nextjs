@@ -142,7 +142,7 @@ export const columns: ColumnDef<Payment>[] = [
   {
     id: "actions",
     accessorKey: "sctions",
-    header: "Actions",
+    header: "",
     enableHiding: false,
     cell: ({ row }) => {
       const payment = row.original;

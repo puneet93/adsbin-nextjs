@@ -97,7 +97,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     accessorKey: "actions",
-    header: "Actions",
+    header: "",
     cell: () => <Actions />
   }
 ];
