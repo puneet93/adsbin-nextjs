@@ -130,13 +130,13 @@ export const columns: ColumnDef<Payment>[] = [
   {
     // id: "actions",
     accessorKey: "actions",
-    header: "Actions",
+    header: "",
     // enableHiding: false,
     cell: ({ row }) => {
       // const payment = row.original
 
       return (
-        <Link href={"/"} className="flex gap-2.5">
+        <Link href={"/billing"} className="flex gap-2.5">
           {row.getValue("actions")}
 
           {row.getValue("actions") === "Download" && <Download color="#000" />}

@@ -4,6 +4,7 @@ import PurchaseOrderDetails from "./PurchaseOrderDetails";
 import PurchasePersonalInformation from "./PurchasePersonalInformation";
 import PurchaseShippingInformation from "./PurchaseShippingInformation";
 import PurchaseAdditionalInformation from "./PurchaseAdditionalInformation";
+import Link from "next/link";
 
 export default function PurchaseForm() {
   return (
@@ -21,8 +22,8 @@ export default function PurchaseForm() {
           <ArrowLeft color="#000" className="w-5 h-5" /> Go back
         </Button>
 
-        <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
-          Pay now <ArrowRight className="w-5 h-5" />
+        <Button asChild className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
+          <Link href={'/billing'}>Pay now <ArrowRight className="w-5 h-5" /></Link>
         </Button>
       </div>
     </>
