@@ -12,6 +12,12 @@ body {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .text-base{
+   font-size: 14px !important; 
+  }
+}
+
 .font-outfit {
   font-family: var(--font-outfit);
 }

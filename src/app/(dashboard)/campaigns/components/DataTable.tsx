@@ -27,6 +27,7 @@ import {
 import Status from "@/components/Status";
 import ActionDropdown from "@/components/ActionDropdown";
 import { PaginationUI } from "@/components/Pagination";
+import { useWindowDimensions } from "@/lib/useWindowDimensions";
 
 const data: Payment[] = [
   {
@@ -153,13 +154,25 @@ export const columns: ColumnDef<Payment>[] = [
 ];
 
 export function DataTable() {
+  const { width } = useWindowDimensions();
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({});
+    React.useState<VisibilityState>({ actions: width > 767, endDate: width > 767, startDate: width > 767, locations: width > 767, assets: width > 767 });
   const [rowSelection, setRowSelection] = React.useState({});
+
+  React.useEffect(() => {
+      setColumnVisibility((prev) => ({
+        ...prev,
+        actions: width > 767, // Toggle visibility of the 'actions' column
+        endDate: width > 767, // Toggle visibility of the 'actions' column
+        startDate: width > 767, // Toggle visibility of the 'actions' column
+        locations: width > 767, // Toggle visibility of the 'actions' column
+        assets: width > 767, // Toggle visibility of the 'actions' column
+      }));
+    }, [width]);
 
   const table = useReactTable({
     data,

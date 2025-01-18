@@ -29,6 +29,7 @@ import { Button } from "@/components/ui/button";
 import { CirclePlay } from "lucide-react";
 import Actions from "./Actions";
 import NameMedia from "./NameMedia";
+import { useWindowDimensions } from "@/lib/useWindowDimensions";
 
 const data: Payment[] = [
   {
@@ -103,13 +104,22 @@ export const columns: ColumnDef<Payment>[] = [
 ];
 
 export function DataTable() {
+  const { width } = useWindowDimensions();
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({});
+    React.useState<VisibilityState>({ user: width > 767, play: width > 767 });
   const [rowSelection, setRowSelection] = React.useState({});
+
+  React.useEffect(() => {
+    setColumnVisibility((prev) => ({
+      ...prev,
+      user: width > 767, // Toggle visibility of the 'actions' column
+      play: width > 767, // Toggle visibility of the 'actions' column
+    }));
+  }, [width]);
 
   const table = useReactTable({
     data,

@@ -27,6 +27,7 @@ import {
 import { PaginationUI } from "@/components/Pagination";
 import ActionDropdown from "@/components/ActionDropdown";
 import Image from "next/image";
+import { useWindowDimensions } from "@/lib/useWindowDimensions";
 
 const data: Payment[] = [
   {
@@ -133,8 +134,8 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "username",
     header: "Username",
     cell: () => (
-      <div className="flex items-center gap-2.5 min-w-60">
-        <div>
+      <div className="flex items-center gap-2.5 min-w-42">
+        <div className="sm:block hidden">
           <Image
             src={"/image-1.png"}
             alt={"Title"}
@@ -173,7 +174,7 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     id: "actions",
-    accessorKey: "sctions",
+    accessorKey: "actions",
     header: "",
     enableHiding: false,
     cell: ({ row }) => {
@@ -185,13 +186,23 @@ export const columns: ColumnDef<Payment>[] = [
 ];
 
 export function DataTable() {
+  const { width } = useWindowDimensions();
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({});
+    React.useState<VisibilityState>({ actions: width > 767, lastseen: width > 767, status: width > 767 });
   const [rowSelection, setRowSelection] = React.useState({});
+
+  React.useEffect(() => {
+          setColumnVisibility((prev) => ({
+            ...prev,
+            actions: width > 767, // Toggle visibility of the 'actions' column
+            lastseen: width > 767, // Toggle visibility of the 'actions' column
+            status: width > 767, // Toggle visibility of the 'actions' column
+          }));
+        }, [width]);
 
   const table = useReactTable({
     data,
