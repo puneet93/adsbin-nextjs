@@ -85,87 +85,7 @@ export type Payment = {
   name: string;
 };
 
-export const columns: ColumnDef<Payment>[] = [
-  {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
-        onCheckedChange={(value: boolean) =>
-          table.toggleAllPageRowsSelected(!!value)
-        }
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value: boolean) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false
-  },
-  {
-    accessorKey: "name",
-    header: "Name",
-    cell: ({ row }) => (
-      <h4 className="text-adsbin-evergreens text-base font-bold">
-        {row.getValue("name")}
-      </h4>
-    )
-  },
-  {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => <Status status={row.getValue("status")} />
-  },
-  {
-    accessorKey: "assets",
-    header: "Assets",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("assets")}</div>
-    )
-  },
-  {
-    accessorKey: "locations",
-    header: "Locations",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("locations")}</div>
-    )
-  },
-  {
-    accessorKey: "startDate",
-    header: "Start date",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("startDate")}</div>
-    )
-  },
-  {
-    accessorKey: "endDate",
-    header: "End date",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("endDate")}</div>
-    )
-  },
-  {
-    id: "actions",
-    accessorKey: "sctions",
-    header: "",
-    enableHiding: false,
-    cell: ({ row }) => {
-      const payment = row.original;
-
-      return <ActionDropdown payment={payment} />;
-    }
-  }
-];
-
-export function DataTable({ onPreviewClick }: { onPreviewClick: (rowData: any) => void }) {
+export function DataTable({ onPreviewClick }: { onPreviewClick: () => void }) {
   const { width } = useWindowDimensions();
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -192,30 +112,109 @@ export function DataTable({ onPreviewClick }: { onPreviewClick: (rowData: any) =
     }));
   }, [width]);
 
+
+  const columns: ColumnDef<Payment>[] = [
+    {
+      id: "select",
+      header: ({ table }) => (
+        <Checkbox
+          checked={
+            table.getIsAllPageRowsSelected() ||
+            (table.getIsSomePageRowsSelected() && "indeterminate")
+          }
+          onCheckedChange={(value: boolean) =>
+            table.toggleAllPageRowsSelected(!!value)
+          }
+          aria-label="Select all"
+        />
+      ),
+      cell: ({ row }) => (
+        <Checkbox
+          checked={row.getIsSelected()}
+          onCheckedChange={(value: boolean) => row.toggleSelected(!!value)}
+          aria-label="Select row"
+        />
+      ),
+      enableSorting: false,
+      enableHiding: false
+    },
+    {
+      accessorKey: "name",
+      header: "Name",
+      cell: ({ row }) => (
+        <h4 className="text-adsbin-evergreens text-base font-bold">
+          {row.getValue("name")}
+        </h4>
+      )
+    },
+    {
+      accessorKey: "status",
+      header: "Status",
+      cell: ({ row }) => <Status status={row.getValue("status")} />
+    },
+    {
+      accessorKey: "assets",
+      header: "Assets",
+      cell: ({ row }) => (
+        <div className="capitalize">{row.getValue("assets")}</div>
+      )
+    },
+    {
+      accessorKey: "locations",
+      header: "Locations",
+      cell: ({ row }) => (
+        <div className="capitalize">{row.getValue("locations")}</div>
+      )
+    },
+    {
+      accessorKey: "preview",
+      header: "Preview",
+      cell: ({ row }) => (
+        <Button
+          variant={"outline"}
+          disabled={row.getValue("status") === "Rejected"}
+          className="sm:text-sm anim-pulse rounded-none !shadow-none ml-auto border-0 md:border md:border-adsbin-grey-100 !h-9 font-semibold text-adsbin-evergreens"
+          onClick={() => onPreviewClick()} // Pass the row's data to the parent
+        >
+          <span className="sm:flex hidden items-center gap-2.5">
+            Preview <Eye color="#415B41" size={16} />
+          </span>
+          <span className="sm:hidden">
+            <Eye color="#B8C6B8" size={24} />
+          </span>
+        </Button>
+      ),
+    },
+    {
+      accessorKey: "startDate",
+      header: "Start date",
+      cell: ({ row }) => (
+        <div className="capitalize">{row.getValue("startDate")}</div>
+      )
+    },
+    {
+      accessorKey: "endDate",
+      header: "End date",
+      cell: ({ row }) => (
+        <div className="capitalize">{row.getValue("endDate")}</div>
+      )
+    },
+    {
+      id: "actions",
+      accessorKey: "sctions",
+      header: "",
+      enableHiding: false,
+      cell: ({ row }) => {
+        const payment = row.original;
+  
+        return <ActionDropdown payment={payment} />;
+      }
+    }
+  ];
+
   const table = useReactTable({
     data,
-    columns: [
-      ...columns,
-      {
-        accessorKey: "preview",
-        header: "Preview",
-        cell: ({ row }) => (
-          <Button
-            variant={"outline"}
-            disabled={row.getValue("status") === "Rejected"}
-            className="sm:text-sm anim-pulse rounded-none !shadow-none ml-auto border-0 md:border md:border-adsbin-grey-100 !h-9 font-semibold text-adsbin-evergreens"
-            onClick={() => onPreviewClick(row.original)} // Pass the row's data to the parent
-          >
-            <span className="sm:flex hidden items-center gap-2.5">
-              Preview <Eye color="#415B41" size={16} />
-            </span>
-            <span className="sm:hidden">
-              <Eye color="#B8C6B8" size={24} />
-            </span>
-          </Button>
-        ),
-      },
-    ],
+    columns,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),

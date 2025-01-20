@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Plus, X } from "lucide-react";
+import { X } from "lucide-react";
 
 export default function SelectedLocations() {
   return (

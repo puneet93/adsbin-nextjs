@@ -9,8 +9,8 @@ import Preview from "./Preview";
 
 export default function CampaignDataTable() {
   const [show, setShow] = useState(false);
-  const handlePreviewClick = (rowData: any) => {
-    setShow(rowData); // Store the row data if needed
+  const handlePreviewClick = () => {
+    setShow(!show);
   };
   return !show ? (
     <div className="border-t border-adsbin-grey-100">
