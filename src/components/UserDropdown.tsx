@@ -9,19 +9,20 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { CaretDown } from "@/lib/icons";
 import { Avatar } from "@radix-ui/react-avatar";
+import { Shield } from "lucide-react";
 
 export default function UserDropdown() {
   return (
     <>
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <div className="flex items-center gap-5">
+          <div className="flex ml-5 items-center gap-5">
             <div className="md:flex hidden flex-col items-start gap-1">
               <span className="font-semibold text-base text-white">
                 Jimmy van der Velde
               </span>
-              <span className="font-bold text-xsm text-adsbin-evergreens">
-                DHG & Partners
+              <span className="font-bold flex items-center gap-1 text-xsm text-adsbin-evergreens">
+                <Shield size={16} /> <span className="relative top-0.5">DHG & Partners</span>
               </span>
             </div>
 

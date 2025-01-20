@@ -1,10 +1,15 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { DataTable } from "./DataTable";
+import { useState } from "react";
+import PreviewPopup from "./PreviewPopup";
 
 export default function CampaignDataTable() {
-  return (
+  const [show, setShow] = useState(false);
+  return !show ? (
     <div className="border-t border-adsbin-grey-100">
       <div className="md:py-5 md:pr-3.5 md:pl-12 p-4 flex md:flex-row flex-col md:items-center gap-2.5">
         <div className="flex items-center pr-5 justify-between flex-grow">
@@ -27,7 +32,9 @@ export default function CampaignDataTable() {
         </form>
       </div>
 
-      <DataTable />
+      <DataTable getValue={() => setShow(!show)} />
     </div>
+  ):(
+    <PreviewPopup getValue={() => setShow(!show)} />
   );
 }

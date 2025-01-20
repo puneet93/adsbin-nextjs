@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { Ellipsis } from "lucide-react";
 
 type Payment = {
   id: string;
@@ -18,9 +19,10 @@ export default function ActionDropdown({ payment }: { payment: Payment }) {
       <DropdownMenuTrigger asChild>
         <Button
         variant={"outline"}
-        className="text-base anim-pulse shadow-formField font-outfit border-adsbin-grey-200 !h-9 font-bold text-adsbin-green-300"
+        className="sm:text-sm anim-pulse rounded-none !shadow-none ml-auto border-0 md:border md:border-adsbin-grey-100 !h-9 font-semibold text-adsbin-evergreens"
       >
-        Action
+        <span className="sm:flex hidden items-center gap-2.5">Action <Ellipsis color="#415B41" size={16} /></span>
+        <span className="sm:hidden"><Ellipsis color="#B8C6B8" size={24} /></span>
       </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

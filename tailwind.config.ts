@@ -13,6 +13,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         "adsbin-evergreens": "#415B41",
+        "adsbin-evergreens-light": "rgba(65, 91, 65, 0.37)",
         dark: "#000000",
         "adsbin-grey": {
           100: "#ECECEC", // gray-light
@@ -37,7 +38,9 @@ export default {
         },
         "adsbin-red": {
           100: "#FCDCDC", // unpaidBg
-          200: "#FF6E6E" // unpaid
+          200: "#FF6E6E", // unpaid
+          300: "#6A0303", // unpaid
+          400: "#FCDCDC" // unpaid
         },
         "adsbin-neutral": {
           100: "#F0F0F0", // runningBg

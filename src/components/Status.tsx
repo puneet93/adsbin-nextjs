@@ -37,5 +37,11 @@ export default function Status({ status }: { status: string }) {
         {status}
       </div>
     );
+  } else if (status === "Rejected") {
+    return (
+      <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-adsbin-red-300 text-adsbin-red-300 bg-adsbin-red-400 font-semibold">
+        {status} <Lock />
+      </div>
+    );
   }
 }

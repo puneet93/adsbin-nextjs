@@ -12,15 +12,16 @@ import { DataTable } from "./DataTable";
 export default function MediaData({ getValue }: { getValue: () => void }) {
   return (
     <div className="border-t border-adsbin-grey-100">
-      <div className="md:py-5 md:pr-3.5 md:pl-12 p-4 flex md:flex-row flex-col md:items-center gap-2.5">
-        <div className="flex items-center pr-5 justify-between flex-grow">
-          <h5 className="text-adsbin-grey-1000 text-base tracking-wide">
+      <div className="md:py-5 md:pr-3.5 md:pl-12 p-4 flex md:flex-row flex-col-reverse md:items-center md:gap-2.5 gap-5">
+        <div className="flex items-center md:pr-5 md:pl-0 pl-6 justify-between flex-grow">
+          <h5 className="md:text-adsbin-grey-1000 font-bold md:font-normal text-black text-base tracking-wide">
             5 files selected
           </h5>
 
           <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-2.5 text-[#000] text-sm font-semibold outline-none">
-              Apply to selection <Ellipsis color="#415B41" size={24} />
+            <DropdownMenuTrigger className="flex items-center gap-2.5 sm:text-black  text-sm font-semibold outline-none">
+              <span className="sm:flex hidden items-center gap-2.5 hidden">Apply to selection <Ellipsis color="#415B41" size={24} /></span>
+              <span className="sm:hidden"><Ellipsis color="#B8C6B8" size={24} /></span>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem>Profile</DropdownMenuItem>

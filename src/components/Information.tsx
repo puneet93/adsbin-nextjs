@@ -1,4 +1,4 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Shield } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Information({
@@ -7,7 +7,8 @@ export default function Information({
   title,
   content,
   goBack,
-  align = ""
+  align = "",
+  titleIcon
 }: {
   children?: React.ReactNode;
   label: string;
@@ -15,6 +16,7 @@ export default function Information({
   content: string;
   goBack: boolean;
   align?: string;
+  titleIcon?: React.ReactNode;
 }) {
   return (
     <div
@@ -36,10 +38,13 @@ export default function Information({
             # {label}
           </h6>
         )}
-        <h1
-          className={`text-adsbin-evergreens tracking-tight text-4xl font-normal font-outfit`}
-          dangerouslySetInnerHTML={{ __html: title }}
-        />
+        <div className="flex gap-2.5 items-center">
+          {titleIcon}
+          <h1
+            className={`text-adsbin-evergreens tracking-tight text-4xl font-normal font-outfit`}
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+        </div>
         <p className="text-base tracking-wider text-adsbin-grey-1000">
           {content}
         </p>

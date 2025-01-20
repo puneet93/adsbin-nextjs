@@ -28,6 +28,8 @@ import Status from "@/components/Status";
 import ActionDropdown from "@/components/ActionDropdown";
 import { PaginationUI } from "@/components/Pagination";
 import { useWindowDimensions } from "@/lib/useWindowDimensions";
+import { Button } from "@/components/ui/button";
+import { Eye } from "lucide-react";
 
 const data: Payment[] = [
   {
@@ -59,6 +61,16 @@ const data: Payment[] = [
     startDate: "12/04/2025",
     endDate: "21/04/2025",
     actions: ""
+  },
+  {
+    id: "derv1ws0",
+    assets: 5,
+    locations: 12,
+    status: "Rejected",
+    name: "Lorem.png",
+    startDate: "12/04/2025",
+    endDate: "21/04/2025",
+    actions: ""
   }
 ];
 
@@ -66,7 +78,7 @@ export type Payment = {
   id: string;
   assets: number;
   locations: number;
-  status: "Approved" | "Unpaid" | "Running";
+  status: "Approved" | "Unpaid" | "Running" | "Rejected";
   startDate: string;
   endDate: string;
   actions: string;
@@ -127,6 +139,24 @@ export const columns: ColumnDef<Payment>[] = [
     )
   },
   {
+    accessorKey: "preview",
+    header: "Preview",
+    cell: ({ row }) => (
+      <Button
+        variant={"outline"}
+        disabled={row.getValue("status") === "Rejected"}
+        className="sm:text-sm anim-pulse rounded-none !shadow-none ml-auto border-0 md:border md:border-adsbin-grey-100 !h-9 font-semibold text-adsbin-evergreens"
+      >
+        <span className="sm:flex hidden items-center gap-2.5">
+          Preview <Eye color="#415B41" size={16} />
+        </span>
+        <span className="sm:hidden">
+          <Eye color="#B8C6B8" size={24} />
+        </span>
+      </Button>
+    )
+  },
+  {
     accessorKey: "startDate",
     header: "Start date",
     cell: ({ row }) => (
@@ -160,19 +190,25 @@ export function DataTable() {
     []
   );
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({ actions: width > 767, endDate: width > 767, startDate: width > 767, locations: width > 767, assets: width > 767 });
+    React.useState<VisibilityState>({
+      actions: width > 767,
+      endDate: width > 767,
+      startDate: width > 767,
+      locations: width > 767,
+      assets: width > 767
+    });
   const [rowSelection, setRowSelection] = React.useState({});
 
   React.useEffect(() => {
-      setColumnVisibility((prev) => ({
-        ...prev,
-        actions: width > 767, // Toggle visibility of the 'actions' column
-        endDate: width > 767, // Toggle visibility of the 'actions' column
-        startDate: width > 767, // Toggle visibility of the 'actions' column
-        locations: width > 767, // Toggle visibility of the 'actions' column
-        assets: width > 767, // Toggle visibility of the 'actions' column
-      }));
-    }, [width]);
+    setColumnVisibility((prev) => ({
+      ...prev,
+      actions: width > 767, // Toggle visibility of the 'actions' column
+      endDate: width > 767, // Toggle visibility of the 'actions' column
+      startDate: width > 767, // Toggle visibility of the 'actions' column
+      locations: width > 767, // Toggle visibility of the 'actions' column
+      assets: width > 767 // Toggle visibility of the 'actions' column
+    }));
+  }, [width]);
 
   const table = useReactTable({
     data,
