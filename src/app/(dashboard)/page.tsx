@@ -3,6 +3,7 @@ import { CalendarDays } from "lucide-react";
 import Statistics from "@/components/Statistics";
 import Overview from "@/components/Overview";
 import PopupControls from "@/components/PopupControls";
+import QuickLink from "@/components/QuickLink";
 
 export default function page() {
   return (
@@ -20,7 +21,11 @@ export default function page() {
         </div>
       </Information>
 
-      <div className="border-t border-adsbin-grey-100 mt-10 py-5 grid md:grid-cols-2 grid-cols-1 gap-5">
+      <div className="border-t border-adsbin-grey-100 mt-10 mb-5 pt-5">
+        <QuickLink />
+      </div>
+
+      <div className="py-5 grid md:grid-cols-2 grid-cols-1 gap-5">
         <Statistics />
         <Overview />
       </div>
