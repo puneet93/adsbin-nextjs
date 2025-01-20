@@ -10,18 +10,19 @@ import { Globe } from "lucide-react";
 
 export default function LangDropdown() {
   return (
-    <div className="border-adsbin-evergreens-light border-x-2">
+    <div className="border-adsbin-evergreens-light sm:border-x-2">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
             variant={"outline"}
-            className="text-base !border-0 !outline-none !shadow-none flex items-center gap-2 px-5 py-2.5 !bg-transparent anim-pulse text-white !h-9 font-semibold"
+            className="text-base !border-0 !outline-none !shadow-none flex items-center gap-2 sm:px-5 px-2.5 py-2.5 !bg-transparent anim-pulse text-white !h-9 font-semibold"
           >
-            <Globe color="#415B41" /> English
+            <Globe color="#415B41" /> <span className="sm:hidden">Eng</span> <span className="sm:block hidden">English</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
+              className="sm:block hidden"
               fill="currentColor"
               viewBox="0 0 16 16"
             >

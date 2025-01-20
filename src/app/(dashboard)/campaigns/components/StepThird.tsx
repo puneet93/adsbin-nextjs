@@ -1,10 +1,12 @@
+"use client";
+
 import StepHeader from "@/components/StepHeader";
 import Preview from "./Preview";
 import MediaCard from "../../media/components/MediaCard";
 import MediaUpload from "../../media/components/MediaUpload";
 
-export default function StepThird() {
-  return (
+export default function StepThird({showPreview, getPreview}:{showPreview:boolean, getPreview: () => void}) {
+  return !showPreview ? (
     <div>
       <StepHeader count={3} title="What do you want to show?">
         <div className="text-center ml-auto">
@@ -17,8 +19,10 @@ export default function StepThird() {
         <MediaCard />
         <MediaUpload />
       </div>
-
-      <Preview />
+    </div>
+  ) : (
+    <div>
+      <Preview getValue={() => getPreview()} />
     </div>
   );
 }

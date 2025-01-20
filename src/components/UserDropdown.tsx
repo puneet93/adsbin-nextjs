@@ -16,7 +16,7 @@ export default function UserDropdown() {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <div className="flex ml-5 items-center gap-5">
+          <div className="flex sm:ml-5 ml-2.5 items-center sm:gap-5 gap-2.5">
             <div className="md:flex hidden flex-col items-start gap-1">
               <span className="font-semibold text-base text-white">
                 Jimmy van der Velde

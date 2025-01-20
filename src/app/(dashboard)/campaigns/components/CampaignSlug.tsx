@@ -13,19 +13,24 @@ import { useState } from "react";
 
 export default function CampaignSlug() {
   const [activeIndex, setActiveIndex] = useState(1);
+  const [showPreview, setShowPreview] = useState(false);
+  
   return (
     <div className="flex flex-col gap-2.5 mt-10">
-      <div className="max-w-96 w-full py-5 flex items-center gap-2.5 justify-center mx-auto">
-        <span className={`h-1.5 flex-grow ${activeIndex === 1 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
-        <span className={`h-1.5 flex-grow ${activeIndex === 2 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
-        <span className={`h-1.5 flex-grow ${activeIndex === 3 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
-        <span className={`h-1.5 flex-grow ${activeIndex === 4 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
-        <span className={`h-1.5 flex-grow ${activeIndex === 5 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
-        <span className={`h-1.5 flex-grow ${activeIndex === 6 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
-      </div>
+      {!showPreview && (
+        <div className="max-w-96 w-4/5 py-5 flex items-center gap-2.5 justify-center mx-auto">
+          <span className={`h-1.5 flex-grow ${activeIndex === 1 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
+          <span className={`h-1.5 flex-grow ${activeIndex === 2 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
+          <span className={`h-1.5 flex-grow ${activeIndex === 3 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
+          <span className={`h-1.5 flex-grow ${activeIndex === 4 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
+          <span className={`h-1.5 flex-grow ${activeIndex === 5 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
+          <span className={`h-1.5 flex-grow ${activeIndex === 6 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
+        </div>
+      )}
+
       {activeIndex === 1 && <StepFirst />}
       {activeIndex === 2 && <StepSecond />}
-      {activeIndex === 3 && <StepThird />}
+      {activeIndex === 3 && <StepThird showPreview={showPreview} getPreview={() => setShowPreview(!showPreview)} />}
       {activeIndex === 4 && <StepFour />}
       {activeIndex === 5 && <StepFive />}
       {activeIndex === 6 && <StepSix />}
@@ -33,10 +38,12 @@ export default function CampaignSlug() {
 
       {activeIndex <= 5 ? (
         <div className="flex items-center justify-between md:px-0 px-5">
-          {activeIndex <= 3 && (
+          {activeIndex === 3 && (
+            !showPreview &&
             <Button
               variant={"outline"}
               className="text-base anim-pulse !shadow-none border-0 md:border md:border-adsbin-grey-200 !h-9 font-bold text-black"
+              onClick={() => setShowPreview(!showPreview)}
             >
               <span className="flex items-center gap-2.5">
                 Preview <Eye color="#606060" size={16} />
