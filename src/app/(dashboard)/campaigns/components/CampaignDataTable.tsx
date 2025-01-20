@@ -9,6 +9,9 @@ import Preview from "./Preview";
 
 export default function CampaignDataTable() {
   const [show, setShow] = useState(false);
+  const handlePreviewClick = (rowData: any) => {
+    setShow(rowData); // Store the row data if needed
+  };
   return !show ? (
     <div className="border-t border-adsbin-grey-100">
       <div className="md:py-5 md:pr-3.5 md:pl-12 p-4 flex md:flex-row flex-col md:items-center gap-2.5">
@@ -33,7 +36,7 @@ export default function CampaignDataTable() {
       </div>
 
       {/* <DataTable getValue={() => setShow(!show)} /> */}
-      <DataTable />
+      <DataTable onPreviewClick={handlePreviewClick} />
     </div>
   ):(
     <Preview getValue={() => setShow(!show)} />

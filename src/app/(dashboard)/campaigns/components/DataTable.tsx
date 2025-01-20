@@ -139,24 +139,6 @@ export const columns: ColumnDef<Payment>[] = [
     )
   },
   {
-    accessorKey: "preview",
-    header: "Preview",
-    cell: ({ row }) => (
-      <Button
-        variant={"outline"}
-        disabled={row.getValue("status") === "Rejected"}
-        className="sm:text-sm anim-pulse rounded-none !shadow-none ml-auto border-0 md:border md:border-adsbin-grey-100 !h-9 font-semibold text-adsbin-evergreens"
-      >
-        <span className="sm:flex hidden items-center gap-2.5">
-          Preview <Eye color="#415B41" size={16} />
-        </span>
-        <span className="sm:hidden">
-          <Eye color="#B8C6B8" size={24} />
-        </span>
-      </Button>
-    )
-  },
-  {
     accessorKey: "startDate",
     header: "Start date",
     cell: ({ row }) => (
@@ -183,7 +165,7 @@ export const columns: ColumnDef<Payment>[] = [
   }
 ];
 
-export function DataTable() {
+export function DataTable({ onPreviewClick }: { onPreviewClick: (rowData: any) => void }) {
   const { width } = useWindowDimensions();
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -212,7 +194,28 @@ export function DataTable() {
 
   const table = useReactTable({
     data,
-    columns,
+    columns: [
+      ...columns,
+      {
+        accessorKey: "preview",
+        header: "Preview",
+        cell: ({ row }) => (
+          <Button
+            variant={"outline"}
+            disabled={row.getValue("status") === "Rejected"}
+            className="sm:text-sm anim-pulse rounded-none !shadow-none ml-auto border-0 md:border md:border-adsbin-grey-100 !h-9 font-semibold text-adsbin-evergreens"
+            onClick={() => onPreviewClick(row.original)} // Pass the row's data to the parent
+          >
+            <span className="sm:flex hidden items-center gap-2.5">
+              Preview <Eye color="#415B41" size={16} />
+            </span>
+            <span className="sm:hidden">
+              <Eye color="#B8C6B8" size={24} />
+            </span>
+          </Button>
+        ),
+      },
+    ],
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),
@@ -264,12 +267,15 @@ export function DataTable() {
                   {row.getVisibleCells().map((cell) => (
                     <TableCell
                       key={cell.id}
+                      data-prev={cell.id}
                       className="text-adsbin-evergreens text-base tracking-wider"
                     >
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
+                      {
+                          flexRender(
+                            cell.column.columnDef.cell,
+                            cell.getContext()
+                          )
+                        }
                     </TableCell>
                   ))}
                 </TableRow>
