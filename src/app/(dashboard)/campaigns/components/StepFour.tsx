@@ -77,21 +77,25 @@ export default function StepFour() {
 
       <div className="py-5 md:px-0 px-5 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
         <LocationCard
+          active={false}
           icon={<ShoppingBag color="#000" className="mb-3" />}
           title="DUBAI MALL"
           content="Dubai Mall is the world’s largest mall, featuring over 1,300 stores, an aquarium, ice rink, and numerous dining options."
         />
         <LocationCard
+          active={false}
           icon={<ShoppingBag color="#000" className="mb-3" />}
           title="MALL OF THE EMIRATES"
           content="Mall of the Emirates features 560 stores, Ski Dubai, VOX Cinemas, luxury hotels, and diverse dining options, making it a must-visit."
         />
         <LocationCard
+          active={true}
           icon={<ShoppingBag color="#000" className="mb-3" />}
           title="Ibn Battuta Mall"
           content="Ibn Battuta Mall, the world’s largest themed mall, features 300+ stores, dining, and decor inspired by the explorer’s travels"
         />
         <LocationCard
+          active={false}
           icon={<ShoppingBag color="#000" className="mb-3" />}
           title="Dubai Marina Mall"
           content="Dubai Marina Mall offers 140 stores, 21 dining options, and a children’s play area, all within 390,000 square feet"

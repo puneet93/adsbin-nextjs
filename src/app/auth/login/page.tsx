@@ -5,7 +5,8 @@ export default function page() {
   return (
     <>
       <InfoHeader
-        label="Login"
+        logo={true}
+        label=""
         title="Please login"
         content="Use your username and password to login"
       />

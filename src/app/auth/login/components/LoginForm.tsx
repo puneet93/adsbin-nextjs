@@ -41,7 +41,7 @@ export default function LoginForm() {
             asChild
             className="px-5 py-2.5 border-0 !bg-transparent shadow-none text-base font-bold text-adsbin-grey-600"
           >
-            <Link href={"/"}>Sign Up</Link>
+            <Link href={"/auth/signup"}>Sign Up</Link>
           </Button>
           <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
             Login <ArrowRight className="w-5 h-5" />

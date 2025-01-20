@@ -15,7 +15,7 @@ import { Locate, Search, Upload } from "lucide-react";
 
 export default function StepFirst() {
   return (
-    <div className="bg-adsbin-neutral-100 p-5 rounded-lg">
+    <div>
       <StepHeader count={1} title="Details">
         <></>
       </StepHeader>

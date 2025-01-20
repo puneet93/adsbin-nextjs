@@ -11,16 +11,14 @@ import {
 
 export default function StepFive() {
   return (
-    <div className="bg-adsbin-neutral-100 p-5 rounded-lg">
+    <div>
       <StepHeader count={5} title="Set the start and end dates">
         <></>
       </StepHeader>
 
       <div className="flex text-adsbin-grey-1000 flex-col py-5 mb-5 gap-5 md:px-0 px-5">
         <p className="tracking-wide text-base max-w-xl w-full">
-          Reserve a certain number of hours of ad display over two weeks, and
-          your ad will be shown multiple times, evenly distributed to maximise
-          visibility.
+          Reserve a certain number of hours of ad display over a period of weeks, and your ad will be shown multiple times, evenly distributed to maximize visibility. Minimum duration is two weeks.
         </p>
 
         <div className="flex items-center flex-wrap gap-5">

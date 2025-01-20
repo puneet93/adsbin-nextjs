@@ -8,34 +8,36 @@ import {
   CarouselPrevious
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { X } from "lucide-react";
 
-export default function Preview() {
+export default function Preview({ getValue }: { getValue?: () => void }) {
   return (
-    <div className="text-center p-2.5 bg-gradient-to-b from-white via-white to-adsbin-grey-1100">
-      <h2 className="mb-2.5 font-outfit text-adsbin-evergreens text-3xl">
-        Preview
-      </h2>
-      <div className="py-10 md:px-28 px-20">
-        <Carousel>
-          <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1 text-center">
-                  <Image
-                    src={"/ads.png"}
-                    alt="ads"
-                    width={1055}
-                    height={344}
-                    className="m-auto"
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+    <div className="container md:px-0 px-4 mx-auto w-full mb-5">
+      <div className="shadow-container border border-adsbin-grey-100">
+        <div className="py-3.5 text-adsbin-evergreens px-5 flex items-center border-bottom border-adsbin-grey-100">
+          <h2 className="text-base font-semibold mr-auto">Preview</h2>
+          <button>
+              <X color="#415B41" onClick={getValue} />
+          </button>
+        </div>
       </div>
+      <Carousel className="carousel-grid">
+        <CarouselContent>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <CarouselItem key={index}>
+              <Image
+                  src={"/ads.png"}
+                  alt="ads"
+                  width={1040}
+                  height={505}
+                  className="m-auto w-full"
+                />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </div>
   );
 }

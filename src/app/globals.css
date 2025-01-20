@@ -53,6 +53,14 @@ button[role="combobox"] {
   @apply text-sm bottom-0 font-bold;
 }
 
+.carousel-grid > button:not(:last-child){
+  @apply left-5
+}
+
+.carousel-grid > button:last-child{
+  @apply right-5
+}
+
 .anim-pulse:hover{
   animation: pulse 0.5s ease-in-out;
 }

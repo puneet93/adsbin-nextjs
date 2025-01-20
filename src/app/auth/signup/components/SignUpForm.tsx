@@ -3,6 +3,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function SignUpForm() {
   return (
@@ -59,23 +61,36 @@ export default function SignUpForm() {
         </div>
       </div>
 
-      <div className="px-5 pt-2.5 flex items-center space-x-2">
-        <Checkbox id="terms" />
-        <label
-          htmlFor="terms"
-          className="font-nunito leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-        >
-          Accept terms and conditions
-        </label>
-      </div>
-      <div className="px-5 py-2.5 mb-5 flex items-center space-x-2">
-        <Checkbox id="privacy" />
-        <label
-          htmlFor="privacy"
-          className="font-nunito leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-        >
-          Accept Privacy and cookies agreement
-        </label>
+      <div className="p-5 border-b border-adsbin-grey-100 mb-5">
+        <div className="px-5 py-1 flex items-center space-x-2 mb-5">
+          <Checkbox id="terms" />
+          <label
+            htmlFor="terms"
+            className="font-nunito leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            I have read and accept our <Link href={'/'}>Terms and Conditions</Link>
+          </label>
+        </div>
+        <div className="px-5 py-1 mb-5 flex items-center space-x-2">
+          <Checkbox id="privacy" />
+          <label
+            htmlFor="privacy"
+            className="font-nunito leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            I have read and accept our <Link href={'/'}>Privacy Policy</Link>
+          </label>
+        </div>
+
+        <div className="px-5 py-2.5 mb-5 flex items-center space-x-2 border border-adsbin-grey-100">
+          <Checkbox id="recaptcha" />
+          <label
+            htmlFor="recaptcha"
+            className="font-nunito leading-none flex-grow peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            I am not a robot
+          </label>
+          <Image src="/re-captcha.svg" alt="re-captcha" width="27" height="27" />
+        </div>
       </div>
 
       <div className="flex items-center gap-1.5 md:px-0 px-5">

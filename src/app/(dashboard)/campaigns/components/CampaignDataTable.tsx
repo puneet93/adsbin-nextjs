@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { DataTable } from "./DataTable";
 import { useState } from "react";
-import PreviewPopup from "./PreviewPopup";
+import Preview from "./Preview";
 
 export default function CampaignDataTable() {
   const [show, setShow] = useState(false);
@@ -32,9 +32,10 @@ export default function CampaignDataTable() {
         </form>
       </div>
 
-      <DataTable getValue={() => setShow(!show)} />
+      {/* <DataTable getValue={() => setShow(!show)} /> */}
+      <DataTable />
     </div>
   ):(
-    <PreviewPopup getValue={() => setShow(!show)} />
+    <Preview getValue={() => setShow(!show)} />
   );
 }

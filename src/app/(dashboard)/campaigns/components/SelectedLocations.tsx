@@ -10,12 +10,7 @@ export default function SelectedLocations() {
 
       <div className="p-5 border-b text-sm border-adsbin-grey-100 flex flex-wrap items-center gap-2.5">
         <h6 className="uppercase tracking-wide mr-auto">DUBAI MALL</h6>
-        <Button
-          className="!h-11 mr-2 anim-pulse border-adsbin-grey-100 font-bold text-base text-black"
-          variant={"outline"}
-        >
-          Add a map <Plus />
-        </Button>
+        
         <p className="font-normal sm:flex-grow-0 flex-grow">Baseprice: $11.5 /Hr.</p>
         <Button size={"icon"} variant={"link"} className="!h-auto  !w-auto">
           <X />
@@ -23,12 +18,7 @@ export default function SelectedLocations() {
       </div>
       <div className="p-5 border-b text-sm border-adsbin-grey-100 flex items-center gap-2.5">
         <h6 className="uppercase tracking-wide mr-auto">CORNER COFFEE 21</h6>
-        <Button
-          className="!h-11 mr-2 anim-pulse border-adsbin-grey-100 font-bold text-base text-black"
-          variant={"outline"}
-        >
-          Add a map <Plus />
-        </Button>
+        
         <p className="font-normal sm:flex-grow-0 flex-grow">Baseprice: $15.5 /Hr.</p>
         <Button size={"icon"} variant={"link"} className="!h-auto !w-auto">
           <X />
@@ -36,12 +26,7 @@ export default function SelectedLocations() {
       </div>
       <div className="p-5 border-b text-sm border-adsbin-grey-100 flex items-center gap-2.5">
         <h6 className="uppercase tracking-wide mr-auto">SELECT CLOTHING ST.</h6>
-        <Button
-          className="!h-11 mr-2 anim-pulse border-adsbin-grey-100 font-bold text-base text-black"
-          variant={"outline"}
-        >
-          Add a map <Plus />
-        </Button>
+        
         <p className="font-normal sm:flex-grow-0 flex-grow">Baseprice: $9.5 /Hr.</p>
         <Button size={"icon"} variant={"link"} className="!h-auto !w-auto">
           <X />
@@ -49,12 +34,7 @@ export default function SelectedLocations() {
       </div>
       <div className="p-5 border-b text-sm border-adsbin-grey-100 flex items-center gap-2.5">
         <h6 className="uppercase tracking-wide mr-auto">STARBUCKS</h6>
-        <Button
-          className="!h-11 mr-2 anim-pulse border-adsbin-grey-100 font-bold text-base text-black"
-          variant={"outline"}
-        >
-          Add a map <Plus />
-        </Button>
+        
         <p className="font-normal sm:flex-grow-0 flex-grow">Baseprice: $14.5 /Hr.</p>
         <Button size={"icon"} variant={"link"} className="!h-auto !w-auto">
           <X />

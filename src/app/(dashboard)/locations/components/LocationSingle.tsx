@@ -18,7 +18,7 @@ export default function LocationSingle() {
           <ArrowLeft color="#000" className="w-5 h-5" /> Go back
         </Button>
         <Button asChild className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
-          <Link href={'/billing'}>Register your item <ArrowRight className="w-5 h-5" /></Link>
+          <Link href={'/billing'}>Register Item <ArrowRight className="w-5 h-5" /></Link>
         </Button>
       </div>
     </div>

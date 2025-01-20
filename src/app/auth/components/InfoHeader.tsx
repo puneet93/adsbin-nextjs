@@ -1,15 +1,22 @@
+import Image from "next/image";
+
 export default function InfoHeader({
   label,
   title,
-  content
+  content,
+  logo
 }: {
   label: string;
   title: string;
   content: string;
+  logo?: boolean;
 }) {
   return (
     <>
       <div className="flex flex-col gap-2.5 p-5">
+        {logo && (
+          <Image src="/Logo-dark.svg" alt="logo" width={190} height={59} />
+        )}
         {label && (
           <h6 className="uppercase text-adsbin-grey-1000 tracking-widest text-xsm font-bold">
             # {label}
