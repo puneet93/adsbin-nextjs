@@ -34,7 +34,7 @@ export default function InviteForm() {
           <Label className="min-w-36 font-nunito">Last name</Label>
           <Input type="text" className="!border-adsbin-grey-100" />
         </div>
-        <div className="flex w-full max-w-xl items-center md:gap-5 gap-2.5 custom-select">
+        <div className="flex w-full max-w-xl items-center md:gap-5 gap-2.5 select-box">
           <Label className="min-w-36 font-nunito">Role</Label>
           {/*<Input type="text" className="!border-adsbin-grey-100" />*/}
           <Select>

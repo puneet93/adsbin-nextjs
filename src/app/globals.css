@@ -45,10 +45,6 @@ button[role="combobox"] {
   @apply !border-adsbin-grey-100 !bg-white;
 }
 
-.custom-select button[role="combobox"]{
-  @apply !border-adsbin-grey-100;
-}
-
 .text-xsm {
   font-size: 13px;
 }
