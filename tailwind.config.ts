@@ -59,6 +59,9 @@ export default {
       },
       spacing: {
         "26": "108px"
+      },
+      fontSize:{
+        '13': "13px"
       }
     }
   },

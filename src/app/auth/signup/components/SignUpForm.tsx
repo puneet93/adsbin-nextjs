@@ -14,6 +14,16 @@ export default function SignUpForm() {
           <Label className="min-w-36 font-nunito">Email address</Label>
           <Input type="email" className="!border-adsbin-grey-100" />
         </div>
+        <div className="px-2.5 mb-10 flex items-center space-x-5">
+          <Checkbox id="individual" />
+          <label
+              htmlFor="individual"
+              className="font-nunito max-w-[326px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            <h6 className={'text-base'}>Please check this box.</h6>
+            <span className={'text-13 leading-tight block'}>By doing so, you confirm that you are a business user. Our services are not intended for individual consumers.</span>
+          </label>
+        </div>
         <div className="flex w-full max-w-xl items-center md:gap-5 gap-2.5">
           <Label className="min-w-36 font-nunito">Username</Label>
           <Input type="text" className="!border-adsbin-grey-100" />
