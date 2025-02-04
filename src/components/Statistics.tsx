@@ -5,8 +5,8 @@ import { BarChartStatistics } from "./BarChartStatistics";
 
 export default function Statistics() {
   return (
-    <div className="p-5 border-b border-adsbin-grey-100">
-      <div className="flex items-center mb-5 justify-between">
+    <div>
+      <div className="flex items-center mb-3 justify-between">
         <h3 className="text-adsbin-evergreens text-2xl font-outfit tracking-tight">
           Statistics
         </h3>

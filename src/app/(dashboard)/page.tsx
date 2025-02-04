@@ -21,13 +21,13 @@ export default function page() {
         </div>
       </Information>
 
-      <div className="border-t border-adsbin-grey-100 mt-10 mb-5 pt-5">
-        <QuickLink />
+      <div className="border-t border-b border-adsbin-grey-100 mt-10 mb-5 pb-5 pt-10 px-5 gap-5">
+        <Statistics />
+        {/* <Overview /> */}
       </div>
 
-      <div className="py-5 grid md:grid-cols-2 grid-cols-1 gap-5">
-        <Statistics />
-        <Overview />
+      <div className="mb-5">
+        <QuickLink />
       </div>
 
       <PopupControls title="Stay in Control with your Dashboard" content="Here you can see all your campaigns, statistics, and more." />
