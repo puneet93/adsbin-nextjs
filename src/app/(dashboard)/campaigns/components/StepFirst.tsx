@@ -1,41 +1,152 @@
 import StepHeader from "@/components/StepHeader";
-import { BookDown, Eye, ShoppingCart, User, UserPlus } from "lucide-react";
-import CampaignCard from "./CampaignCard";
+import {Label} from "@/components/ui/label";
+import {Input} from "@/components/ui/input";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Textarea} from "@/components/ui/textarea";
 
 export default function StepFirst() {
   return (
     <div>
-      <StepHeader count={1} title="What is the target of the Campaign?">
+      <StepHeader count={1} title="Details and Behavior">
         <></>
       </StepHeader>
 
-      <div className="p-5 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
-        <CampaignCard
-          icon={<ShoppingCart color="#000" size={24} />}
-          title="Sales"
-          content="Drive direct purchases of your products or services through targeted advertising."
-        />
-        <CampaignCard
-          icon={<User color="#000" size={24} />}
-          title="LEADS"
-          content="Capture potential customer information to nurture and convert into sales."
-        />
-        <CampaignCard
-          icon={<UserPlus color="#000" size={24} />}
-          title="Website Traffic"
-          content="Increase the number of visitors to your website to boost online engagement and conversions."
-        />
-        <CampaignCard
-          icon={<Eye color="#000" size={24} />}
-          title="BRAND AWARENESS"
-          content="Enhance the visibility and recognition of your brand among your target audience."
-        />
-        <CampaignCard
-          icon={<BookDown color="#000" size={24} />}
-          title="App DOWNLOADS"
-          content="Encourage users to download and install your mobile application to expand your user base."
-        />
-      </div>
+        <div className="flex flex-col p-5 mb-5 gap-6">
+            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                    Company Name <small className={'block'}>(optional) :</small>
+                </Label>
+                <Input
+                    type="text"
+                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                    placeholder="United LLC"
+                />
+            </div>
+            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                    Campaign Name:
+                </Label>
+                <Input
+                    type="text"
+                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                    placeholder="Summer promotion "
+                />
+            </div>
+            <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
+                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                    QR:
+                </Label>
+                <div className="flex items-start space-x-5">
+                    <Checkbox id="qr-link" className={'mt-1.5'} />
+                    <label
+                        htmlFor="qr-link"
+                        className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        <h6 className={'text-base mb-1'}>Disable all QR link functionality</h6>
+                        <span className={'text-13 leading-tight block'}>Disable this when the Media already has an embedded QR code or when no linking is needed</span>
+                    </label>
+                </div>
+            </div>
+            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                    Target URL:
+                </Label>
+                <Input
+                    type="text"
+                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                    placeholder="https://mypromotionsite.com"
+                />
+            </div>
+            <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
+                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                    Link to:
+                </Label>
+                <div className={'flex flex-col gap-2'}>
+                    <div className="flex items-start space-x-5">
+                        <Checkbox id="website-target" className={'mt-1.5'} />
+                        <label
+                            htmlFor="website-target"
+                            className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                            Website Target URL
+                        </label>
+                    </div>
+                    <div className="flex items-start space-x-5">
+                        <Checkbox id="business-telephone" className={'mt-1.5'} />
+                        <label
+                            htmlFor="business-telephone"
+                            className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                            Business Telephone number
+                        </label>
+                    </div>
+                    <div className="flex items-start space-x-5">
+                        <Checkbox id="app-store" className={'mt-1.5'} />
+                        <label
+                            htmlFor="app-store"
+                            className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        >
+                            App Store Download Page
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
+                <Label htmlFor="" className="text-nowrap min-w-44 leading-none">
+                    Extra:
+                </Label>
+                <div className="flex items-start space-x-5">
+                    <Checkbox id="verification" className={'mt-1.5'} />
+                    <label
+                        htmlFor="verification"
+                        className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        <h6 className={'text-base mb-1'}>Add Age Verification Gate After QR Click</h6>
+                        <span className={'text-13 leading-tight block'}>When enabled, users clicking the QR code will see an age confirmation screen before accessing the content.</span>
+                    </label>
+                </div>
+            </div>
+            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                    Business Tel. No:
+                </Label>
+                <Input
+                    type="text"
+                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                    placeholder="+1 201 149 70 46"
+                />
+            </div>
+            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                    Apple Appstore URL:
+                </Label>
+                <Input
+                    type="text"
+                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                    placeholder="https://apps.apple.com/app/id1234567890"
+                />
+            </div>
+            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                    Google Playstore URL:
+                </Label>
+                <Input
+                    type="text"
+                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                    placeholder="https://apps.apple.com/app/id1234567890"
+                />
+            </div>
+            <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
+                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                    Description <small className={'block'}>(optional) :</small>
+                </Label>
+                <Textarea
+                    rows={3}
+                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                    placeholder="Our campaign aims to increase brand awareness among small businesses in the tech sector through targeted social media ads."
+                />
+            </div>
+        </div>
     </div>
   );
 }

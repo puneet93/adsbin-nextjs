@@ -17,7 +17,7 @@ import LocationCard from "./LocationCard";
 export default function StepFour() {
   return (
     <div>
-      <StepHeader count={4} title="Where do you want to Advertise?">
+      <StepHeader count={4} title="Where do you want to show your Campaign?">
         <></>
       </StepHeader>
 

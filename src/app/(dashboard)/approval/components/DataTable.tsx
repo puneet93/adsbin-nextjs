@@ -25,11 +25,10 @@ import {
   TableRow
 } from "@/components/ui/table";
 import User from "./User";
-import { Button } from "@/components/ui/button";
-import { CirclePlay } from "lucide-react";
 import Actions from "./Actions";
 import NameMedia from "./NameMedia";
 import { useWindowDimensions } from "@/lib/useWindowDimensions";
+import ViewDropdown from "@/app/(dashboard)/approval/components/ViewDropdown";
 
 const data: Payment[] = [
   {
@@ -81,14 +80,12 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     accessorKey: "play",
-    header: "Play",
+    header: "Details",
     cell: () => (
-      <Button
-        variant={"outline"}
-        className="text-base anim-pulse shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300"
-      >
-        Preview <CirclePlay color="#000" />
-      </Button>
+        <>
+          <ViewDropdown />
+        </>
+
     )
   },
   {

@@ -1,10 +1,11 @@
-import { FileVideo } from "lucide-react";
+import {Eye, FileVideo} from "lucide-react";
 import Image from "next/image";
 import FileDetailItem from "./FileDetailItem";
+import {Button} from "@/components/ui/button";
 
 export default function MediaCard() {
   return (
-    <div className="border border-adsbin-grey-100 p-5">
+    <div className="border border-adsbin-grey-100 p-5 max-w-xs w-full">
       <div className="relative h-40 mb-2.5">
         <Image
           src={"/media-poster.png"}
@@ -18,10 +19,14 @@ export default function MediaCard() {
         <FileVideo color="#17412D" />
       </div>
 
-      <div className="grid grid-cols-2 divide-x -mx-5">
+      <div className="grid grid-cols-2 divide-x -mx-5 mb-5">
         <FileDetailItem title="Filetype" info="video" />
         <FileDetailItem title="Duration" info="0:31" />
       </div>
+
+    <Button className="py-2.5 w-full px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none ml-auto">
+        Preview Content <Eye className="w-5 h-5" />
+    </Button>
     </div>
   );
 }

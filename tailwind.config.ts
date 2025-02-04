@@ -45,7 +45,8 @@ export default {
         "adsbin-neutral": {
           100: "#F0F0F0", // runningBg
           200: "#C9C9C9", // running
-          300: "#1D1B20" // running
+          300: "#1D1B20", // running
+          400: "#9D9C9C" // running
         }
       },
       borderRadius: {
