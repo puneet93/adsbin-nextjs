@@ -3,7 +3,7 @@ import PurchaseForm from "./components/PurchaseForm";
 
 export default function page() {
   return (
-    <>
+    <div className="container max-w-[600px] mx-auto py-3 md:py-5">
       <InfoHeader
         label="Place ORDER"
         title="Purchase"
@@ -11,6 +11,6 @@ export default function page() {
       />
 
       <PurchaseForm />
-    </>
+    </div>
   );
 }

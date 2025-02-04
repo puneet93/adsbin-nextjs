@@ -1,4 +1,6 @@
-import { Clock, Coins, Lock } from "lucide-react";
+import {Clock, Coins, Info, Lock} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+import {Button} from "@/components/ui/button";
 
 export default function Status({ status }: { status: string }) {
   if (status === "Approved") {
@@ -39,8 +41,22 @@ export default function Status({ status }: { status: string }) {
     );
   } else if (status === "Rejected") {
     return (
-      <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-adsbin-red-300 text-adsbin-red-300 bg-adsbin-red-400 font-semibold">
-        {status} <Lock />
+      <div className={'flex items-center gap-1.5'}>
+        <div className="inline-flex items-center leading-tight gap-2.5 py-1.5 px-2.5 rounded-md border border-adsbin-red-300 text-adsbin-red-300 bg-adsbin-red-400 font-semibold">
+          {status} <Lock />
+        </div>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="outline" className={'px-2.5'}>
+                <Info />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Add to library</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
     );
   }

@@ -3,7 +3,7 @@ import InfoHeader from "../components/InfoHeader";
 
 export default function page() {
   return (
-    <>
+    <div className="container max-w-[600px] mx-auto py-3 md:py-5">
       <InfoHeader
         label="BROCHURE"
         title="Brochure"
@@ -11,6 +11,6 @@ export default function page() {
       />
 
       <BrochureForm />
-    </>
+    </div>
   );
 }
