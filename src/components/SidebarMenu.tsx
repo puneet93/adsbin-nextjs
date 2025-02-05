@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  BarChartIcon,
   CircleHelp,
   Cog,
   DollarSign,
@@ -34,6 +35,12 @@ export default function Sidebar() {
       label: "Media",
       subtitle: "Images and Videos",
       icon: <FilmIcon color="#0F172A" size={24} />
+    },
+    {
+      href: "/earnings",
+      label: "Earnings",
+      subtitle: "Revenue for your location",
+      icon: <BarChartIcon color="#0F172A" size={24} />
     },
     {
       href: "/campaigns",

@@ -1,7 +1,8 @@
 import { CircleArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { BarChartStatistics } from "./BarChartStatistics";
+import {LineChartFun} from "@/components/LineChart";
+import * as React from "react";
 
 export default function Statistics() {
   return (
@@ -21,9 +22,12 @@ export default function Statistics() {
         </Button>
       </div>
 
-      <div className="px-7">
-        <BarChartStatistics />
-      </div>
+        <div className={'md:px-8'}>
+            <LineChartFun />
+        </div>
+      {/*<div className="px-7">*/}
+      {/*  <BarChartStatistics />*/}
+      {/*</div>*/}
     </div>
   );
 }
