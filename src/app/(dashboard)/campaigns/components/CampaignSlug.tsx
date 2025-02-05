@@ -4,12 +4,11 @@ import { Button } from "@/components/ui/button";
 import StepFirst from "./StepFirst";
 import StepFive from "./StepFive";
 import StepFour from "./StepFour";
-import StepSecond from "./StepSecond";
-import StepSix from "./StepSix";
 import StepThird from "./StepThird";
-import { ArrowLeft, ArrowRight, Eye } from "lucide-react";
+import { ArrowLeft, ArrowRight} from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import StepQR from "@/app/(dashboard)/campaigns/components/StepQR";
 
 export default function CampaignSlug() {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -18,7 +17,7 @@ export default function CampaignSlug() {
   return (
     <div className="flex flex-col gap-2.5 mt-10">
       {!showPreview && (
-        <div className="py-5 flex items-center gap-2.5 justify-end font-semibold text-base ml-auto tracking-wide">
+        <div className="py-5 md:px-5 flex items-center gap-2.5 justify-end font-semibold text-base ml-auto tracking-wide">
           <div className={'flex  flex-col gap-1 items-center justify-center px-1.5'}>
             <span className={`h-1.5 w-14 flex-grow ${activeIndex === 1 ? "bg-adsbin-green-500" : 'bg-adsbin-grey-100' }`}></span>
             <span className={activeIndex === 1 ? 'text-black' : 'text-adsbin-neutral-400'}>Details</span>
@@ -45,12 +44,13 @@ export default function CampaignSlug() {
       {activeIndex === 1 && <StepFirst />}
       {/*{activeIndex === 2 && <StepSecond />}*/}
       {activeIndex === 2 && <StepThird showPreview={showPreview} getPreview={() => setShowPreview(!showPreview)} />}
+      {activeIndex === 3 && <StepQR />}
       {activeIndex === 4 && <StepFour />}
-      {activeIndex === 4 && <StepFive />}
-      {activeIndex === 5 && <StepSix />}
+      {activeIndex === 5 && <StepFive />}
+      {/*{activeIndex === 5 && <StepSix />}*/}
 
 
-      {activeIndex <= 5 ? (
+      {activeIndex <= 4 ? (
         <div className="flex items-center justify-between md:px-0 px-5">
           {/*{activeIndex === 2 && (*/}
           {/*  !showPreview &&*/}

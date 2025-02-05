@@ -21,7 +21,7 @@ export default function StepFour() {
         <></>
       </StepHeader>
 
-      <div className="flex items-center flex-wrap gap-2.5 justify-between mb-5 md:px-0 px-5">
+      <div className="flex items-center flex-wrap gap-2.5 justify-between mb-5 px-5">
         <div className="flex flex-wrap items-center gap-2.5">
           <form action="/" className="relative">
             <Input
@@ -73,9 +73,11 @@ export default function StepFour() {
         </div>
       </div>
 
-      <GoogleMap />
+      <div className="px-5">
+        <GoogleMap />
+      </div>
 
-      <div className="py-5 md:px-0 px-5 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
+      <div className="p-5 px-5 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
         <LocationCard
           active={false}
           icon={<ShoppingBag color="#000" className="mb-3" />}
