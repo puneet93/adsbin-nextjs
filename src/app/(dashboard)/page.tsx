@@ -1,7 +1,6 @@
 import Information from "../../components/Information";
 import { CalendarDays } from "lucide-react";
 import Statistics from "@/components/Statistics";
-import Overview from "@/components/Overview";
 import PopupControls from "@/components/PopupControls";
 import QuickLink from "@/components/QuickLink";
 

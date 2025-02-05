@@ -17,7 +17,7 @@ export default function  StepFive() {
         <></>
       </StepHeader>
 
-      <div className="flex text-adsbin-grey-1000 flex-col pb-5 mb-5 gap-5 md:px-0 px-5 max-w-3xl w-full">
+      <div className="flex text-adsbin-grey-1000 flex-col pb-5 mb-5 gap-5 px-5 max-w-3xl w-full">
         <p className="tracking-wide text-base max-w-2xl md:pr-14 w-full">
           Reserve a certain number of hours of ad display over a period of weeks, and your ad will be shown multiple times, evenly distributed to maximize visibility. Minimum duration is two weeks.
         </p>

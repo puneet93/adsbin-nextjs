@@ -56,7 +56,8 @@ export default {
       },
       boxShadow: {
         container: "0px 0px 44px 0px rgba(0,0,0,0.1)",
-        formField: "0px 4px 4px 0px rgba(0,0,0,0.04)"
+        formField: "0px 4px 4px 0px rgba(0,0,0,0.04)",
+        carousel: "0px 11px 62px -43px rgba(0,0,0,0.25)"
       },
       spacing: {
         "26": "108px"

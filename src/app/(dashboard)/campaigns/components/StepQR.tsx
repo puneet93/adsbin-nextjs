@@ -1,11 +1,21 @@
+"use client";
+
 import StepHeader from "@/components/StepHeader";
 import { Label } from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Eye} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
+import Image from "next/image";
+import * as React from "react";
+import Preview from "@/app/(dashboard)/campaigns/components/Preview";
 
-export default function StepQR() {
-  return (
-    <div>
-      <div className="grid md:grid-cols-2 grid-cols-1">
+export default function StepQR({getPreview}:{getPreview: () => void}) {
+  const [showPreview, setShowPreview] = React.useState(false);
+
+  return !showPreview ? (
+    <div className={'md:px-5'}>
+      <div className="grid md:grid-cols-2 grid-cols-1 mb-10">
         <div className={'order-1'}>
           <StepHeader count={3} title="QR code preferences">
             <></>
@@ -54,14 +64,45 @@ export default function StepQR() {
               </Select>
             </div>
 
+            <div className={'w-full mt-24'}>
+              <Button onClick={() => {
+                setShowPreview(!showPreview);
+                getPreview()
+              }} className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none ml-auto">
+                Preview Content <Eye className="w-5 h-5" />
+              </Button>
+            </div>
 
           </div>
         </div>
 
-        <div>
-
+        <div className={'max-w-2xl mt-5 w-full'}>
+          <Carousel className="carousel-grid shadow-carousel">
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                  <CarouselItem key={index}>
+                    <Image
+                        src={"/ads.png"}
+                        alt="ads"
+                        width={1040}
+                        height={505}
+                        className="m-auto w-full"
+                    />
+                  </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
+    </div>
+  ) : (
+    <div className={'md:px-5'}>
+      <Preview getValue={() => {
+        setShowPreview(!showPreview);
+        getPreview()
+      }} />
     </div>
   );
 }

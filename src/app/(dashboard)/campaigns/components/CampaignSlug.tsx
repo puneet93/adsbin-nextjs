@@ -44,14 +44,14 @@ export default function CampaignSlug() {
       {activeIndex === 1 && <StepFirst />}
       {/*{activeIndex === 2 && <StepSecond />}*/}
       {activeIndex === 2 && <StepThird showPreview={showPreview} getPreview={() => setShowPreview(!showPreview)} />}
-      {activeIndex === 3 && <StepQR />}
+      {activeIndex === 3 && <StepQR getPreview={() => setShowPreview(!showPreview)} />}
       {activeIndex === 4 && <StepFour />}
       {activeIndex === 5 && <StepFive />}
       {/*{activeIndex === 5 && <StepSix />}*/}
 
 
       {activeIndex <= 4 ? (
-        <div className="flex items-center justify-between md:px-0 px-5">
+        <div className="flex items-center justify-between px-5">
           {/*{activeIndex === 2 && (*/}
           {/*  !showPreview &&*/}
           {/*  <Button*/}
@@ -73,7 +73,7 @@ export default function CampaignSlug() {
           </Button>
         </div>
       ):(
-        <div className="flex items-center justify-between md:px-0 px-5">
+        <div className="flex items-center justify-between px-5">
           <Button
             variant={"outline"}
             className="p-0 border-0 anim-pulse !bg-transparent shadow-none text-base font-bold text-adsbin-grey-1000"
