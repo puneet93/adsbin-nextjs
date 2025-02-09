@@ -1,4 +1,4 @@
-import {LineChartFun} from "@/components/LineChart";
+import {LineChartEarningFun} from "@/components/LineChartEarning";
 
 export default function Overview(){
     return(
@@ -8,7 +8,7 @@ export default function Overview(){
             </h3>
 
             <div className={'md:px-8 md:pt-10 py-5'}>
-                <LineChartFun />
+                <LineChartEarningFun />
             </div>
         </div>
     )

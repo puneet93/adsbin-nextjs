@@ -50,7 +50,8 @@ export default {
           200: "#C9C9C9", // running
           300: "#1D1B20", // running
           400: "#9D9C9C", // running
-          500: "#656565" // running
+          500: "#656565", // running
+          600: "#CBCBCB" // running
         }
       },
       borderRadius: {
@@ -64,7 +65,8 @@ export default {
         carousel: "0px 11px 62px -43px rgba(0,0,0,0.25)"
       },
       spacing: {
-        "26": "108px"
+        "26": "108px",
+        '70': '70px',
       },
       fontSize:{
         '13': "13px"
