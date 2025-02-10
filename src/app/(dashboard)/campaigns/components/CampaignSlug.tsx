@@ -19,23 +19,23 @@ export default function CampaignSlug() {
       {!showPreview && (
         <div className="py-5 md:px-5 flex items-center justify-end font-semibold text-xs ml-auto font-outfit tracking-wide leading-10">
           <div className={'flex flex-col gap-2.5 items-center justify-center w-70'}>
-            <span className={`h-1.5 w-full flex-grow bg-adsbin-neutral-600 relative after:w-3.5 after:z-10 after:h-3.5 after:absolute after:left-0 after:right-0 after:-top-1 after:rounded-full after:m-auto before:bg-adsbin-green-500 before:absolute before:top-0 before:left-0 before:h-full before:w-1/2 before:transition-all ${activeIndex >= 1 ? "after:bg-adsbin-green-500" : 'after:bg-adsbin-neutral-600' }`}></span>
-            <span className={activeIndex >= 1 ? 'text-black' : 'text-adsbin-neutral-400'}>Details</span>
+            <span className={`h-1.5 w-full flex-grow bg-adsbin-neutral-600 relative after:w-3.5 after:z-10 after:h-3.5 after:absolute after:left-0 after:right-0 after:-top-1 after:rounded-full after:m-auto before:bg-adsbin-green-500 before:absolute before:top-0 before:left-0 before:h-full before:w-1/2 before:transition-all after:transition-all ${activeIndex >= 1 ? "after:bg-adsbin-green-500" : 'after:bg-adsbin-neutral-600' } ${activeIndex === 1 && "after:bg-black after:shadow-indicator"}`}></span>
+            <span className={activeIndex === 1 ? 'text-black' : 'text-adsbin-neutral-400'}>Details</span>
           </div>
           <div className={'flex  flex-col gap-2.5 items-center justify-center w-70'}>
-            <span className={`h-1.5 w-full flex-grow bg-adsbin-neutral-600 relative after:w-3.5 after:z-10 after:h-3.5 after:absolute after:left-0 after:right-0 after:-top-1 after:rounded-full after:m-auto before:bg-adsbin-green-500 before:absolute before:top-0 before:-left-1/2 before:h-full before:transition-all ${activeIndex >= 2 ? "after:bg-adsbin-green-500 before:w-full" : 'after:bg-adsbin-neutral-600 before:w-0' }`}></span>
-            <span className={activeIndex >= 2 ? 'text-black' : 'text-adsbin-neutral-400'}>Media</span>
+            <span className={`h-1.5 w-full flex-grow bg-adsbin-neutral-600 relative after:w-3.5 after:z-10 after:h-3.5 after:absolute after:left-0 after:right-0 after:-top-1 after:rounded-full after:m-auto before:bg-adsbin-green-500 before:absolute before:top-0 before:-left-1/2 before:h-full before:transition-all ${activeIndex >= 2 ? "after:bg-adsbin-green-500 before:w-full" : 'after:bg-adsbin-neutral-600 before:w-0' } ${activeIndex === 2 && "after:bg-black after:shadow-indicator"}`}></span>
+            <span className={activeIndex === 2 ? 'text-black' : 'text-adsbin-neutral-400'}>Media</span>
           </div>
           <div className={'flex  flex-col gap-2.5 items-center justify-center w-70'}>
-            <span className={`h-1.5 w-full flex-grow ${activeIndex === 3 ? "bg-adsbin-green-500" : 'bg-adsbin-neutral-600' }`}></span>
+            <span className={`h-1.5 w-full flex-grow bg-adsbin-neutral-600 relative after:w-3.5 after:z-10 after:h-3.5 after:absolute after:left-0 after:right-0 after:-top-1 after:rounded-full after:m-auto before:bg-adsbin-green-500 before:absolute before:top-0 before:-left-1/2 before:h-full before:transition-all ${activeIndex >= 3 ? "after:bg-adsbin-green-500 before:w-full" : 'after:bg-adsbin-neutral-600 before:w-0' } ${activeIndex === 3 && "after:bg-black after:shadow-indicator"}`}></span>
             <span className={activeIndex === 3 ? 'text-black' : 'text-adsbin-neutral-400'}>QR Code</span>
           </div>
           <div className={'flex  flex-col gap-2.5 items-center justify-center w-70'}>
-            <span className={`h-1.5 w-full flex-grow ${activeIndex === 4 ? "bg-adsbin-green-500" : 'bg-adsbin-neutral-600' }`}></span>
+            <span className={`h-1.5 w-full flex-grow bg-adsbin-neutral-600 relative after:w-3.5 after:z-10 after:h-3.5 after:absolute after:left-0 after:right-0 after:-top-1 after:rounded-full after:m-auto before:bg-adsbin-green-500 before:absolute before:top-0 before:-left-1/2 before:h-full before:transition-all ${activeIndex >= 4 ? "after:bg-adsbin-green-500 before:w-full" : 'after:bg-adsbin-neutral-600 before:w-0' } ${activeIndex === 4 && "after:bg-black after:shadow-indicator"}`}></span>
             <span className={activeIndex === 4 ? 'text-black' : 'text-adsbin-neutral-400'}>Locations</span>
           </div>
           <div className={'flex  flex-col gap-2.5 items-center justify-center w-70'}>
-            <span className={`h-1.5 w-full flex-grow ${activeIndex === 5 ? "bg-adsbin-green-500" : 'bg-adsbin-neutral-600' }`}></span>
+            <span className={`h-1.5 w-full flex-grow bg-adsbin-neutral-600 relative after:w-3.5 after:z-10 after:h-3.5 after:absolute after:left-0 after:right-0 after:-top-1 after:rounded-full after:m-auto before:bg-adsbin-green-500 before:absolute before:top-0 before:-left-1/2 before:h-full before:transition-all ${activeIndex >= 5 ? "after:bg-adsbin-green-500 before:w-full" : 'after:bg-adsbin-neutral-600 before:w-0' } ${activeIndex === 5 && "after:bg-black after:shadow-indicator"}`}></span>
             <span className={activeIndex === 5 ? 'text-black' : 'text-adsbin-neutral-400'}>Dates</span>
           </div>
         </div>
