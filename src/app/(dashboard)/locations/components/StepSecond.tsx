@@ -6,7 +6,7 @@ import { ScreensDataTable } from "./ScreensDataTable";
 export default function StepSecond() {
   return (
     <div>
-      <StepHeader count={2} title="Screens">
+      <StepHeader count={2} countEnable={true} title="Screens">
         <></>
       </StepHeader>
 

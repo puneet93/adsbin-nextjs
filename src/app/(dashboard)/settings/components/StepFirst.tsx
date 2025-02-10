@@ -11,7 +11,7 @@ import {
 export default function StepFirst() {
   return (
     <div>
-      <StepHeader count={1} title="Clock and Timezone">
+      <StepHeader count={1} countEnable={true} title="Clock and Timezone">
         <></>
       </StepHeader>
 

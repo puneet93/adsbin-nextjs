@@ -11,7 +11,7 @@ import {
 export default function StepSecond() {
   return (
     <div>
-      <StepHeader count={2} title="Region">
+      <StepHeader count={2} countEnable={true} title="Region">
         <></>
       </StepHeader>
 

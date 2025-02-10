@@ -16,7 +16,7 @@ import { Locate, Search, Upload } from "lucide-react";
 export default function StepFirst() {
   return (
     <div>
-      <StepHeader count={1} title="Details">
+      <StepHeader count={1} countEnable={true} title="Details">
         <></>
       </StepHeader>
 

@@ -12,7 +12,7 @@ import {
 export default function StepThird() {
   return (
     <div>
-      <StepHeader count={3} title="Notifications">
+      <StepHeader count={3} countEnable={true} title="Notifications">
         <></>
       </StepHeader>
 
