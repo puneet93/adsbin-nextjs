@@ -21,9 +21,9 @@ export default function StepFour() {
         <></>
       </StepHeader>
 
-      <div className="flex items-center flex-wrap gap-2.5 justify-between mb-5 px-5">
+      <div className="flex items-center flex-wrap sm:gap-2.5 justify-between mb-5 px-5">
         <div className="flex flex-wrap items-center gap-2.5">
-          <form action="/" className="relative">
+          <form action="/" className="relative sm:w-auto w-full">
             <Input
               placeholder="Place search"
               className="rounded-sm shadow-formField text-adsbin-green-300 placeholder:text-adsbin-green-300 font-outfit text-base border-adsbin-grey-200 pr-10 font-normal min-h-10 min-w-72"
@@ -37,7 +37,7 @@ export default function StepFour() {
           </form>
 
           <Select>
-            <SelectTrigger className="w-40 h-11 text-adsbin-green-300 border-adsbin-grey-200 font-outfit text-base">
+            <SelectTrigger className="sm:w-40 h-11 text-adsbin-green-300 border-adsbin-grey-200 font-outfit text-base">
               <SelectValue placeholder="Venue type" />
             </SelectTrigger>
             <SelectContent>
@@ -47,7 +47,7 @@ export default function StepFour() {
             </SelectContent>
           </Select>
           <Select>
-            <SelectTrigger className="w-28 h-11 text-adsbin-green-300 border-adsbin-grey-200 font-outfit text-base">
+            <SelectTrigger className="sm:w-28 h-11 text-adsbin-green-300 border-adsbin-grey-200 font-outfit text-base">
               <SelectValue placeholder="Map" />
             </SelectTrigger>
             <SelectContent>
@@ -57,10 +57,10 @@ export default function StepFour() {
             </SelectContent>
           </Select>
 
-          <p className="px-2.5 text-adsbin-grey-500">6 Units found</p>
+          <p className="px-2.5 text-adsbin-grey-500 sm:mt-0 mt-4">6 Units found</p>
         </div>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center ml-auto gap-2.5 sm:mt-0 -mt-9">
           <Label className="text-nowrap px-5 py-2 font-outfit font-bold">
             15 selected
           </Label>

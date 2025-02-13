@@ -79,17 +79,22 @@ export default function  StepFive() {
             </SelectContent>
           </Select>
         </div>
-        <div className="flex flex-wrap items-center md:gap-5 gap-2.5 font-outfit">
+        <div className="flex items-center md:gap-5 gap-2.5 font-outfit">
           <Label className="text-nowrap min-w-28">Exposure: </Label>
 
-          <p className="text-adsbin-grey-700 min-w-48">+/- 930 views per location</p>
-          <p className="text-adsbin-grey-700">+/- 13.950 over 15 locations</p>
+          <div className={'flex items-center md:gap-5 gap-2.5 flex-wrap'}>
+            <p className="text-adsbin-grey-700 min-w-48">+/- 930 views per location</p>
+            <p className="text-adsbin-grey-700">+/- 13.950 over 15 locations</p>
+          </div>
+
         </div>
-        <div className="flex flex-wrap items-center md:gap-5 gap-2.5 font-outfit">
+        <div className="flex items-center md:gap-5 gap-2.5 font-outfit">
           <Label className="text-nowrap min-w-28">CTR:</Label>
 
-          <p className="text-adsbin-grey-700 min-w-48">+/- 47 QR Scans </p>
-          <p className="text-adsbin-grey-700">+/- 698 Scans over 15 locations</p>
+          <div className={'flex items-center md:gap-5 gap-2.5 flex-wrap'}>
+            <p className="text-adsbin-grey-700 min-w-48">+/- 47 QR Scans </p>
+            <p className="text-adsbin-grey-700">+/- 698 Scans over 15 locations</p>
+          </div>
         </div>
       </div>
     </div>

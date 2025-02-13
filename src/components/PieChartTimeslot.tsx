@@ -56,15 +56,15 @@ export function PieChartTimeslot() {
                             data={chartData}
                             dataKey="visitors"
                             nameKey="browser"
-                            innerRadius={70}
+                            innerRadius={50}
                             strokeWidth={5}
                         >
                         </Pie>
                     </PieChart>
                 </ChartContainer>
             </div>
-            <div>
-                <ul className={'flex flex-col gap-1.5'}>
+            <div className={'flex'}>
+                <ul className={'flex m-auto flex-col gap-1.5'}>
                     {chartData?.map((item:{browser:string, fill: string}, index:number) => (
                         <li key={index} className={'flex items-center gap-2.5 text-adsbin-grey-1000'}><span className={`w-3 h-3`} style={{backgroundColor: item?.fill}}></span> {item?.browser}</li>
                     ))}

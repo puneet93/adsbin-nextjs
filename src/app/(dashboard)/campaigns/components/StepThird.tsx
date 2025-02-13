@@ -15,7 +15,7 @@ export default function StepThird({showPreview, getPreview}:{showPreview:boolean
         </div>
       </StepHeader>
 
-      <div className="flex flex-wrap gap-5 p-5 mb-5">
+      <div className="flex flex-wrap sm:justify-start justify-center gap-5 p-5 mb-5">
         <MediaCard />
         <MediaUpload />
       </div>

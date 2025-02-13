@@ -22,30 +22,32 @@ export default function StepQR({getPreview}:{getPreview: () => void}) {
           </StepHeader>
 
           <div className="flex items-center px-5 flex-wrap gap-5 relative">
-            <div className="flex items-center md:gap-5 gap-2.5">
-              <Label className="text-nowrap !font-normal min-w-24">
+            <div className="flex items-start md:gap-5 gap-2.5">
+              <Label className="sm:text-nowrap mt-2 !font-normal min-w-24">
                 Show QR:
               </Label>
-              <Select>
-                <SelectTrigger className="w-44 h-11 text-adsbin-evergreens">
-                  <SelectValue placeholder="Visible" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
-              <Select>
-                <SelectTrigger className="w-44 h-11 text-adsbin-evergreens">
-                  <SelectValue placeholder="Left Bottom" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
+              <div className={'flex items-center md:gap-5 gap-2.5 flex-wrap'}>
+                <Select>
+                  <SelectTrigger className="w-44 h-11 text-adsbin-evergreens">
+                    <SelectValue placeholder="Visible" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="light">Light</SelectItem>
+                    <SelectItem value="dark">Dark</SelectItem>
+                    <SelectItem value="system">System</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Select>
+                  <SelectTrigger className="w-44 h-11 text-adsbin-evergreens">
+                    <SelectValue placeholder="Left Bottom" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="light">Light</SelectItem>
+                    <SelectItem value="dark">Dark</SelectItem>
+                    <SelectItem value="system">System</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
 
             <div className="flex items-center md:gap-5 gap-2.5">
@@ -64,7 +66,7 @@ export default function StepQR({getPreview}:{getPreview: () => void}) {
               </Select>
             </div>
 
-            <div className={'w-full mt-24'}>
+            <div className={'w-full md:mt-24 mt-6'}>
               <Button onClick={() => {
                 setShowPreview(!showPreview);
                 getPreview()

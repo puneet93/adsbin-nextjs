@@ -3,7 +3,7 @@ import {FilmIcon, Upload} from "lucide-react";
 
 export default function MediaUpload() {
   return (
-    <div className="p-2.5 sm:max-w-xs w-full flex">
+    <div className="p-2.5 sm:max-w-xs w-full justify-center flex">
       <input type="file" hidden id="uploadMedia" />
       <label
         htmlFor="uploadMedia"

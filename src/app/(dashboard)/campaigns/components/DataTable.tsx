@@ -173,15 +173,15 @@ export function DataTable({ onPreviewClick }: { onPreviewClick: () => void }) {
         <Button
           variant={"outline"}
           disabled={row.getValue("status") === "Rejected"}
-          className="sm:text-sm anim-pulse rounded-none !shadow-none ml-auto border-0 md:border md:border-adsbin-grey-100 !h-9 font-semibold text-adsbin-evergreens"
+          className="sm:text-sm anim-pulse rounded-none !shadow-none ml-auto border-0 border border-adsbin-grey-100 !h-9 font-semibold text-adsbin-evergreens"
           onClick={() => onPreviewClick()} // Pass the row's data to the parent
         >
-          <span className="sm:flex hidden items-center gap-2.5">
+          <span className="flex items-center gap-2.5">
             Preview <Eye color="#415B41" size={16} />
           </span>
-          <span className="sm:hidden">
-            <Eye color="#B8C6B8" size={24} />
-          </span>
+          {/*<span className="sm:hidden">*/}
+          {/*  <Eye color="#B8C6B8" size={24} />*/}
+          {/*</span>*/}
         </Button>
       ),
     },

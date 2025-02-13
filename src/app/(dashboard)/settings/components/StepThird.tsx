@@ -18,11 +18,11 @@ export default function StepThird() {
 
       <div className="flex flex-col pt-2 pb-5 gap-2.5">
         <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-          <Label htmlFor="picture" className="text-nowrap min-w-40">
+          <Label htmlFor="picture" className="text-nowrap sm:min-w-40 min-w-28">
             Email{" "}
           </Label>
           <Select>
-            <SelectTrigger className="h-11 w-80 text-adsbin-evergreens !border-adsbin-grey-200 font-outfit font-normal">
+            <SelectTrigger className="h-11 sm:w-80 w-64 text-adsbin-evergreens !border-adsbin-grey-200 font-outfit font-normal">
               <SelectValue placeholder="Enable all" />
             </SelectTrigger>
             <SelectContent>
@@ -32,12 +32,12 @@ export default function StepThird() {
             </SelectContent>
           </Select>
         </div>
-        <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-          <Label htmlFor="picture" className="text-nowrap min-w-40">
+        <div className="flex w-full max-w-2xl items-center flex-wrap md:gap-5 gap-2.5">
+          <Label htmlFor="picture" className="text-nowrap sm:min-w-40 min-w-28">
             Web Push{" "}
           </Label>
           <Select>
-            <SelectTrigger className="h-11 w-80 text-adsbin-evergreens !border-adsbin-grey-200 font-outfit font-normal">
+            <SelectTrigger className="h-11 sm:w-80 w-64 text-adsbin-evergreens !border-adsbin-grey-200 font-outfit font-normal">
               <SelectValue placeholder="Enable all" />
             </SelectTrigger>
             <SelectContent>
@@ -48,7 +48,7 @@ export default function StepThird() {
           </Select>
           <Button
             variant={"outline"}
-            className="text-base anim-pulse shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300"
+            className="text-base sm:ml-0 ml-auto anim-pulse shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300"
           >
             Approve Web Push
           </Button>

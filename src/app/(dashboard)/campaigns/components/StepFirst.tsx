@@ -13,7 +13,7 @@ export default function StepFirst() {
 
         <div className="flex flex-col p-5 mb-5 gap-6">
             <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Company Name <small className={'block'}>(optional) :</small>
                 </Label>
                 <Input
@@ -23,7 +23,7 @@ export default function StepFirst() {
                 />
             </div>
             <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Campaign Name:
                 </Label>
                 <Input
@@ -33,7 +33,7 @@ export default function StepFirst() {
                 />
             </div>
             <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     QR:
                 </Label>
                 <div className="flex items-start space-x-5">
@@ -48,7 +48,7 @@ export default function StepFirst() {
                 </div>
             </div>
             <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Target URL:
                 </Label>
                 <Input
@@ -58,7 +58,7 @@ export default function StepFirst() {
                 />
             </div>
             <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Link to:
                 </Label>
                 <div className={'flex flex-col gap-2'}>
@@ -92,7 +92,7 @@ export default function StepFirst() {
                 </div>
             </div>
             <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
-                <Label htmlFor="" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Extra:
                 </Label>
                 <div className="flex items-start space-x-5">
@@ -107,7 +107,7 @@ export default function StepFirst() {
                 </div>
             </div>
             <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Business Tel. No:
                 </Label>
                 <Input
@@ -117,7 +117,7 @@ export default function StepFirst() {
                 />
             </div>
             <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Apple Appstore URL:
                 </Label>
                 <Input
@@ -127,7 +127,7 @@ export default function StepFirst() {
                 />
             </div>
             <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Google Playstore URL:
                 </Label>
                 <Input
@@ -137,7 +137,7 @@ export default function StepFirst() {
                 />
             </div>
             <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="text-nowrap min-w-44 leading-none">
+                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Description <small className={'block'}>(optional) :</small>
                 </Label>
                 <Textarea
