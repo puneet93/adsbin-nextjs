@@ -103,9 +103,9 @@ export default function Sidebar() {
         <MenuIcon className="!w-8 !h-8" color="#fff" />
       </Button>
       <div
-        className={`fixed z-10 top-0 ${
+        className={`fixed z-20 top-0 ${
           show ? "left-0" : "md:left-0 -left-80"
-        } transition-all w-80 mt-[112px] bottom-0 border-r border-adsbin-grey-100 overflow-auto flex bg-white flex-col`}
+        } transition-all w-80 mt-28 bottom-0 border-r border-adsbin-grey-100 overflow-auto flex bg-white flex-col`}
       >
         {menuItems.map((item, index) => (
           <Link

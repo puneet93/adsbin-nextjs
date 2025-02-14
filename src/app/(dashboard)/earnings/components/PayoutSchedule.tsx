@@ -33,7 +33,7 @@ export default function PayoutSchedule(){
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens border-b border-adsbin-grey-100">
                             <th>Okt. - Dec.</th>
                             <td>Ongoing</td>
-                            <td>$ 5,421.14 <span className={'block text-13 text-adsbin-neutral-400 leading-none'}>Estimated $ 35,000.00</span></td>
+                            <td>$ 5,421.14 <span className={'block text-sm text-adsbin-neutral-400 leading-none'}>Estimated $ 35,000.00</span></td>
                         </tr>
                     </tbody>
                 </table>

@@ -43,7 +43,7 @@ export default function StepFirst() {
                         className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     >
                         <h6 className={'text-base mb-1'}>Disable all QR link functionality</h6>
-                        <span className={'text-13 leading-tight block'}>Disable this when the Media already has an embedded QR code or when no linking is needed</span>
+                        <span className={'text-sm leading-tight block'}>Disable this when the Media already has an embedded QR code or when no linking is needed</span>
                     </label>
                 </div>
             </div>
@@ -102,7 +102,7 @@ export default function StepFirst() {
                         className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     >
                         <h6 className={'text-base mb-1'}>Add Age Verification Gate After QR Click</h6>
-                        <span className={'text-13 leading-tight block'}>When enabled, users clicking the QR code will see an age confirmation screen before accessing the content.</span>
+                        <span className={'text-sm leading-tight block'}>When enabled, users clicking the QR code will see an age confirmation screen before accessing the content.</span>
                     </label>
                 </div>
             </div>

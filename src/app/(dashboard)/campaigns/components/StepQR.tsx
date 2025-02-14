@@ -21,7 +21,7 @@ export default function StepQR({getPreview}:{getPreview: () => void}) {
             <></>
           </StepHeader>
 
-          <div className="flex items-center px-5 flex-wrap gap-5 relative">
+          <div className="flex flex-col px-5 gap-5 relative">
             <div className="flex items-start md:gap-5 gap-2.5">
               <Label className="sm:text-nowrap mt-2 !font-normal min-w-24">
                 Show QR:

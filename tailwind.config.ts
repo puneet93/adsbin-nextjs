@@ -1,4 +1,9 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
+
+function reduceByPercentage(value: string, percentage: number) {
+  return `calc(${value} * ${percentage / 100})`;
+}
 
 export default {
   darkMode: ["class"],
@@ -66,11 +71,30 @@ export default {
         indicator: "0px 0px 0 6px rgba(0,0,0,0.15)"
       },
       spacing: {
-        "26": "108px",
-        '70': '70px',
+        "26": "calc(108px * 0.8)", // Reduced by 20%
+        "70": "calc(70px * 0.8)", // Reduced by 20%
+        ...Object.fromEntries(
+            Object.entries(defaultTheme.spacing).map(([key, value]) => [
+              key,
+              reduceByPercentage(value, 80), // Reduce by 20%
+            ])
+        ),
       },
-      fontSize:{
-        '13': "13px"
+      fontSize: {
+        "13": "calc(13px * 0.8)", // Reduced by 20%
+        ...Object.fromEntries(
+            Object.entries(defaultTheme.fontSize).map(([key, value]) => [
+              key,
+              typeof value === "string"
+                  ? reduceByPercentage(value, 80)
+                  : Array.isArray(value)
+                      ? [
+                        reduceByPercentage(value[0], 80),
+                        value[1],
+                      ]
+                      : value,
+            ])
+        ),
       }
     }
   },

@@ -21,7 +21,7 @@ export default function SignUpForm() {
               className="font-nunito max-w-[326px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
             <h6 className={'text-base'}>Please check this box.</h6>
-            <span className={'text-13 leading-tight block'}>By doing so, you confirm that you are a business user. Our services are not intended for individual consumers.</span>
+            <span className={'text-sm leading-tight block'}>By doing so, you confirm that you are a business user. Our services are not intended for individual consumers.</span>
           </label>
         </div>
         <div className="flex w-full max-w-xl items-center md:gap-5 gap-2.5">
