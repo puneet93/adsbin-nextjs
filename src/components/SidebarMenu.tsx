@@ -96,7 +96,7 @@ export default function Sidebar() {
     <>
       <Button
         onClick={() => setShow(!show)}
-        className="md:hidden fixed z-20 top-10 left-3.5 pb-1"
+        className="md:hidden fixed z-30 top-10 left-3.5 pb-1"
         variant={"link"}
         size={"icon"}
       >
