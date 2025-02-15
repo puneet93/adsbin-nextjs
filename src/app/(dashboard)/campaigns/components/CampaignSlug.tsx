@@ -17,7 +17,7 @@ export default function CampaignSlug() {
   return (
     <div className="flex flex-col gap-2.5 mt-10">
       {!showPreview && (
-        <div className="py-5 px-5 flex items-center justify-end font-semibold text-xs ml-auto font-outfit tracking-wide leading-10">
+        <div className="py-5 px-5 flex items-center md:justify-end justify-center font-semibold text-xs md:ml-auto md:mr-0 mx-auto font-outfit tracking-wide leading-10">
           <div className={'flex flex-col gap-2.5 items-center justify-center w-20'}>
             <span className={`h-1.5 w-full flex-grow bg-adsbin-neutral-600 relative after:w-3.5 after:z-10 after:h-3.5 after:absolute after:left-0 after:right-0 after:-top-1 after:rounded-full after:m-auto before:bg-adsbin-green-500 before:absolute before:top-0 before:left-0 before:h-full before:w-1/2 before:transition-all after:transition-all ${activeIndex >= 1 ? "after:bg-adsbin-green-500" : 'after:bg-adsbin-neutral-600' } ${activeIndex === 1 && "after:bg-black after:shadow-indicator"}`}></span>
             <span className={activeIndex === 1 ? 'text-black' : 'text-adsbin-neutral-400'}>Details</span>

@@ -41,7 +41,7 @@ export function PieChartTimeslot() {
     // }, [])
 
     return (
-        <div className={'grid sm:grid-cols-2 grid-cols-1 justify-center items-center'}>
+        <div className={'grid grid-cols-2 justify-center items-center'}>
             <div>
                 <ChartContainer
                     config={chartConfig}

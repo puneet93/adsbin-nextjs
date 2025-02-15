@@ -41,7 +41,7 @@ export function PieChartFun() {
     // }, [])
 
     return (
-        <div className={'grid sm:grid-cols-2 grid-cols-1 justify-center items-center'}>
+        <div className={'grid grid-cols-2 justify-center items-center'}>
             <div>
                 <ChartContainer
                     config={chartConfig}
@@ -57,7 +57,7 @@ export function PieChartFun() {
                             dataKey="visitors"
                             nameKey="browser"
                             innerRadius={50}
-                            strokeWidth={8}
+                            strokeWidth={15}
                         >
                         </Pie>
                     </PieChart>
