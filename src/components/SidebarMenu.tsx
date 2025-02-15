@@ -96,16 +96,16 @@ export default function Sidebar() {
     <>
       <Button
         onClick={() => setShow(!show)}
-        className="md:hidden fixed z-30 top-10 left-3.5 pb-1"
+        className="md:hidden fixed z-30 md:top-10 top-6 left-3.5 pb-1"
         variant={"link"}
         size={"icon"}
       >
-        <MenuIcon className="!w-8 !h-8" color="#fff" />
+        <MenuIcon className="!w-8 !h-8 mt-1 md:mt-0" color="#fff" />
       </Button>
       <div
         className={`fixed z-20 top-0 ${
           show ? "left-0" : "md:left-0 -left-80"
-        } transition-all w-80 mt-28 bottom-0 border-r border-adsbin-grey-100 overflow-auto flex bg-white flex-col`}
+        } transition-all w-80 md:mt-28 mt-[62px] bottom-0 border-r border-adsbin-grey-100 overflow-auto flex bg-white flex-col`}
       >
         {menuItems.map((item, index) => (
           <Link

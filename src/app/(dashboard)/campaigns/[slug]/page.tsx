@@ -6,7 +6,7 @@ export default function page() {
   return (
     <>
       <Information
-        goBack={true}
+        goBack={false}
         label={""}
         title="Start new Campaign"
         content="Set the default settings and quickly roll-out"

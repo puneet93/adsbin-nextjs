@@ -107,14 +107,14 @@ export function DataTable() {
     []
   );
   const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({ user: width > 767, play: width > 767 });
+    React.useState<VisibilityState>({ user: width > 767 });
   const [rowSelection, setRowSelection] = React.useState({});
 
   React.useEffect(() => {
     setColumnVisibility((prev) => ({
       ...prev,
       user: width > 767, // Toggle visibility of the 'actions' column
-      play: width > 767, // Toggle visibility of the 'actions' column
+       // Toggle visibility of the 'actions' column
     }));
   }, [width]);
 

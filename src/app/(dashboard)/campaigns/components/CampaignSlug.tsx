@@ -68,6 +68,16 @@ export default function CampaignSlug() {
           {/*<Button variant={'outline'} className="p-0 border-0 ml-auto anim-pulse !bg-transparent shadow-none text-base font-bold text-black" onClick={() => setActiveIndex(activeIndex + 1)}>*/}
           {/*  Next step <ArrowRight className="w-5 h-5" />*/}
           {/*</Button>*/}
+            {activeIndex > 1 && (
+                <Button
+                    variant={"outline"}
+                    onClick={() => setActiveIndex(activeIndex - 1)}
+                    className="p-0 border-0 anim-pulse !bg-transparent shadow-none text-base font-bold text-adsbin-grey-1000"
+                >
+                    <ArrowLeft color="#000" className="w-5 h-5" /> Go back
+                </Button>
+            )}
+
           <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none ml-auto" onClick={() => setActiveIndex(activeIndex + 1)}>
             Next step <ArrowRight className="w-5 h-5" />
           </Button>
@@ -76,6 +86,7 @@ export default function CampaignSlug() {
         <div className="flex items-center justify-between px-5">
           <Button
             variant={"outline"}
+            onClick={() => setActiveIndex(activeIndex - 1)}
             className="p-0 border-0 anim-pulse !bg-transparent shadow-none text-base font-bold text-adsbin-grey-1000"
           >
             <ArrowLeft color="#000" className="w-5 h-5" /> Go back
