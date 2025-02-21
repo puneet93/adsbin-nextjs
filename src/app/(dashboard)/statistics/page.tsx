@@ -20,9 +20,9 @@ export default function page() {
         align="top"
         title="Statistics Dashboard"
       >
-          <div className={'flex justify-end md:py-10 py-5'}>
+          <div className={'flex justify-end md:py-10 py-2'}>
               <Select>
-                  <SelectTrigger className="w-80 h-11 text-adsbin-evergreens">
+                  <SelectTrigger className="md:w-80 w-full h-[40px] text-adsbin-evergreens">
                       <SelectValue placeholder="All Campaigns" />
                   </SelectTrigger>
                   <SelectContent>

@@ -23,7 +23,7 @@ export default function MediaPage() {
           <Button asChild={true} className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
             <Link href={'/campaigns/new'}>Start new Campaign <Megaphone className="w-4 h-4" /></Link>
           </Button>
-          <Button className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
+          <Button className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-evergreens rounded-none">
             Upload new File <Upload className="w-4 h-4" />
           </Button>
         </div>

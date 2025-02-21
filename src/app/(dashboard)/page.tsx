@@ -7,6 +7,12 @@ import QuickLink from "@/components/QuickLink";
 export default function page() {
   return (
     <>
+        <div className={'md:hidden px-5 -mb-6 flex'}>
+            <div className="inline-flex items-center gap-2.5 font-semibold text-adsbin-grey-1000 mb-auto ml-auto">
+                <CalendarDays />{" "}
+                <span className="text-sm">14 Oktober 2024 14;23</span>
+            </div>
+        </div>
       <Information
         goBack={false}
         content="Ready to Transform Your Space and Engage Your Audience?"
@@ -14,13 +20,13 @@ export default function page() {
         align="top"
         title="Welcome back <strong>Jimmy</strong> 🤚"
       >
-        <div className="inline-flex items-center gap-2.5 font-semibold text-adsbin-grey-1000 ml-auto mb-auto">
+        <div className="hidden md:inline-flex items-center gap-2.5 font-semibold text-adsbin-grey-1000 ml-auto mb-auto">
           <CalendarDays />{" "}
           <span className="text-sm">14 Oktober 2024 14;23</span>
         </div>
       </Information>
 
-      <div className="border-t border-b border-adsbin-grey-100 mt-10 mb-5 pb-5 pt-10 px-5 gap-5">
+      <div className="border-t border-b border-adsbin-grey-100 md:mt-10 -mt-2.5 mb-5 pb-5 md:pt-10 pt-5 px-5 gap-5">
         <Statistics />
         {/* <Overview /> */}
       </div>

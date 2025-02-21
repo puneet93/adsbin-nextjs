@@ -78,7 +78,7 @@ export default function CampaignSlug() {
                 </Button>
             )}
 
-          <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none ml-auto" onClick={() => setActiveIndex(activeIndex + 1)}>
+          <Button className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-evergreens rounded-none ml-auto" onClick={() => setActiveIndex(activeIndex + 1)}>
             Next step <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
@@ -91,7 +91,7 @@ export default function CampaignSlug() {
           >
             <ArrowLeft color="#000" className="w-5 h-5" /> Go back
           </Button>
-          <Button asChild className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
+          <Button asChild className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-evergreens rounded-none">
             <Link href={'/campaigns'}>Go to Checkout <ArrowRight className="w-5 h-5" /></Link>
           </Button>
         </div>

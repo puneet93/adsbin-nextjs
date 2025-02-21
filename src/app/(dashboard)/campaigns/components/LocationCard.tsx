@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Clock3, DollarSign, Eye, Plus, X } from "lucide-react";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 
 export default function LocationCard({
   icon,
@@ -14,15 +15,34 @@ export default function LocationCard({
 }) {
   return (
     <div
-      className={`border ${
-        active ? "border-adsbin-neutral-300" : "border-adsbin-grey-100"
-      } p-5 text-adsbin-grey-1000 tracking-wide text-base min-h-52 hover:border-adsbin-evergreens transition-all`}
+      className={`border 
+       
+      p-5 text-adsbin-grey-1000 tracking-wide text-base min-h-52 border-adsbin-grey-100 transition-all`}
     >
-      <div className="flex items-start justify-between gap-2.5 mb-2.5">
-        <h6 className="uppercase font-extrabold text-sm">{title}</h6>
+      {/* hover:border-adsbin-evergreens*/}
+      {/*${active ? "border-adsbin-neutral-300" : "border-adsbin-grey-100"}*/}
+      <div className="flex items-center gap-2.5 mb-3">
+        <h6 className="uppercase font-extrabold leading-3 text-sm flex-grow">{title}</h6>
+
+        <div className={'flex -space-x-3'}>
+          <Avatar className={'border-2 border-white'}>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar className={'border-2 border-white'}>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar className={'border-2 border-white'}>
+            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        </div>
         {icon}
       </div>
-      <div className="min-h-32 mb-10">{content}</div>
+      <div className="sm:min-h-32">{content}</div>
+
+      <hr className={'mb-5 sm:mt-4 mt-7 -mx-5'} />
 
       <div className="mb-7 flex flex-col gap-2">
         <div className="flex items-center gap-2.5">
@@ -41,15 +61,13 @@ export default function LocationCard({
 
       {active ? (
         <Button
-          className="!h-11 anim-pulse border-adsbin-grey-100 font-bold text-base w-full text-black"
-          variant={"outline"}
+          className="!h-11 anim-pulse bg-adsbin-green-500 border-adsbin-green-500 font-bold text-base w-full text-white"
         >
           Remove Location <X />
         </Button>
       ) : (
         <Button
-          className="!h-11 anim-pulse border-adsbin-grey-100 font-bold text-base w-full text-black"
-          variant={"outline"}
+          className="!h-11 anim-pulse bg-adsbin-green-500 border-adsbin-green-500 font-bold text-base w-full text-white"
         >
           Add location <Plus />
         </Button>

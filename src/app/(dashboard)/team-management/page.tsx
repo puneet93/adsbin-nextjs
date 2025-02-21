@@ -13,7 +13,7 @@ export default function page() {
         content="Add and manage your team members"
         titleIcon={<Shield size={30} color="#415B41" />}
       >
-        <Button className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
+        <Button className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none  md:w-auto w-full">
           Invite new member <UserPlus className="w-4 h-4" />
         </Button>
       </Information>
