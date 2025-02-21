@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
-import {Megaphone, Shield, UserPlus} from "lucide-react";
+import {Shield, UserPlus} from "lucide-react";
 import TeamDataTable from "./components/TeamDataTable";
 import Information from "@/components/Information";
-import Link from "next/link";
 
 export default function page() {
   return (
