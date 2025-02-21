@@ -29,6 +29,7 @@ import Actions from "./Actions";
 import NameMedia from "./NameMedia";
 import { useWindowDimensions } from "@/lib/useWindowDimensions";
 import ViewDropdown from "@/app/(dashboard)/approval/components/ViewDropdown";
+import {PaginationUI} from "@/components/Pagination";
 
 const data: Payment[] = [
   {
@@ -138,8 +139,8 @@ export function DataTable() {
   });
 
   return (
-    <div className="w-full border-b border-adsbin-grey-100">
-      <div className="overflow-auto">
+    <div className="w-full">
+      <div className="overflow-auto border-b border-adsbin-grey-100 mb-4">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -195,6 +196,8 @@ export function DataTable() {
           </TableBody>
         </Table>
       </div>
+
+      <PaginationUI />
     </div>
   );
 }

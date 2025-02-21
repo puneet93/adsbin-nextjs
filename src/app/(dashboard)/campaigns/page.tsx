@@ -25,6 +25,17 @@ export default function page() {
       </Information>
 
       <CampaignDataTable />
+
+        <div className={'flex justify-center py-10 px-5'}>
+            <Button
+                asChild
+                className="py-2 anim-pulse px-4 text-sm gap-2.5 h-auto md:w-auto w-full bg-adsbin-green-500 rounded-none"
+            >
+                <Link href={"/campaigns/new"}>
+                    Start new campaign <Megaphone className="w-5 h-5" />
+                </Link>
+            </Button>
+        </div>
       <PopupControls title="Create or Mange your Campaigns" content="Here you can create a new campaign or manage your existing ones." />
     </>
   );

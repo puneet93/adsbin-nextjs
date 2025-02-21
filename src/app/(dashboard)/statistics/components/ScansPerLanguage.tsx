@@ -14,22 +14,22 @@ export default function ScansPerLanguage(){
                     </tr>
                 </thead>
                 <tbody className={'font-nunito text-adsbin-neutral-500'}>
-                    <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100">
+                    <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100 [&>td]:font-bold">
                         <td>Dutch (Nl-nl)</td>
                         <td>2121</td>
                         <td>20%</td>
                     </tr>
-                    <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100">
+                    <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100 [&>td]:font-bold">
                         <td>Portugese (PT)</td>
                         <td>221</td>
                         <td>20%</td>
                     </tr>
-                    <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100">
+                    <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100 [&>td]:font-bold">
                         <td>Spanish (ES-es)</td>
                         <td>22</td>
                         <td>20%</td>
                     </tr>
-                    <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100">
+                    <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100 [&>td]:font-bold">
                         <td>English (en-uk)</td>
                         <td>145</td>
                         <td>20%</td>

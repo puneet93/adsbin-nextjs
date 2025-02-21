@@ -9,7 +9,7 @@ export default function QuickLink(){
                 Quick Links
             </h3>
 
-            <div className="grid xl:grid-cols-4 2xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2.5 items-center">
+            <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2.5 items-center [&>div]:xl:max-w-96 [&>div]:xl:w-full">
                 <div className="relative min-h-48 rounded-lg overflow-hidden anim-pulse">
                     <Image src="/quick-banner-image-1.png" alt="quick-banner-image-1" fill={true} className="object-center opacity-35"  />
                     <Link href={'/campaigns'} className="rounded-full py-1.5 px-5 bg-adsbin-evergreens absolute flex items-center gap-2.5 top-1/2 -translate-y-1/2 left-5 right-5">

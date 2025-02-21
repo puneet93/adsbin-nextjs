@@ -35,7 +35,8 @@ export default {
           900: "#920909",
           1000: "#606060", // 606
           1100: "#EDEDED", // 606
-          1200: "#FAFCF9" // 606
+          1200: "#FAFCF9", // 606
+          1300: "#fbfbfb" // 606
         },
         "adsbin-green": {
           100: "#E4FCDC", // approvedBg

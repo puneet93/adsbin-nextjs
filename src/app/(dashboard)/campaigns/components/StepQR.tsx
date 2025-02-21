@@ -70,7 +70,7 @@ export default function StepQR({getPreview}:{getPreview: () => void}) {
               <Button onClick={() => {
                 setShowPreview(!showPreview);
                 getPreview()
-              }} className="py-2.5 px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none ml-auto">
+              }} className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none ml-auto">
                 Preview Content <Eye className="w-5 h-5" />
               </Button>
             </div>

@@ -24,6 +24,17 @@ export default function page() {
       </Information>
 
       <LocationDataTable />
+
+        <div className={'flex justify-center py-10 px-5'}>
+            <Button
+                asChild
+                className="py-2 anim-pulse px-4 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none md:w-auto w-full"
+            >
+                <Link href={"/locations/add"}>
+                    Register new Location <MapPin size={32} />
+                </Link>
+            </Button>
+        </div>
     </>
   );
 }

@@ -105,7 +105,7 @@ export default function Sidebar() {
       <div
         className={`fixed z-20 top-0 ${
           show ? "left-0" : "md:left-0 -left-80"
-        } transition-all w-80 md:mt-28 mt-[62px] bottom-0 border-r border-adsbin-grey-100 overflow-auto flex bg-white flex-col`}
+        } transition-all w-80 md:mt-[72px] mt-[63px] bottom-0 border-r border-adsbin-grey-100 overflow-auto flex  bg-adsbin-grey-1300 flex-col`}
       >
         {menuItems.map((item, index) => (
           <Link

@@ -14,22 +14,22 @@ export default function ScansByDay(){
                 </tr>
                 </thead>
                 <tbody className={'font-nunito text-adsbin-neutral-500'}>
-                <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100">
+                <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100 [&>td]:font-bold">
                     <td>Mon. 15 Oct. 2025</td>
                     <td>1558</td>
                     <td>20%</td>
                 </tr>
-                <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100">
+                <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100 [&>td]:font-bold">
                     <td>Wed. 17 Oct. 2025</td>
                     <td>1456</td>
                     <td>20%</td>
                 </tr>
-                <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100">
+                <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100 [&>td]:font-bold">
                     <td>Fri. 19 Oct. 2025</td>
                     <td>1234</td>
                     <td>20%</td>
                 </tr>
-                <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100">
+                <tr className="[&>td]:py-2.5 [&>td]:px-3 border-b border-adsbin-grey-100 [&>td]:font-bold">
                     <td>Sat. 20 Oct. 2025</td>
                     <td>987</td>
                     <td>20%</td>
