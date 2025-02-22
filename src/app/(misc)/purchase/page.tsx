@@ -1,4 +1,4 @@
-import InfoHeader from "../components/InfoHeader";
+import InfoHeader from "../../auth/components/InfoHeader";
 import PurchaseForm from "./components/PurchaseForm";
 
 export default function page() {

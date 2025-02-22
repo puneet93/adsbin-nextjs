@@ -1,5 +1,5 @@
 import ReturnForm from "./components/ReturnForm";
-import InfoHeader from "../components/InfoHeader";
+import InfoHeader from "../../auth/components/InfoHeader";
 
 export default function page() {
   return (

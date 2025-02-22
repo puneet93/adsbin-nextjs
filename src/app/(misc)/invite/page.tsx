@@ -1,4 +1,4 @@
-import InfoHeader from "../components/InfoHeader";
+import InfoHeader from "../../auth/components/InfoHeader";
 import InviteForm from "./components/InviteForm";
 
 export default function page() {
