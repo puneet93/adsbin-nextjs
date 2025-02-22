@@ -1,5 +1,5 @@
 import BrochureForm from "./components/BrochureForm";
-import InfoHeader from "../components/InfoHeader";
+import InfoHeader from "../../auth/components/InfoHeader";
 
 export default function page() {
   return (
