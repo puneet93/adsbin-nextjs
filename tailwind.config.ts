@@ -12,7 +12,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        "adsbin-evergreens": "#415B41",
+        "adsbin-evergreens": "#000000", //"#415B41"
         "adsbin-evergreens-light": "rgba(65, 91, 65, 0.37)",
         dark: "#000000",
         "adsbin-chart": {

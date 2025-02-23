@@ -17,23 +17,28 @@ export default function PayoutSchedule(){
                     <tbody>
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens border-b border-adsbin-grey-100">
                             <th>Jan. - Mar.</th>
-                            <td>01-04-2025</td>
-                            <td>$ 15,345.00</td>
+                            <th>01-04-2025</th>
+                            <th>$ 15,345.00</th>
                         </tr>
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens border-b border-adsbin-grey-100">
                             <th>Apr. - Jun.</th>
-                            <td>01-07-2025</td>
-                            <td>$ 18,345.00</td>
+                            <th>01-07-2025</th>
+                            <th>$ 18,345.00</th>
                         </tr>
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens border-b border-adsbin-grey-100">
                             <th>Jul. - Sep.</th>
-                            <td>01-10-2025</td>
-                            <td>$ 21,300.00</td>
+                            <th>01-10-2025</th>
+                            <th>$ 21,300.00</th>
                         </tr>
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens border-b border-adsbin-grey-100">
                             <th>Okt. - Dec.</th>
-                            <td>Ongoing</td>
-                            <td>$ 5,421.14 <span className={'block text-sm text-adsbin-neutral-400 leading-none'}>Estimated $ 35,000.00</span></td>
+                            <th>Ongoing</th>
+                            <th>$ 5,421.14</th>
+                        </tr>
+                        <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens">
+                            <th></th>
+                            <th></th>
+                            <td><span className={'block text-sm text-adsbin-neutral-400 leading-none'}>Estimated $ 35,000.00</span></td>
                         </tr>
                     </tbody>
                 </table>

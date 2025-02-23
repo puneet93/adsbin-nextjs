@@ -37,34 +37,10 @@ export default function Sidebar() {
       icon: <FilmIcon color="#0F172A" size={24} />
     },
     {
-      href: "/earnings",
-      label: "Earnings",
-      subtitle: "Revenue for your location",
-      icon: <BarChartIcon color="#0F172A" size={24} />
-    },
-    {
       href: "/campaigns",
       label: "Campaigns",
       subtitle: "Create and Manage",
       icon: <FlipHorizontal color="#0F172A" size={24} />
-    },
-    {
-      href: "/approval",
-      label: "Approval",
-      subtitle: "Manage campaigns",
-      icon: <ThumbsUp color="#0F172A" size={24} />
-    },
-    {
-      href: "/locations",
-      label: "Locations",
-      subtitle: "Signage Display Locations",
-      icon: <EyeIcon color="#0F172A" size={24} />
-    },
-    {
-      href: "/billing",
-      label: "Billing",
-      subtitle: "Payment information",
-      icon: <DollarSign color="#0F172A" size={24} />
     },
     {
       href: "/statistics",
@@ -73,10 +49,34 @@ export default function Sidebar() {
       icon: <TrendingUpIcon color="#0F172A" size={24} />
     },
     {
+      href: "/approval",
+      label: "Approval",
+      subtitle: "Manage campaigns",
+      icon: <ThumbsUp color="#0F172A" size={24} />
+    },
+    {
+      href: "/earnings",
+      label: "Earnings",
+      subtitle: "Revenue for your location",
+      icon: <BarChartIcon color="#0F172A" size={24} />
+    },
+    {
+      href: "/billing",
+      label: "Billing",
+      subtitle: "Payment information",
+      icon: <DollarSign color="#0F172A" size={24} />
+    },
+    {
       href: "/team-management",
       label: "Users",
       subtitle: "Manage team",
       icon: <UsersIcon color="#0F172A" size={24} />
+    },
+    {
+      href: "/locations",
+      label: "Locations",
+      subtitle: "Signage Display Locations",
+      icon: <EyeIcon color="#0F172A" size={24} />
     },
     {
       href: "/settings",
@@ -104,7 +104,7 @@ export default function Sidebar() {
       <div
         className={`fixed z-20 top-0 ${
           show ? "left-0" : "md:left-0 -left-80"
-        } transition-all w-80 md:mt-[72px] mt-[63px] bottom-0 border-r border-adsbin-grey-100 overflow-auto flex  bg-adsbin-grey-1300 flex-col`}
+        } transition-all w-80 md:mt-[66px] mt-[63px] bottom-0 border-r border-adsbin-grey-100 overflow-auto flex  bg-adsbin-grey-1300 flex-col`}
       >
         {menuItems.map((item, index) => (
           <Link

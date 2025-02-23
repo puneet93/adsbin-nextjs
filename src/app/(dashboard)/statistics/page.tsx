@@ -34,7 +34,7 @@ export default function page() {
           </div>
       </Information>
 
-      <div className={'px-5 pt-5 pb-10 border-b border-adsbin-grey-100 mb-5'}>
+      <div className={'px-5 pt-5 pb-5 border-b border-adsbin-grey-100 mb-5'}>
           <h3 className="text-adsbin-evergreens text-2xl font-outfit tracking-tight mb-2.5">
               Total Scans
           </h3>
@@ -64,7 +64,7 @@ export default function page() {
             </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 mb-10 border-b border-adsbin-grey-100">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 mb-10">
             <div>
                 <Segments />
             </div>

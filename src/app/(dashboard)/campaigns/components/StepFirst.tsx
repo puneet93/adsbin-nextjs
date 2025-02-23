@@ -6,8 +6,8 @@ import {Textarea} from "@/components/ui/textarea";
 
 export default function StepFirst() {
   return (
-    <div>
-      <StepHeader count={1} title="Details and Behavior">
+    <div className={'-mt-10'}>
+      <StepHeader count={1} title="">
         <></>
       </StepHeader>
 

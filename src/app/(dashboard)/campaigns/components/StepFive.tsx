@@ -12,8 +12,8 @@ import DurationPopupControls from "@/components/DurationPopupControls";
 
 export default function  StepFive() {
   return (
-    <div>
-      <StepHeader count={5} title="Set the start and end dates">
+    <div className={'-mt-5'}>
+      <StepHeader count={5} title="">
         <></>
       </StepHeader>
 

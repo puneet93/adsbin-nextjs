@@ -14,10 +14,10 @@ export default function StepQR({getPreview}:{getPreview: () => void}) {
   const [showPreview, setShowPreview] = React.useState(false);
 
   return !showPreview ? (
-    <div className={'md:px-5'}>
+    <div className={'md:px-5 mt-2.5'}>
       <div className="grid md:grid-cols-2 grid-cols-1 mb-10">
-        <div className={'order-1'}>
-          <StepHeader count={3} title="QR code preferences">
+        <div className={'order-1 md:-mt-10'}>
+          <StepHeader count={3} title="">
             <></>
           </StepHeader>
 
@@ -66,7 +66,7 @@ export default function StepQR({getPreview}:{getPreview: () => void}) {
               </Select>
             </div>
 
-            <div className={'w-full md:mt-24 mt-6'}>
+            <div className={'w-full md:mt-10 mt-6'}>
               <Button onClick={() => {
                 setShowPreview(!showPreview);
                 getPreview()

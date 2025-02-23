@@ -12,7 +12,7 @@ export default function Information({
 }: {
   children?: React.ReactNode;
   label: string;
-  title: string;
+  title: string | boolean;
   content: string;
   goBack: boolean;
   align?: string;
@@ -20,7 +20,7 @@ export default function Information({
 }) {
   return (
     <div
-      className={`px-5 grid md:grid-cols-2 md:gap-2.5 gap-5 px-5 mb-5 ${
+      className={`p-5 grid md:grid-cols-2 md:gap-2.5 gap-5 mb-5 bg-adsbin-grey-100/50 ${
         align === "top" ? "items-start" : "items-center"
       }`}
     >

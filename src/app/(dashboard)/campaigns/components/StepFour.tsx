@@ -16,8 +16,8 @@ import LocationCard from "./LocationCard";
 
 export default function StepFour() {
   return (
-    <div>
-      <StepHeader count={4} title="Where do you want to show your Campaign?">
+    <div className={'-mt-10'}>
+      <StepHeader count={4} title="">
         <></>
       </StepHeader>
 
@@ -30,7 +30,7 @@ export default function StepFour() {
             />
             <Button
               variant={"link"}
-              className="p-0 absolute top-0.5 right-0 min-w-12"
+              className="p-0 absolute top-2 right-0 min-w-12"
             >
               <Search color="#000" size={32} />
             </Button>

@@ -10,23 +10,23 @@ import {
 } from "@/components/ui/chart"
 import * as React from "react";
 const chartData = [
-    { day: "Mon. 21 jan.", total: 186, kids: 80, young: 80, adults: 30, middleage: 54, senior: 34, elderly: 23 },
-    { day: "Tue. 22 jan.", total: 305, kids: 200, young: 50, adults: 10, middleage: 40, senior: 12, elderly: 21 },
-    { day: "Wed. 24 jan.", total: 237, kids: 120, young: 20, adults: 75, middleage: 32, senior: 76, elderly: 54 },
-    { day: "Thur. 27 jan.", total: 73, kids: 190, young: 120, adults: 54, middleage: 76, senior: 32, elderly: 32 },
-    { day: "Fri. 29 jan.", total: 209, kids: 130, young: 40, adults: 76, middleage: 12, senior: 32, elderly: 54 },
-    { day: "Sat. 30 jan.", total: 214, kids: 140, young: 60, adults: 23, middleage: 67, senior: 65, elderly: 54 },
-    { day: "Sun. 31 jan.", total: 186, kids: 80, young: 80, adults: 30, middleage: 54, senior: 34, elderly: 23 },
-    { day: "Mon. 1 feb.", total: 305, kids: 200, young: 50, adults: 10, middleage: 40, senior: 12, elderly: 21 },
-    { day: "Tue. 2 feb.", total: 237, kids: 120, young: 20, adults: 75, middleage: 32, senior: 76, elderly: 54 },
-    { day: "Wed. 3 feb.", total: 73, kids: 190, young: 120, adults: 54, middleage: 76, senior: 32, elderly: 32 },
-    { day: "Thur. 4 feb.", total: 209, kids: 130, young: 40, adults: 76, middleage: 12, senior: 32, elderly: 54 },
-    { day: "Fri. 5 feb.", total: 214, kids: 140, young: 60, adults: 23, middleage: 67, senior: 65, elderly: 54 },
-    { day: "Sat. 6 feb.", total: 237, kids: 120, young: 20, adults: 75, middleage: 32, senior: 76, elderly: 54 },
-    { day: "Sun. 7feb.", total: 73, kids: 190, young: 120, adults: 54, middleage: 76, senior: 32, elderly: 32 },
-    { day: "Mon. 1 feb.", total: 209, kids: 130, young: 40, adults: 76, middleage: 12, senior: 32, elderly: 54 },
-    { day: "Tue. 2 feb.", total: 214, kids: 140, young: 60, adults: 23, middleage: 67, senior: 65, elderly: 54 },
-    { day: "Wed. 3 feb.", total: 186, kids: 80, young: 80, adults: 30, middleage: 54, senior: 34, elderly: 23 }
+    { day: "Mon. 21 jan.", total: 186, advertisement: 30, views: 54},
+    { day: "Tue. 22 jan.", total: 305, advertisement: 10, views: 40},
+    { day: "Wed. 24 jan.", total: 237, advertisement: 75, views: 32},
+    { day: "Thur. 27 jan.", total: 73, advertisement: 54, views: 76},
+    { day: "Fri. 29 jan.", total: 209, advertisement: 76, views: 12},
+    { day: "Sat. 30 jan.", total: 214, advertisement: 23, views: 67},
+    { day: "Sun. 31 jan.", total: 186, advertisement: 30, views: 54},
+    { day: "Mon. 1 feb.", total: 305, advertisement: 10, views: 40},
+    { day: "Tue. 2 feb.", total: 237, advertisement: 75, views: 32},
+    { day: "Wed. 3 feb.", total: 73, advertisement: 54, views: 76},
+    { day: "Thur. 4 feb.", total: 209, advertisement: 76, views: 12},
+    { day: "Fri. 5 feb.", total: 214, advertisement: 23, views: 67},
+    { day: "Sat. 6 feb.", total: 237, advertisement: 75, views: 32},
+    { day: "Sun. 7feb.", total: 73, advertisement: 54, views: 76},
+    { day: "Mon. 1 feb.", total: 209, advertisement: 76, views: 12},
+    { day: "Tue. 2 feb.", total: 214, advertisement: 23, views: 67},
+    { day: "Wed. 3 feb.", total: 186, advertisementts: 30, views: 54 }
 ]
 
 const chartConfig = {
@@ -34,30 +34,30 @@ const chartConfig = {
         label: "Total QR Scans",
         color: "#4DBB18",
     },
-    kids: {
-        label: "Kids (12 - 19)",
-        color: "#9747FF",
+    // kids: {
+    //     label: "Kids (12 - 19)",
+    //     color: "#9747FF",
+    // },
+    // young: {
+    //     label: "Young Adults (20 - 29)",
+    //     color: "#FFD600",
+    // },
+    advertisement: {
+        label: "Advertisement",
+        color: "#000000",
     },
-    young: {
-        label: "Young Adults (20 - 29)",
-        color: "#FFD600",
-    },
-    adults: {
-        label: "Adults (30- 39)",
-        color: "#646464",
-    },
-    middleage: {
-        label: "Middle Age (40-49)",
+    views: {
+        label: "Total Views",
         color: "#7CCBFF",
     },
-    senior: {
-        label: "Senior (50-66)",
-        color: "#F10909",
-    },
-    elderly: {
-        label: "Elderly 67+",
-        color: "#A44646",
-    },
+    // senior: {
+    //     label: "Senior (50-66)",
+    //     color: "#F10909",
+    // },
+    // elderly: {
+    //     label: "Elderly 67+",
+    //     color: "#A44646",
+    // },
 } satisfies ChartConfig
 
 export function LineChartFun() {
@@ -103,14 +103,14 @@ export function LineChartFun() {
                         dot={false}
                     />
                     <Line
-                        dataKey="adults"
+                        dataKey="advertisement"
                         type="monotone"
-                        stroke="#646464"
+                        stroke="#000"
                         strokeWidth={2}
                         dot={false}
                     />
                     <Line
-                        dataKey="middleage"
+                        dataKey="views"
                         type="monotone"
                         stroke="#7CCBFF"
                         strokeWidth={2}

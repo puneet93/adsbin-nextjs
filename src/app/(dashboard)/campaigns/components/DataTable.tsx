@@ -234,7 +234,7 @@ export function DataTable({ onPreviewClick }: { onPreviewClick: () => void }) {
   return (
     <div className="w-full">
       <div className="overflow-auto">
-        <Table className="mb-4">
+        <Table className="mb-4 border-b border-adsbin-grey-100">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
