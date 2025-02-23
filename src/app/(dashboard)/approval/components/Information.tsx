@@ -9,7 +9,7 @@ export default function Information() {
           # Approval
         </h6>
         <div className="flex items-start gap-6 max-w-xl md:pr-8 w-full relative">
-          <TriangleAlert className="mt-2 absolute top-1 left-0 md:relative" />
+          <TriangleAlert className="mt-2 top-1 left-0 relative" />
           <div className="flex flex-col items-start gap-2.5">
             <h1
                 className={`text-adsbin-evergreens tracking-tight text-4xl font-normal font-outfit`}
