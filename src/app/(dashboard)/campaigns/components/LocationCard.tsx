@@ -17,11 +17,11 @@ export default function LocationCard({
     <div
       className={`border 
        
-      p-5 text-adsbin-grey-1000 tracking-wide text-base min-h-52 border-adsbin-grey-100 transition-all`}
+      p-5 text-adsbin-grey-1000 tracking-wide text-base min-h-52 border-adsbin-grey-500 transition-all`}
     >
       {/* hover:border-adsbin-evergreens*/}
       {/*${active ? "border-adsbin-neutral-300" : "border-adsbin-grey-100"}*/}
-      <div className="flex items-center gap-2.5 mb-3">
+      <div className="flex items-center gap-2.5 mb-6">
         <h6 className="uppercase font-extrabold leading-3 text-sm flex-grow">{title}</h6>
 
         <div className={'flex -space-x-3'}>

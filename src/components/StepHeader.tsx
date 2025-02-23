@@ -16,7 +16,7 @@ export default function StepHeader({
             <span className={`bg-adsbin-grey-100 text-adsbin-evergreens min-w-10 w-10 h-10 tracking-tighter font-bold font-outfit rounded-full flex items-center justify-center ${countEnable ? 'block' : 'hidden'}`}>
             {count}.
           </span>
-            <h3 className={`font-outfit text-adsbin-evergreens text-xl lg:text-[26px] ${countEnable ? 'underline' : ''}`}>
+            <h3 className={`font-outfit text-adsbin-evergreens text-xl lg:text-[26px]`}>
               {title}
             </h3>
         </div>

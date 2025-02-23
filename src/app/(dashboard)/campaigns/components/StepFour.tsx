@@ -77,7 +77,7 @@ export default function StepFour() {
         <GoogleMap />
       </div>
 
-      <div className="p-5 px-5 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
+      <div className="p-5 px-5 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-5 gap-7">
         <LocationCard
           active={false}
           icon={<ShoppingBag color="#000" />}

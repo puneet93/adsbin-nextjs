@@ -21,7 +21,7 @@ export default function page() {
       <TeamDataTable />
 
         <div className={'flex justify-center py-10 px-5'}>
-            <Button className="py-2 anim-pulse px-4 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none  md:w-auto w-full">
+            <Button className="py-2 anim-pulse px-4 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none  w-auto">
                 Invite new member <UserPlus className="w-4 h-4" />
             </Button>
         </div>
