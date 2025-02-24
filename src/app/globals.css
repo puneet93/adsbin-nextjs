@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: var(--font-nunito);
 }
@@ -73,6 +77,10 @@ td>[role=checkbox], th>[role=checkbox]{
   @apply ml-3 md:ml-0;
 }
 
+input, textarea, select {
+  touch-action: manipulation;
+  font-size: 16px !important;
+}
 
 @-webkit-keyframes pulse {
   from {

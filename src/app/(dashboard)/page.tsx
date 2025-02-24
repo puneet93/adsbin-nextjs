@@ -28,7 +28,7 @@ export default function page() {
             </Information>
         </div>
 
-      <div className="border-t border-b border-adsbin-grey-100 md:mt-10 -mt-2.5 pb-5 md:pt-10 pt-5 px-5 gap-5">
+      <div className="border-b border-adsbin-grey-100 mt-10 pb-5 px-5 gap-5">
         <Statistics />
         {/* <Overview /> */}
       </div>

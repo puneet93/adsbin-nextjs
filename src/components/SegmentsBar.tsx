@@ -21,23 +21,23 @@ const chartConfig = {
         label: "Perc.",
     },
     kids: {
-        label: "Kids (12-19)",
+        label: "Kids",
         color: "#9747FF",
     },
     young: {
-        label: "Young Adults (20 - 29)",
+        label: "Young Adults",
         color: "#FFD600",
     },
     middelage: {
-        label: "Middle Age (40-49)",
+        label: "Middle Age",
         color: "#7CCBFF",
     },
     senior: {
-        label: "Senior (50-66)",
+        label: "Senior",
         color: "#F10909",
     },
     elderly: {
-        label: "Elderly 67+",
+        label: "Elderly",
         color: "#A44646",
     },
 } satisfies ChartConfig

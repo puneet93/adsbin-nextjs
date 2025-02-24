@@ -64,16 +64,22 @@ export default function StepQR({getPreview}:{getPreview: () => void}) {
                   <SelectItem value="system">System</SelectItem>
                 </SelectContent>
               </Select>
-            </div>
-
-            <div className={'w-full md:mt-10 mt-6'}>
               <Button onClick={() => {
                 setShowPreview(!showPreview);
                 getPreview()
-              }} className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none ml-auto">
+              }} className="py-2.5 anim-pulse px-4 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none">
                 Preview Content <Eye className="w-5 h-5" />
               </Button>
             </div>
+
+            {/*<div className={'w-full md:mt-10 mt-6'}>*/}
+            {/*  <Button onClick={() => {*/}
+            {/*    setShowPreview(!showPreview);*/}
+            {/*    getPreview()*/}
+            {/*  }} className="py-2.5 anim-pulse px-5 text-base gap-2.5 h-auto bg-adsbin-green-500 rounded-none ml-auto">*/}
+            {/*    Preview Content <Eye className="w-5 h-5" />*/}
+            {/*  </Button>*/}
+            {/*</div>*/}
 
           </div>
         </div>

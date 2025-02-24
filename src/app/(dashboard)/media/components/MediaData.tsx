@@ -11,7 +11,7 @@ import { DataTable } from "./DataTable";
 
 export default function MediaData({ getValue }: { getValue: () => void }) {
   return (
-    <div className="border-t border-adsbin-grey-100">
+    <div>
       <div className="md:py-5 md:pr-3.5 md:pl-12 p-4 flex md:flex-row flex-col-reverse md:items-center md:gap-2.5 gap-5">
         <div className="flex items-center md:pr-5 md:pl-0 pl-6 justify-between flex-grow">
           <h5 className="md:text-adsbin-grey-1000 font-bold md:font-normal text-black text-base tracking-wide">

@@ -6,7 +6,7 @@ import StepThird from "./StepThird";
 
 export default function SettingSteps() {
   return (
-    <div className="flex max-w-5xl w-full px-5 flex-col gap-5 mt-10">
+    <div className="flex max-w-5xl w-full px-5 flex-col gap-5 mt-5">
       <StepFirst />
       <StepSecond />
       <StepThird />

@@ -16,24 +16,24 @@ export default function PayoutSchedule(){
                     </thead>
                     <tbody>
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens border-b border-adsbin-grey-100">
-                            <th>Jan. - Mar.</th>
-                            <th>01-04-2025</th>
-                            <th>$ 15,345.00</th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>Jan. - Mar.</span></th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>01-04-2025</span></th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>$ 15,345.00</span></th>
                         </tr>
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens border-b border-adsbin-grey-100">
-                            <th>Apr. - Jun.</th>
-                            <th>01-07-2025</th>
-                            <th>$ 18,345.00</th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>Apr. - Jun.</span></th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>01-07-2025</span></th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>$ 18,345.00</span></th>
                         </tr>
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens border-b border-adsbin-grey-100">
-                            <th>Jul. - Sep.</th>
-                            <th>01-10-2025</th>
-                            <th>$ 21,300.00</th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>Jul. - Sep.</span></th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>01-10-2025</span></th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>$ 21,300.00</span></th>
                         </tr>
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens border-b border-adsbin-grey-100">
-                            <th>Okt. - Dec.</th>
-                            <th>Ongoing</th>
-                            <th>$ 5,421.14</th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>Okt. - Dec.</span></th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>Ongoing</span></th>
+                            <th><span className={'border border-adsbin-grey-100 px-2.5 py-1'}>$ 5,421.14</span></th>
                         </tr>
                         <tr className="[&>td]:py-2.5 [&>td]:px-5 [&>th]:py-2.5 [&>th]:px-5 [&>td]:text-adsbin-evergreens [&>th]:text-adsbin-evergreens">
                             <th></th>

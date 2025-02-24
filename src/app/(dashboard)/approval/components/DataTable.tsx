@@ -139,7 +139,7 @@ export function DataTable() {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-full pt-2.5">
       <div className="overflow-auto border-b border-adsbin-grey-100 mb-4">
         <Table>
           <TableHeader>
