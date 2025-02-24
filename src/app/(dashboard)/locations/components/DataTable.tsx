@@ -190,15 +190,15 @@ export function DataTable() {
                   data-state={row.getIsSelected() && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell
-                      key={cell.id}
-                      className="text-adsbin-evergreens text-base tracking-wider"
-                    >
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
+                      <TableCell
+                          key={cell.id}
+                          className={`text-adsbin-evergreens text-base tracking-wider ${cell?.column?.id === 'screen' && 'pl-8'}`}
+                      >
+                          {flexRender(
+                              cell.column.columnDef.cell,
+                              cell.getContext()
+                          )}
+                      </TableCell>
                   ))}
                 </TableRow>
               ))

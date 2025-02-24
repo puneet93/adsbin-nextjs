@@ -39,7 +39,7 @@ export default function MediaData({ getValue }: { getValue: () => void }) {
           />
           <Button
             variant={"link"}
-            className="p-0 absolute top-0.5 right-0 min-w-12"
+            className="p-0 absolute top-2 right-0 min-w-12"
           >
             <Search color="#415B41" size={32} />
           </Button>

@@ -3,7 +3,7 @@ import { ThumbsDown, ThumbsUp, TriangleAlert } from "lucide-react";
 
 export default function Information() {
   return (
-      <div className={'p-5 mb-5 p-5 bg-adsbin-grey-100/50'}>
+      <div className={'px-5 pt-5 md:pb-5 pb-14 md:mb-5 mb-2.5 bg-adsbin-grey-100/50'}>
         <h6 className="uppercase text-adsbin-grey-1000 mb-2.5 tracking-widest text-xsm font-bold">
           # Approval
         </h6>

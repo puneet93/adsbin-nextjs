@@ -9,6 +9,7 @@ import {
     ChartTooltip,
     ChartTooltipContent,
 } from "@/components/ui/chart"
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 const chartData = [
     { browser: "TTG Media", visitors: 275, fill: "#60CA3B" },
     { browser: "HJP Enterprise", visitors: 200, fill: "#EA3A88" },
@@ -63,12 +64,25 @@ export function PieChartFun() {
                     </PieChart>
                 </ChartContainer>
             </div>
-            <div className={'flex'}>
-                <ul className={'flex flex-col gap-1.5 m-auto'}>
-                    {chartData?.map((item:{browser:string, fill: string}, index:number) => (
-                        <li key={index} className={'flex items-center gap-2.5 text-adsbin-grey-1000'}><span className={`w-3 h-3`} style={{backgroundColor: item?.fill}}></span> {item?.browser}</li>
-                    ))}
-                </ul>
+            <div className={'flex flex-col gap-5'}>
+                <div className={'max-w-[160px] w-full  m-auto'}>
+                    <ul className={'flex flex-col gap-1.5 mb-2.5'}>
+                        {chartData?.map((item:{browser:string, fill: string}, index:number) => (
+                            <li key={index} className={'flex items-center gap-2.5 text-adsbin-grey-1000'}><span className={`w-3 h-3`} style={{backgroundColor: item?.fill}}></span> {item?.browser}</li>
+                        ))}
+                    </ul>
+
+                    <Select>
+                        <SelectTrigger className="md:max-w-[160px] w-full h-[40px] text-adsbin-evergreens">
+                            <SelectValue placeholder="Companies" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="light">One</SelectItem>
+                            <SelectItem value="dark">Two</SelectItem>
+                            <SelectItem value="system">Three</SelectItem>
+                        </SelectContent>
+                    </Select>
+                </div>
             </div>
         </div>
     )

@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <Header />
       <Sidebar />
-      <main className="md:p-10 pb-8 md:ml-80 md:mt-[68px] mt-[63px]">{children}</main>
+      <main className="md:p-10 pb-8 md:ml-80 md:mt-[62px] mt-[59px]">{children}</main>
     </>
   );
 }

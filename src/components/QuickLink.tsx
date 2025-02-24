@@ -12,9 +12,9 @@ export default function QuickLink(){
 
             <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-2.5 gap-6 items-center [&>div]:xl:max-w-96 [&>div]:xl:w-full">
                 <div>
-                    <div className="relative h-48 overflow-hidden rounded-lg mb-8">
+                    <Link href={"/campaigns"} className="relative h-48 block overflow-hidden rounded-lg mb-8">
                         <Image src="/quick-banner-image-1.png" alt="quick-banner-image-1" width={307} height={153} className="object-center w-full object-cover scale-105"  />
-                    </div>
+                    </Link>
                     {/*<Link href={'/campaigns'} className="rounded-full py-1.5 px-5 bg-adsbin-evergreens absolute flex items-center gap-2.5 top-1/2 -translate-y-1/2 left-5 right-5">*/}
                     {/*    <h3 className="text-white flex-grow text-base font-outfit leading-tight text-center">Start new <br />Campaign</h3>*/}
                     {/*    <CloudUpload size={24} color="#fff" />*/}
@@ -30,9 +30,9 @@ export default function QuickLink(){
                     </Button>
                 </div>
                 <div>
-                    <div className="relative h-48 overflow-hidden rounded-lg mb-8">
+                    <Link href={"/media"} className="relative h-48 block overflow-hidden rounded-lg mb-8">
                         <Image src="/quick-banner-image-2.png" alt="quick-banner-image-2" width={307} height={153} className="object-center w-full object-cover scale-105"  />
-                    </div>
+                    </Link>
                     {/*<Link href={'/media'} className="rounded-full py-1.5 px-5 bg-adsbin-evergreens absolute flex items-center gap-2.5 top-1/2 -translate-y-1/2 left-5 right-5">*/}
                     {/*    <h3 className="text-white flex-grow text-base font-outfit leading-tight text-center">Upload new <br />Advertisement</h3>*/}
                     {/*    <CloudUpload size={24} color="#fff" />*/}
@@ -47,9 +47,9 @@ export default function QuickLink(){
                     </Button>
                 </div>
                 <div>
-                    <div className="relative h-48 overflow-hidden rounded-lg mb-8">
+                    <Link href={"/approval"} className="relative h-48 block overflow-hidden rounded-lg mb-8">
                         <Image src="/quick-banner-image-3.png" alt="quick-banner-image-3" width={307} height={153} className="object-center w-full object-cover scale-105"  />
-                    </div>
+                    </Link>
                     {/*<Image src="/quick-banner-image-3.png" alt="quick-banner-image-3" fill={true} className="object-center opacity-35"  />*/}
                     {/*<Link href={'/approval'} className="rounded-full py-1.5 px-5 bg-adsbin-evergreens absolute flex items-center gap-2.5 top-1/2 -translate-y-1/2 left-5 right-5">*/}
                     {/*    <h3 className="text-white flex-grow text-base font-outfit leading-tight text-center">Approve a <br />Campaign</h3>*/}

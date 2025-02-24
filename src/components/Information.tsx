@@ -20,7 +20,7 @@ export default function Information({
 }) {
   return (
     <div
-      className={`p-5 grid md:grid-cols-2 md:gap-2.5 gap-5 mb-5 bg-adsbin-grey-100/50 ${
+      className={`px-5 pt-5 md:pb-5 pb-14 grid md:grid-cols-2 md:gap-2.5 gap-5 md:mb-5 mb-2.5 bg-adsbin-grey-100/50 ${
         align === "top" ? "items-start" : "items-center"
       }`}
     >

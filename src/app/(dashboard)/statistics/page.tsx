@@ -44,12 +44,12 @@ export default function page() {
           </div>
       </div>
 
-        <div className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-5 mb-10">
-            <div className={'lg:col-span-3'}>
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 mb-10">
+            <div>
                 <ScansByDay />
             </div>
 
-            <div className={'lg:col-span-2'}>
+            <div>
                 <ScansByTimeslot />
             </div>
         </div>

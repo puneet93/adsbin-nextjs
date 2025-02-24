@@ -242,7 +242,7 @@ export function DataTable({ onPreviewClick }: { onPreviewClick: () => void }) {
                   return (
                     <TableHead
                       key={header.id}
-                      className="tracking-wider text-base text-nowrap font-bold text-[#000]"
+                      className={`tracking-wider text-base text-nowrap font-bold text-[#000] ${header?.column?.id === 'assets' && 'w-24 text-center'} ${header?.column?.id === 'locations' && 'w-36 text-center'}`}
                     >
                       {header.isPlaceholder
                         ? null
@@ -267,7 +267,7 @@ export function DataTable({ onPreviewClick }: { onPreviewClick: () => void }) {
                     <TableCell
                       key={cell.id}
                       data-prev={cell.id}
-                      className="text-adsbin-evergreens text-base tracking-wider"
+                      className={`text - adsbin - evergreens text-base tracking-wider ${cell?.column?.id === 'assets' && 'w-24 text-center'}  ${cell?.column?.id === 'locations' && 'w-36 text-center'}`}
                     >
                       {
                           flexRender(

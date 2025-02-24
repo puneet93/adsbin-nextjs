@@ -44,46 +44,48 @@ const chartConfig = {
 
 export function SegmentBar() {
     return (
-        <ChartContainer config={chartConfig}>
-            <BarChart accessibilityLayer data={chartData}>
-                <CartesianGrid vertical={false} />
-                <XAxis
-                    dataKey="browser"
-                    tickLine={false}
-                    tickMargin={10}
-                    axisLine={false}
-                    tickFormatter={(value) =>
-                        chartConfig[value as keyof typeof chartConfig]?.label
-                    }
-                />
-                <ChartTooltip
-                    cursor={false}
-                    content={<ChartTooltipContent hideLabel />}
-                />
-                <YAxis
-                    tickLine={false}
-                    axisLine={false}
-                    tickMargin={10}
-                    label={{ value: "Perc. (%)", angle: -90, position: "insideLeft" }}
-                />
-                <Bar
-                    dataKey="visitors"
-                    strokeWidth={2}
-                    radius={8}
-                    activeIndex={2}
-                    // activeBar={({ ...props }) => {
-                    //     return (
-                    //         <Rectangle
-                    //             {...props}
-                    //             fillOpacity={0.8}
-                    //             stroke={props.payload.fill}
-                    //             strokeDasharray={4}
-                    //             strokeDashoffset={4}
-                    //         />
-                    //     )
-                    // }}
-                />
-            </BarChart>
-        </ChartContainer>
+        <div className={'-ml-9'}>
+            <ChartContainer config={chartConfig}>
+                <BarChart accessibilityLayer data={chartData}>
+                    <CartesianGrid vertical={false} />
+                    <XAxis
+                        dataKey="browser"
+                        tickLine={false}
+                        tickMargin={10}
+                        axisLine={false}
+                        tickFormatter={(value) =>
+                            chartConfig[value as keyof typeof chartConfig]?.label
+                        }
+                    />
+                    <ChartTooltip
+                        cursor={false}
+                        content={<ChartTooltipContent hideLabel />}
+                    />
+                    <YAxis
+                        tickLine={false}
+                        axisLine={false}
+                        tickMargin={0}
+                        label={{ value: "Perc. (%)", angle: -90, position: "outsideLeft" }}
+                    />
+                    <Bar
+                        dataKey="visitors"
+                        strokeWidth={0}
+                        radius={6}
+                        activeIndex={2}
+                        // activeBar={({ ...props }) => {
+                        //     return (
+                        //         <Rectangle
+                        //             {...props}
+                        //             fillOpacity={0.8}
+                        //             stroke={props.payload.fill}
+                        //             strokeDasharray={4}
+                        //             strokeDashoffset={4}
+                        //         />
+                        //     )
+                        // }}
+                    />
+                </BarChart>
+            </ChartContainer>
+        </div>
     )
 }
