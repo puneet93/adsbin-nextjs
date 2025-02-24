@@ -1,3 +1,5 @@
+"use client";
+
 import StepHeader from "@/components/StepHeader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,9 +15,12 @@ import {
 import GoogleMap from "@/components/GoogleMap";
 import SelectedLocations from "./SelectedLocations";
 import LocationCard from "./LocationCard";
+import * as React from "react";
+import Preview from "@/app/(dashboard)/campaigns/components/Preview";
 
-export default function StepFour() {
-  return (
+export default function StepFour({getPreview}:{getPreview: () => void}) {
+  const [showPreview, setShowPreview] = React.useState(false);
+  return !showPreview ?  (
     <div className={'-mt-10'}>
       <StepHeader count={4} title="">
         <></>
@@ -79,24 +84,40 @@ export default function StepFour() {
 
       <div className="p-5 px-5 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-5 gap-7">
         <LocationCard
+            onhandle={() => {
+              setShowPreview(!showPreview);
+              getPreview()
+            }}
           active={false}
           icon={<ShoppingBag color="#000" />}
           title="DUBAI MALL"
           content="Dubai Mall is the world’s largest mall, featuring over 1,300 stores, an aquarium, ice rink, and numerous dining options."
         />
         <LocationCard
+            onhandle={() => {
+              setShowPreview(!showPreview);
+              getPreview()
+            }}
           active={false}
           icon={<ShoppingBag color="#000" />}
           title="MALL OF THE EMIRATES"
           content="Mall of the Emirates features 560 stores, Ski Dubai, VOX Cinemas, luxury hotels, and diverse dining options, making it a must-visit."
         />
         <LocationCard
+            onhandle={() => {
+              setShowPreview(!showPreview);
+              getPreview()
+            }}
           active={true}
           icon={<ShoppingBag color="#000" />}
           title="Ibn Battuta Mall"
           content="Ibn Battuta Mall, the world’s largest themed mall, features 300+ stores, dining, and decor inspired by the explorer’s travels"
         />
         <LocationCard
+            onhandle={() => {
+              setShowPreview(!showPreview);
+              getPreview()
+            }}
           active={false}
           icon={<ShoppingBag color="#000" />}
           title="Dubai Marina Mall"
@@ -106,5 +127,12 @@ export default function StepFour() {
 
       <SelectedLocations />
     </div>
+  ) : (
+      <div className={'md:px-5'}>
+        <Preview getValue={() => {
+          setShowPreview(!showPreview);
+          getPreview()
+        }} />
+      </div>
   );
 }

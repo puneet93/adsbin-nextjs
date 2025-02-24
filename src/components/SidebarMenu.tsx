@@ -58,13 +58,13 @@ export default function Sidebar() {
       href: "/earnings",
       label: "Earnings",
       subtitle: "Revenue for your location",
-      icon: <BarChartIcon color="#0F172A" size={24} />
+      icon: <DollarSign color="#0F172A" size={24} />
     },
     {
       href: "/billing",
       label: "Billing",
       subtitle: "Payment information",
-      icon: <DollarSign color="#0F172A" size={24} />
+      icon: <BarChartIcon color="#0F172A" size={24} />
     },
     {
       href: "/team-management",

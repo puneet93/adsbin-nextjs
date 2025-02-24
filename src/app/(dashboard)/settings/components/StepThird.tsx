@@ -46,12 +46,14 @@ export default function StepThird() {
               <SelectItem value="system">System</SelectItem>
             </SelectContent>
           </Select>
-          <Button
-            variant={"outline"}
-            className="text-base sm:ml-0 ml-auto anim-pulse shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300"
-          >
-            Approve Web Push
-          </Button>
+          <div className={'md:ml-5 ml-2.5'}>
+            <Button
+                variant={"outline"}
+                className="text-base anim-pulse shadow-formField font-outfit border-adsbin-grey-200 !h-12 font-bold text-adsbin-green-300 ml-28 sm:ml-40"
+            >
+              Approve Web Push
+            </Button>
+          </div>
         </div>
       </div>
     </div>

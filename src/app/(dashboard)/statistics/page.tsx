@@ -4,7 +4,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import * as React from "react";
 import ScansByTimeslot from "@/app/(dashboard)/statistics/components/ScansByTimeslot";
 import ScansByDay from "@/app/(dashboard)/statistics/components/ScansByDay";
-import ScansByDevice from "@/app/(dashboard)/statistics/components/ScansByDevice";
+// import ScansByDevice from "@/app/(dashboard)/statistics/components/ScansByDevice";
 import ScansPerLanguage from "@/app/(dashboard)/statistics/components/ScansPerLanguage";
 import Segments from "@/app/(dashboard)/statistics/components/Segments";
 import ScansPerLocation from "@/app/(dashboard)/statistics/components/ScansPerLocation";
@@ -56,7 +56,8 @@ export default function page() {
 
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 mb-10">
             <div>
-                <ScansByDevice />
+                {/*<ScansByDevice />*/}
+                <Segments />
             </div>
 
             <div>
@@ -64,10 +65,10 @@ export default function page() {
             </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 mb-10">
-            <div>
-                <Segments />
-            </div>
+        <div className="grid grid-cols-1 gap-5 mb-10">
+            {/*<div>*/}
+            {/*    <Segments />*/}
+            {/*</div>*/}
 
             <div>
                 <ScansPerLocation />

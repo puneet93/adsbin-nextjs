@@ -3,6 +3,7 @@ import { MapPin } from "lucide-react";
 import LocationDataTable from "./components/LocationDataTable";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import PopupControls from "@/components/PopupControls";
 
 export default function page() {
   return (
@@ -35,6 +36,8 @@ export default function page() {
                 </Link>
             </Button>
         </div>
+
+        <PopupControls title="Locations Process" content="Here you can register and manage Signage Locations." />
     </>
   );
 }

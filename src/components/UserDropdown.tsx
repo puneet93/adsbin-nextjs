@@ -21,7 +21,7 @@ export default function UserDropdown() {
               <span className="font-semibold text-base text-white">
                 Jimmy van der Velde
               </span>
-              <span className="font-bold flex items-center gap-1 text-xsm text-adsbin-evergreens">
+              <span className="font-bold flex items-center gap-1 text-xsm text-[#415B41]">
                 <Shield size={16} /> <span className="relative top-0.5">DHG & Partners</span>
               </span>
             </div>

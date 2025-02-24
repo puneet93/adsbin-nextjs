@@ -7,7 +7,7 @@ export default function ScansPerLocation(){
                 Scans per Location
             </h3>
 
-            <Image src={'/map-image.png'} alt={'map-image'} width={448} height={448} />
+            <Image src={'/map.png'} alt={'map-image'} className={'w-full max-h-[420px] min-h-96 object-cover object-center'} width={448} height={448} />
         </div>
     )
 }

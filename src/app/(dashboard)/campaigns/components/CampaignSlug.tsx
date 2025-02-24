@@ -62,7 +62,7 @@ export default function CampaignSlug() {
         {/*{activeIndex === 2 && <StepSecond />}*/}
         {activeIndex === 2 && <StepThird showPreview={showPreview} getPreview={() => setShowPreview(!showPreview)} />}
         {activeIndex === 3 && <StepQR getPreview={() => setShowPreview(!showPreview)} />}
-        {activeIndex === 4 && <StepFour />}
+        {activeIndex === 4 && <StepFour getPreview={() => setShowPreview(!showPreview)} />}
         {activeIndex === 5 && <StepFive />}
         {/*{activeIndex === 5 && <StepSix />}*/}
 

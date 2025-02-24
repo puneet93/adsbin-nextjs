@@ -2,6 +2,7 @@ import Information from "@/components/Information";
 import Overview from "@/app/(dashboard)/earnings/components/Overview";
 import AdvertiseBreakdown from "@/app/(dashboard)/earnings/components/AdvertiseBreakdown";
 import PayoutSchedule from "@/app/(dashboard)/earnings/components/PayoutSchedule";
+import PopupControls from "@/components/PopupControls";
 
 export default function page() {
   return (
@@ -24,6 +25,8 @@ export default function page() {
                 <PayoutSchedule />
             </div>
         </div>
+
+        <PopupControls title="Earning Process" content="Here you can earn or reject campaigns." />
     </>
   );
 }

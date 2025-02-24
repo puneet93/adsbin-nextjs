@@ -6,12 +6,13 @@ export default function LocationCard({
   icon,
   title,
   content,
-  active
+  active,onhandle
 }: {
   icon: React.ReactNode;
   title: string;
   content: string;
   active: boolean;
+  onhandle: () => void;
 }) {
   return (
     <div
@@ -24,7 +25,7 @@ export default function LocationCard({
       <div className="flex items-center gap-2.5 mb-6">
         <h6 className="uppercase font-extrabold leading-3 text-sm flex-grow">{title}</h6>
 
-        <div className={'flex -space-x-3'}>
+        <div className={'flex -space-x-3'} onClick={onhandle}>
           <Avatar className={'border-2 border-white'}>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>

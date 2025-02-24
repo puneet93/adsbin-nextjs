@@ -1,10 +1,17 @@
+"use client"
+
 import StepHeader from "@/components/StepHeader";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Textarea} from "@/components/ui/textarea";
+import {useState} from "react";
 
 export default function StepFirst() {
+    const [isCheckedtarget, setIsCheckedtarget] = useState(false);
+    const [isCheckedBusiness, setIsCheckedBusiness] = useState(false);
+    const [isCheckedAppstore, setIsCheckedAppstore] = useState(false);
+
   return (
     <div className={'-mt-10'}>
       <StepHeader count={1} title="">
@@ -37,7 +44,7 @@ export default function StepFirst() {
                     QR:
                 </Label>
                 <div className="flex items-start space-x-5">
-                    <Checkbox id="qr-link" className={'mt-1.5'} />
+                    <Checkbox id="qr-link" className={'mt-0.5'} />
                     <label
                         htmlFor="qr-link"
                         className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -47,23 +54,17 @@ export default function StepFirst() {
                     </label>
                 </div>
             </div>
-            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
-                    Target URL:
-                </Label>
-                <Input
-                    type="text"
-                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
-                    placeholder="https://mypromotionsite.com"
-                />
-            </div>
+
             <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
                 <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Link to:
                 </Label>
                 <div className={'flex flex-col gap-2'}>
                     <div className="flex items-start space-x-5">
-                        <Checkbox id="website-target" className={'mt-1.5'} />
+                        <Checkbox id="website-target" className={'mt-0.5'}
+                          checked={isCheckedtarget}
+                          onCheckedChange={(checked) => setIsCheckedtarget(checked === true)}
+                        />
                         <label
                             htmlFor="website-target"
                             className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -72,7 +73,10 @@ export default function StepFirst() {
                         </label>
                     </div>
                     <div className="flex items-start space-x-5">
-                        <Checkbox id="business-telephone" className={'mt-1.5'} />
+                        <Checkbox id="business-telephone" className={'mt-0.5'}
+                                  checked={isCheckedBusiness}
+                                  onCheckedChange={(checked) => setIsCheckedBusiness(checked === true)}
+                        />
                         <label
                             htmlFor="business-telephone"
                             className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -81,7 +85,10 @@ export default function StepFirst() {
                         </label>
                     </div>
                     <div className="flex items-start space-x-5">
-                        <Checkbox id="app-store" className={'mt-1.5'} />
+                        <Checkbox id="app-store" className={'mt-0.5'}
+                                  checked={isCheckedAppstore}
+                                  onCheckedChange={(checked) => setIsCheckedAppstore(checked === true)}
+                        />
                         <label
                             htmlFor="app-store"
                             className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -96,7 +103,7 @@ export default function StepFirst() {
                     Extra:
                 </Label>
                 <div className="flex items-start space-x-5">
-                    <Checkbox id="verification" className={'mt-1.5'} />
+                    <Checkbox id="verification" className={'mt-0.5'} />
                     <label
                         htmlFor="verification"
                         className="font-nunito max-w-[398px] text-adsbin-grey-1000 w-full font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -106,36 +113,58 @@ export default function StepFirst() {
                     </label>
                 </div>
             </div>
-            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
-                    Business Tel. No:
-                </Label>
-                <Input
-                    type="text"
-                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
-                    placeholder="+1 201 149 70 46"
-                />
-            </div>
-            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
-                    Apple Appstore URL:
-                </Label>
-                <Input
-                    type="text"
-                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
-                    placeholder="https://apps.apple.com/app/id1234567890"
-                />
-            </div>
-            <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
-                <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
-                    Google Playstore URL:
-                </Label>
-                <Input
-                    type="text"
-                    className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
-                    placeholder="https://apps.apple.com/app/id1234567890"
-                />
-            </div>
+            {isCheckedtarget && (
+                <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                    <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
+                        Target URL:
+                    </Label>
+                    <Input
+                        type="text"
+                        className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                        placeholder="https://mypromotionsite.com"
+                    />
+                </div>
+            )}
+
+            {isCheckedBusiness && (
+                <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                    <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
+                        Business Tel. No:
+                    </Label>
+                    <Input
+                        type="text"
+                        className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                        placeholder="+1 201 149 70 46"
+                    />
+                </div>
+            )}
+
+            {isCheckedAppstore && (
+                <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                    <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
+                        Apple Appstore URL:
+                    </Label>
+                    <Input
+                        type="text"
+                        className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                        placeholder="https://apps.apple.com/app/id1234567890"
+                    />
+                </div>
+            )}
+
+            {isCheckedAppstore && (
+                <div className="flex w-full max-w-2xl items-center md:gap-5 gap-2.5">
+                    <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
+                        Google Playstore URL:
+                    </Label>
+                    <Input
+                        type="text"
+                        className="text-adsbin-grey-300 font-outfit font-normal placeholder:text-adsbin-grey-300"
+                        placeholder="https://apps.apple.com/app/id1234567890"
+                    />
+                </div>
+            )}
+
             <div className="flex w-full max-w-2xl items-start md:gap-5 gap-2.5">
                 <Label htmlFor="picture" className="sm:text-nowrap sm:min-w-44 min-w-32 leading-none">
                     Description <small className={'block'}>(optional) :</small>
