@@ -234,7 +234,7 @@ export function DataTable() {
                   return (
                     <TableHead
                       key={header.id}
-                      className={`tracking - wider text-base text-nowrap font-bold text-[#000]  ${header?.column?.id === 'lastseen' && 'pl-10'} ${header?.column?.id === 'type' && 'pl-[42px]'}`}
+                      className={`tracking - wider text-base text-nowrap font-bold text-[#000]  ${header?.column?.id === 'lastseen' && 'pl-16 w-80'} ${header?.column?.id === 'type' && 'pl-[42px]'}`}
                     >
                       {header.isPlaceholder
                         ? null
