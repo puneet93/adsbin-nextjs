@@ -7,7 +7,7 @@ export default function MediaUpload() {
       <input type="file" hidden id="uploadMedia" />
       <label
         htmlFor="uploadMedia"
-        className="border-8 py-10 text-center items-center gap-3 justify-center tracking-wider text-adsbin-grey-1000 font-extrabold flex flex-col border-adsbin-grey-100 p-5 border-dashed rounded-2xl"
+        className="border-8 py-10 text-center items-center md:min-h-96 min-h-64 gap-3 justify-center tracking-wider text-adsbin-grey-1000 font-extrabold flex flex-col border-black p-5 border-dashed rounded-2xl"
       >
         {/*<div className="flex items-center justify-center flex-col gap-2.5 py-4 mb-7">*/}
         {/*  <CirclePlusIcon size={40} />*/}

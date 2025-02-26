@@ -42,13 +42,13 @@ const chartConfig = {
     //     label: "Young Adults (20 - 29)",
     //     color: "#FFD600",
     // },
-    advertisement: {
-        label: "Advertisement",
-        color: "#000000",
-    },
     views: {
         label: "Total Views",
         color: "#7CCBFF",
+    },
+    advertisement: {
+        label: "Advertisement",
+        color: "#EA3A88",
     },
     // senior: {
     //     label: "Senior (50-66)",
@@ -105,7 +105,7 @@ export function LineChartFun() {
                     <Line
                         dataKey="advertisement"
                         type="monotone"
-                        stroke="#000"
+                        stroke="#EA3A88"
                         strokeWidth={2}
                         dot={false}
                     />

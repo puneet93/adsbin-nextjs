@@ -10,6 +10,7 @@ import {
 import { CaretDown } from "@/lib/icons";
 import { Avatar } from "@radix-ui/react-avatar";
 import { Shield } from "lucide-react";
+import Image from "next/image";
 
 export default function UserDropdown() {
   return (
@@ -26,7 +27,7 @@ export default function UserDropdown() {
               </span>
             </div>
 
-            <Avatar className="border-2 border-[#848484] w-12 h-12 rounded-full overflow-hidden">
+            <Avatar className="border-2 border-black shadow-[0_0_6px_2px_rgba(0,0,0,0.2)] w-12 h-12 rounded-full overflow-hidden">
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
@@ -35,7 +36,12 @@ export default function UserDropdown() {
           </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent align={'end'}>
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuLabel className={'md:hidden'}>
+            <button className="flex gap-2 text-xs font-semibold items-center">
+              <Image src={'/USA.svg'} alt={'USA'} width={24} height={24} className={'w-6 h-6 rounded-full'} />
+              <span className={'leading-none text-sm'}>English</span>
+            </button>
+          </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem>Profile</DropdownMenuItem>
           <DropdownMenuItem>Billing</DropdownMenuItem>

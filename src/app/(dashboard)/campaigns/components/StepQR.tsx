@@ -21,7 +21,7 @@ export default function StepQR({getPreview}:{getPreview: () => void}) {
             <></>
           </StepHeader>
 
-          <div className="flex flex-col px-5 gap-5 relative">
+          <div className="md:flex hidden flex-col px-5 gap-5 relative">
             <div className="flex items-start md:gap-5 gap-2.5">
               <Label className="sm:text-nowrap mt-2 !font-normal min-w-24">
                 Show QR:
@@ -82,6 +82,62 @@ export default function StepQR({getPreview}:{getPreview: () => void}) {
             {/*</div>*/}
 
           </div>
+
+          <div className="grid md:hidden grid-cols-2 gap-5 px-5 gap-5 relative">
+            <div className="flex flex-col gap-5">
+              <Label className="sm:text-nowrap mt-2 !font-normal min-w-24">
+                Show QR:
+              </Label>
+              <div className={'flex items-center md:gap-5 gap-2.5 flex-wrap'}>
+                <Select>
+                  <SelectTrigger className="w-full h-11 text-adsbin-evergreens">
+                    <SelectValue placeholder="Visible" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="light">Light</SelectItem>
+                    <SelectItem value="dark">Dark</SelectItem>
+                    <SelectItem value="system">System</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Select>
+                  <SelectTrigger className="w-full h-11 text-adsbin-evergreens">
+                    <SelectValue placeholder="Left Bottom" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="light">Light</SelectItem>
+                    <SelectItem value="dark">Dark</SelectItem>
+                    <SelectItem value="system">System</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+            <div className="flex gap-5 flex-col">
+              <Label className="text-nowrap !font-normal min-w-24">
+                Type:
+              </Label>
+              <Select>
+                <SelectTrigger className="w-full h-11 text-adsbin-evergreens">
+                  <SelectValue placeholder="Light Bg." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="light">Light</SelectItem>
+                  <SelectItem value="dark">Dark</SelectItem>
+                  <SelectItem value="system">System</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className={'col-span-2'}>
+              <Button onClick={() => {
+                setShowPreview(!showPreview);
+                getPreview()
+              }} className="py-2.5 anim-pulse px-4 text-base gap-2.5 w-full h-auto bg-adsbin-green-500 rounded-none">
+                Preview Content <Eye className="w-5 h-5" />
+              </Button>
+            </div>
+          </div>
+
+
+
         </div>
 
         <div className={'max-w-2xl mt-5 w-full'}>

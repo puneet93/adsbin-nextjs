@@ -34,7 +34,7 @@ export default function Information({
           </Button>
         )}
         {label && (
-          <h6 className="uppercase text-adsbin-grey-1000 tracking-widest text-xsm font-bold">
+          <h6 className="uppercase text-[#606060] tracking-widest text-xsm font-bold">
             # {label}
           </h6>
         )}

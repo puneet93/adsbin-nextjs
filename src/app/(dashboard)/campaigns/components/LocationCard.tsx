@@ -23,9 +23,10 @@ export default function LocationCard({
       {/* hover:border-adsbin-evergreens*/}
       {/*${active ? "border-adsbin-neutral-300" : "border-adsbin-grey-100"}*/}
       <div className="flex items-center gap-2.5 mb-6">
-        <h6 className="uppercase font-extrabold leading-3 text-sm flex-grow">{title}</h6>
+        <h6 className="uppercase font-extrabold leading-3 text-sm">{title}</h6>
 
-        <div className={'flex -space-x-3'} onClick={onhandle}>
+        {icon}
+        <div className={'flex -space-x-3 ml-auto'} onClick={onhandle}>
           <Avatar className={'border-2 border-white'}>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
@@ -39,7 +40,6 @@ export default function LocationCard({
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
-        {icon}
       </div>
       <div className="sm:min-h-32">{content}</div>
 

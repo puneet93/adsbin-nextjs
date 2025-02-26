@@ -10,30 +10,33 @@ import {
 } from "@/components/ui/chart"
 import * as React from "react";
 const chartData = [
-    { day: "Mon. 21 jan.", total: 186},
-    { day: "Tue. 22 jan.", total: 305},
-    { day: "Wed. 24 jan.", total: 237},
-    { day: "Thur. 27 jan.", total: 73},
-    { day: "Fri. 29 jan.", total: 209},
-    { day: "Sat. 30 jan.", total: 214},
-    { day: "Sun. 31 jan.", total: 186},
-    { day: "Mon. 1 feb.", total: 305},
-    { day: "Tue. 2 feb.", total: 237},
-    { day: "Wed. 3 feb.", total: 73},
-    { day: "Thur. 4 feb.", total: 209},
-    { day: "Fri. 5 feb.", total: 214},
-    { day: "Sat. 6 feb.", total: 237},
-    { day: "Sun. 7feb.", total: 73},
-    { day: "Mon. 1 feb.", total: 209},
-    { day: "Tue. 2 feb.", total: 214},
-    { day: "Wed. 3 feb.", total: 186}
+    { day: "Mon. 21 jan.", total: 186, place: 86},
+    { day: "Tue. 22 jan.", total: 305, place: 35},
+    { day: "Wed. 24 jan.", total: 237, place: 23},
+    { day: "Thur. 27 jan.", total: 73, place: 7},
+    { day: "Fri. 29 jan.", total: 209, place: 20},
+    { day: "Sat. 30 jan.", total: 214, place: 21},
+    { day: "Sun. 31 jan.", total: 186, place: 16},
+    { day: "Mon. 1 feb.", total: 305, place: 5},
+    { day: "Tue. 2 feb.", total: 237, place: 7},
+    { day: "Wed. 3 feb.", total: 73, place: 53},
+    { day: "Thur. 4 feb.", total: 209, place: 29},
+    { day: "Fri. 5 feb.", total: 214, place: 24},
+    { day: "Sat. 6 feb.", total: 237, place: 27},
+    { day: "Sun. 7feb.", total: 73, place: 79},
+    { day: "Mon. 1 feb.", total: 209, place: 29},
+    { day: "Tue. 2 feb.", total: 214, place: 24},
+    { day: "Wed. 3 feb.", total: 18, place: 126}
 ]
 
 const chartConfig = {
     total: {
         label: "Ad Revenue over Time",
         color: "#4DBB18",
-    },
+    },place: {
+        label: "Free Place of advertisement",
+        color: "#EAB308",
+    }
 } satisfies ChartConfig
 
 export function LineChartEarningFun() {
@@ -65,9 +68,9 @@ export function LineChartEarningFun() {
                         dot={false}
                     />
                     <Line
-                        dataKey="kids"
+                        dataKey="place"
                         type="monotone"
-                        stroke="#9747FF"
+                        stroke="#EAB308"
                         strokeWidth={2}
                         dot={false}
                     />

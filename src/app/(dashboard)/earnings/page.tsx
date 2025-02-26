@@ -3,6 +3,8 @@ import Overview from "@/app/(dashboard)/earnings/components/Overview";
 import AdvertiseBreakdown from "@/app/(dashboard)/earnings/components/AdvertiseBreakdown";
 import PayoutSchedule from "@/app/(dashboard)/earnings/components/PayoutSchedule";
 import PopupControls from "@/components/PopupControls";
+import * as React from "react";
+import Image from "next/image";
 
 export default function page() {
   return (
@@ -17,13 +19,21 @@ export default function page() {
 
         <Overview />
 
-        <div className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-5">
+        <div className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-5 mb-5">
             <div className={'lg:col-span-2'}>
                 <AdvertiseBreakdown />
             </div>
             <div className={'lg:col-span-3'}>
                 <PayoutSchedule />
             </div>
+        </div>
+
+        <div className={'lg:px-8 px-5 mb-5'}>
+            <h3 className="text-adsbin-evergreens text-2xl font-outfit tracking-tight mb-2.5">
+                Your Locations
+            </h3>
+
+            <Image src={'/map.png'} alt={'map-image'} className={'w-full max-h-[420px] min-h-96 object-cover object-center'} width={448} height={448} />
         </div>
 
         <PopupControls title="Earning Process" content="Here you can earn or reject campaigns." />
