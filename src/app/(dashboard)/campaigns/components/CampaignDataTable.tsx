@@ -21,14 +21,14 @@ export default function CampaignDataTable() {
           </h5>
         </div>
 
-        <form action="/" className="relative">
+        <form action="/" className="relative md:max-w-[172px]">
           <Input
             placeholder="Search Term"
-            className="rounded-full pr-10 font-semibold min-h-10 min-w-56"
+            className="rounded-full pr-10 font-semibold !h-12 !text-base min-w-56"
           />
           <Button
             variant={"link"}
-            className="p-0 absolute top-2 right-0 min-w-12"
+            className="p-0 absolute top-[4px] md:right-0 right-2 min-w-8"
           >
             <Search color="#415B41" size={32} />
           </Button>

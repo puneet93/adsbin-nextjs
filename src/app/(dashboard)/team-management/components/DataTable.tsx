@@ -234,7 +234,7 @@ export function DataTable() {
                   return (
                     <TableHead
                       key={header.id}
-                      className={`tracking - wider text-base text-nowrap font-bold text-[#000]  ${header?.column?.id === 'lastseen' && 'text-center w-80'} ${header?.column?.id === 'type' && 'pl-[42px]'}`}
+                      className={`tracking - wider text-base text-nowrap font-bold text-[#000]  ${header?.column?.id === 'lastseen' && 'text-center w-80 pr-[85px]'} ${header?.column?.id === 'type' && 'pl-[42px]'}`}
                     >
                       {header.isPlaceholder
                         ? null
@@ -258,7 +258,7 @@ export function DataTable() {
                   {row.getVisibleCells().map((cell) => (
                     <TableCell
                       key={cell.id}
-                      className="text-adsbin-evergreens text-base tracking-wider"
+                      className={`text - adsbin - evergreens text-base tracking-wider ${cell?.column?.id === 'lastseen' && 'pl-16'}`}
                     >
                       {flexRender(
                         cell.column.columnDef.cell,

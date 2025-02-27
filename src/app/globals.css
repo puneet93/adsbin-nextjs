@@ -69,6 +69,10 @@ button[role="combobox"] {
   animation: pulse 0.5s ease-in-out;
 }
 
+.hover\:bg-neutral-900\/90:hover{
+  background-color: #5687F2 !important;
+}
+
 strong{
   @apply font-bold;
 }

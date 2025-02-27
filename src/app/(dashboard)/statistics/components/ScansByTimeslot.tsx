@@ -7,7 +7,9 @@ export default function ScansByTimeslot(){
                 Scans by timeslot
             </h3>
 
-            <PieChartTimeslot />
+            <div className="py-12">
+                <PieChartTimeslot />
+            </div>
         </div>
     )
 }

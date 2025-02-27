@@ -50,7 +50,7 @@ export default function page() {
             </div>
 
             <div>
-                <ScansByTimeslot />
+                <ScansPerLanguage />
             </div>
         </div>
 
@@ -61,7 +61,8 @@ export default function page() {
             </div>
 
             <div>
-                <ScansPerLanguage />
+                <ScansByTimeslot />
+
             </div>
         </div>
 

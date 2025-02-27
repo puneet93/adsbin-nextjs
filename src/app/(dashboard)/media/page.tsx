@@ -12,7 +12,7 @@ export default function page() {
         <div className={'flex justify-center py-10 px-5'}>
             <Button
                 asChild
-                className="py-2 anim-pulse px-4 text-sm gap-2.5 h-auto w-auto bg-adsbin-green-500 rounded-none"
+                className="py-2 px-4 anim-pulse text-sm gap-2.5 h-auto w-auto bg-adsbin-green-500 rounded-none"
             >
                 <Link href={"/campaigns/new"}>
                     Start new campaign <Megaphone className="w-5 h-5" />
