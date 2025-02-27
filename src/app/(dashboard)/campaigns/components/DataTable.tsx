@@ -29,15 +29,7 @@ import ActionDropdown from "@/components/ActionDropdown";
 import { PaginationUI } from "@/components/Pagination";
 import { useWindowDimensions } from "@/lib/useWindowDimensions";
 import { Button } from "@/components/ui/button";
-import {ChevronDown, Eye, Info} from "lucide-react";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
-import {
-  DropdownMenu,
-  DropdownMenuContent, DropdownMenuGroup,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
+import {Eye} from "lucide-react";
 import InfoDropdown from "@/app/(dashboard)/campaigns/components/InfoDropdown";
 
 const data: Payment[] = [

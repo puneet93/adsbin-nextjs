@@ -1,6 +1,4 @@
-import {Clock, Coins, Info, Lock} from "lucide-react";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
-import {Button} from "@/components/ui/button";
+import {Clock, Coins, Lock} from "lucide-react";
 
 export default function Status({ status, icon }: { status: string, icon?:boolean }) {
   if (status === "Approved") {
